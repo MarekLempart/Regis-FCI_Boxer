@@ -1,9 +1,9 @@
 {
-  "name": "template-vite-react-ts",
+  "name": "regis-fci-boxer",
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MarekLempart.github.is/template_Vite-React_TS/",
+  "homepage": "https://MarekLempart.github.is/Regis-FCI_Boxer/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MarekLempart/template_Vite-React_TS.git"
+    "url": "git+https://github.com/MarekLempart/Regis-FCI_Boxer.git"
   },
   "keywords": [],
   "author": "MarekLempart <eppum.ml@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MarekLempart/template_Vite-React_TS/issues"
+    "url": "https://github.com/MarekLempart/Regis-FCI_Boxer/issues"
   },
 
   "dependencies": {
