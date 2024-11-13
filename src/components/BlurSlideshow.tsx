@@ -1,9 +1,8 @@
 // src/components/BlurSlideshow.tsx
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import css from "../styles/BlurSlideshow.module.css";
 import imageRegisHero from "../data/imageData";
+import { SlideshowContainer, StyledImage } from "../styles/BlurSlideshowStyles";
 
 const BlurSlideshow = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -26,17 +25,16 @@ const BlurSlideshow = () => {
     }, []);
 
     return (
-        <div className={css.slideshowContainer}>
-      <motion.img
-        src={imageRegisHero[currentImageIndex].src}
-        alt={imageRegisHero[currentImageIndex].id}
-        className={css.image}
-        initial={{ filter: "blur(0px)" }}
-        animate={{ filter: isAnimating ? "blur(30px)" : "blur(0px)" }} // Rozmycie animacji
-        transition={{ duration: 1 }}
-        onAnimationComplete={isAnimating ? handleAnimationComplete : undefined} // Zmiana obrazu tylko po animacji
+    <SlideshowContainer>
+        <StyledImage     
+            src={imageRegisHero[currentImageIndex].src}
+            alt={imageRegisHero[currentImageIndex].id}
+            initial={{ filter: "blur(0px)" }}
+            animate={{ filter: isAnimating ? "blur(30px)" : "blur(0px)" }} // Rozmycie animacji
+            transition={{ duration: 1 }}
+            onAnimationComplete={isAnimating ? handleAnimationComplete : undefined} // Zmiana obrazu tylko po animacji
       />
-    </div>
+    </SlideshowContainer>
     );
 };
 
