@@ -18,8 +18,8 @@ export const SlideshowPositionContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 1200px;
-    height: 800px;
+    width: 600px;
+    height: 400px;
     overflow: hidden;
     border-radius: 20px;
     background: #000;
