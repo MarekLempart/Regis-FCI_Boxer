@@ -6,7 +6,7 @@ import viteLogo from '/vite.svg';
 const Footer = () => {
     return (
         <>
-            <p>&copy; 2024 Template Vite-TS</p>
+            <p>&copy; 2024 Template Vite - React/TS</p>
             <div>
                 <a href="https://vite.dev" target="_blank">
                 <img src={viteLogo} className="logo" alt="Vite logo" />

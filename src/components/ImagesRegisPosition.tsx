@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import imageRegisPosition from "../data/imageDateSection01";
-import { PositionImageContainer, SlideshowPositionContainer, StyledImage } from "../styles/PositionSlideshowStyles";
+import { PositionImageContainer, SlideshowPositionContainer, StyledImage } from "../styles/ImageSlideshow";
 
 const PositionSlideshow = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

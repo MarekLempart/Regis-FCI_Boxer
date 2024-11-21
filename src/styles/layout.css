@@ -1,0 +1,45 @@
+/* src/styles/layout.css */
+
+/* Układ kontenera */
+.container {
+    display: flex;
+    flex-direction: column; /* Domyślnie jedna kolumna */
+    padding: var(--padding-mobile);
+    margin: auto;
+  }
+  
+  @media (min-width: var(--breakpoint-tablet)) {
+    .container {
+      flex-direction: row; /* Dwie kolumny na tablet i desktop */
+      gap: 20px;
+      padding: var(--padding-tablet);
+    }
+  }
+  
+  @media (min-width: var(--breakpoint-desktop)) {
+    .container {
+      padding: var(--padding-desktop);
+    }
+  }
+  
+  /* Kontener dla obrazów */
+  .image-container {
+    flex: 1; /* Obrazy zajmują połowę dostępnej przestrzeni */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Tekst */
+  .text-container {
+    flex: 1;
+    padding: 10px;
+  }
+  

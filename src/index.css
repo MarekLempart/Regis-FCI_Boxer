@@ -1,4 +1,76 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@400;500;700&display=swap');
+
 :root {
+  /* Kolory dla tekstu i elementów */
+  --color-white: #f8f9fa;
+  --color-dark-navy: #0a1f44;
+  --color-dark-blue: #162e5c;
+  --color-dark-orange: #c87533;
+  --color-bright-brown: #a14d26;
+
+  /* Kolory tła */
+  --bg-white: #ffffff;
+  --bg-dark-navy: #0a1f44;
+  --bg-dark-blue: #162e5c;
+  --bg-dark-orange: #c87533;
+  --bg-bright-brown: #a14d26;
+
+  /* Odstępy dla różnych urządzeń */
+  --padding-mobile: 15px;
+  --padding-tablet: 20px;
+  --padding-desktop: 0px;
+
+  /* Typografia */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Oswald', sans-serif;
+  --line-height: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Rozmiary ekranu */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1200px;
+}
+
+/* Reset przeglądarki */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-dark-blue);
+  color: var(--color-white);
+  line-height: var(--line-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  text-align: center;
+}
+
+p, ul, ol {
+  font-family: var(--font-primary);
+  text-align: left;
+}
+
+a {
+  font-family: var(--font-primary);
+  text-decoration: none;
+  color: var(--color-dark-orange);
+}
+
+a:hover {
+  color: var(--color-bright-brown);
+}
+
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +137,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
