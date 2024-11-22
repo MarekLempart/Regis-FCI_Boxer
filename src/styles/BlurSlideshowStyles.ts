@@ -18,7 +18,7 @@ export const SlideshowContainer = styled.div`
 
     @media (max-width: 768px) {
         max-width: 95%;
-        height: 650px; /* Mobile wysokość */
+        height: 600px; /* Mobile wysokość */
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
