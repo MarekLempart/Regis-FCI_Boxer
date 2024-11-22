@@ -7,13 +7,15 @@ import imgRegis_04 from "../img/_DSC7418-Edit.webp";
 import imgRegis_05 from "../img/_DSC6937-Edit.webp";
 
 // Definicja typu dla kazdego elementu w tablicy obrazów
+
 interface ImageItem {
     id: string;
     src: string;
 }
 
 // Tworzenie tablicy obrazów z typu 'ImageItem[]'
-const imageRegisHero: ImageItem[] = [
+
+const imageRegis: ImageItem[] = [
     { id: "Regis_01", src: imgRegis_01 },
     { id: "Regis_02", src: imgRegis_02 },
     { id: "Regis_03", src: imgRegis_03 },
@@ -21,4 +23,4 @@ const imageRegisHero: ImageItem[] = [
     { id: "Regis_05", src: imgRegis_05 },
 ];
 
-export default imageRegisHero;
+export default imageRegis;

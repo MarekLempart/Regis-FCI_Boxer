@@ -5,7 +5,7 @@ import PositionSlideshow from '../components/ImagesRegisPosition';
 import ImageSlideshow from '../components/ImageSlideshow';
 import ImageCard from '../components/ImageCard';
 import imageRegisPosition from '../data/imageDateSection01';
-import imageRegisHero from '../data/imageData';
+import imageRegis from '../data/imageData';
 // import { Container, ImageContainer, TextContainer } from '../styles/HomeStyles';
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
         <h2>Welcome to the Home Page!</h2>
         <BlurSlideshow />
         <PositionSlideshow />
-        <ImageSlideshow images={imageRegisHero} />
+        <ImageSlideshow images={imageRegis} />
         <ImageSlideshow images={imageRegisPosition} />
         <ImageCard image={imageRegisPosition[7]} />            
         </>
