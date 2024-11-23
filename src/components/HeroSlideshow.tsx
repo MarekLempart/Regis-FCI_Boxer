@@ -1,8 +1,8 @@
-// src/components/BlurSlideshow.tsx
+// src/components/HeroSlideshow.tsx
 
 // import { useState, useEffect } from "react";
 // import imageRegisHero from "../data/imageData";
-// import { SlideshowContainer, StyledImage } from "../styles/BlurSlideshowStyles";
+// import { SlideshowContainer, StyledImage } from "../styles/HeroSlideshowStyles";
 
 // const BlurSlideshow = () => {
 //     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -40,11 +40,11 @@
 
 // export default BlurSlideshow;
 
-// src/components/BlurSlideshow.tsx
+// src/components/HeroSlideshow.tsx
 
 import { useState, useEffect } from "react";
 import imageRegisHero from "../data/imageDataHero";
-import { SlideshowContainer, StyledImage } from "../styles/BlurSlideshowStyles";
+import { SlideshowContainer, StyledImage } from "../styles/HeroSlideshowStyles";
 
 const BlurSlideshow = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

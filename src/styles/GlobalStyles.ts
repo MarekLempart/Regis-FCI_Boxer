@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.textBrightBrown};
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2 {
     font-family: 'Oswald', sans-serif;
     text-align: center;
   }
@@ -40,7 +40,12 @@ const GlobalStyles = createGlobalStyle`
     text-align: left;
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@400;500;700&display=swap');
+  /* Dodano czcionkę Caveat */
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;700&family=Oswald:wght@400;500;700&display=swap');
+
+  h3, h4, h5, h6 {
+    font-family: 'Caveat', cursive;
+  }
 `;
 
 export default GlobalStyles;

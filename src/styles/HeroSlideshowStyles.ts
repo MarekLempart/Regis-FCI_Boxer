@@ -1,4 +1,4 @@
-// src/styles/BlurSlideshowStyles.ts
+// src/styles/HeroSlideshowStyles.ts
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
