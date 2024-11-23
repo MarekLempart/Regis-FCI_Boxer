@@ -260,7 +260,7 @@ Error generating stack: `+o.message+`
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
     height: 1000px;
     overflow: hidden;
     border-radius: 20px;
@@ -278,7 +278,7 @@ Error generating stack: `+o.message+`
     }
 
     @media (min-width: 1200px) {
-        max-width: 1500px;
+        max-width: 1600px;
         height: 1000px; /* Desktop wysokość */
     }
 `,aT=ce(of.img)`
