@@ -25,6 +25,8 @@
 
 // export default TextCard;
 
+// src/components/TextCard.tsx
+
 import React, { useState } from "react";
 import { TextCardContainer, StyledText } from "../styles/TextCardStyles";
 import { TypeAnimation } from "react-type-animation";
@@ -38,7 +40,7 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Deklaracja typu dla `useInView`
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     threshold: 0.5, // Procent widoczności komponentu przed aktywacją
     triggerOnce: true, // Uruchamia tylko raz
     onChange: (inView: boolean) => {
