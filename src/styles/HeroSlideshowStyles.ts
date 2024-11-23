@@ -9,7 +9,7 @@ export const SlideshowContainer = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
     height: 1000px;
     overflow: hidden;
     border-radius: 20px;
@@ -27,7 +27,7 @@ export const SlideshowContainer = styled.div`
     }
 
     @media (min-width: 1200px) {
-        max-width: 1500px;
+        max-width: 1600px;
         height: 1000px; /* Desktop wysokość */
     }
 `;
