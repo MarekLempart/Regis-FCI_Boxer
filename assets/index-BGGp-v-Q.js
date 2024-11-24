@@ -265,15 +265,15 @@ Error generating stack: `+o.message+`
     overflow: hidden;
     border-radius: 10px;
     background: #000;
-    margin: 0px auto;
+    margin: 40px auto;
 
     @media (max-width: 768px) {
-        max-width: 95%;
+        max-width: 100%;
         height: 600px; /* Mobile wysokość */
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
-        max-width: 95%;
+        max-width: 100%;
         height: 800px; /* Tablet wysokość */
     }
 
@@ -290,21 +290,19 @@ Error generating stack: `+o.message+`
     display: flex;
     flex-direction: column;
     text-align: center;
-    /* background-color: ; */
-    /* color: ; */
     padding: 30px 20px 30px;
 `,fT=ce.div`
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 780px;
+    height: 520px;
     overflow: hidden;
     border-radius: 10px;
     background: #000;
     box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);
-    margin: 20px auto;
+    margin: 10px auto;
 `,dT=ce(sf.img)`
     width: 100%;
     height: 100%;
@@ -314,28 +312,28 @@ Error generating stack: `+o.message+`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
-  padding: 30px;
+  margin: 10px auto;
+  padding: 30px 20px 30px;
   border-radius: 10px;
 `,pT=ce(sf.img)`
-  width: 600px;
-  height: 400px;
+  width: 780px;
+  height: 520px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);; // Pomarańczowy cień
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
+  /* &:hover {
     cursor: pointer;
-  }
-`,ep=({image:e})=>{const[t,n]=S.useState(!1);return R.jsx(hT,{children:R.jsx(pT,{src:e.src,alt:e.id,onMouseEnter:()=>n(!0),onMouseLeave:()=>n(!1),animate:{scale:t?1.02:1,boxShadow:t?"0px 10px 20px rgba(255, 165, 0, 0.8)":"0px 5px 15px rgba(255, 165, 0, 0.5)"},transition:{duration:.3}})})},mT=ce.div`
+  } */
+`,ep=({image:e})=>{const[t,n]=S.useState(!1);return R.jsx(hT,{children:R.jsx(pT,{src:e.src,alt:e.id,onMouseEnter:()=>n(!0),onMouseLeave:()=>n(!1),animate:{scale:t?1.02:1,boxShadow:t?"5px 10px 20px rgba(255, 165, 0, 0.8)":"5px 10px 20px rgba(255, 165, 0, 0.5)"},transition:{duration:.3}})})},mT=ce.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 400px;
-  margin: 20px auto;
-  padding: 10px;
+  width: 780px;
+  height: 520px;
+  margin: 10px auto;
+  padding: 30px 20px 30px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);
