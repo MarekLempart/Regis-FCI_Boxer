@@ -23,8 +23,8 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
         animate={{
           scale: isHovered ? 1.02 : 1, // Powiększenie o 2% na hover
           boxShadow: isHovered
-            ? "0px 10px 20px rgba(255, 165, 0, 0.8)" // Mocniejszy cień na hover
-            : "0px 5px 15px rgba(255, 165, 0, 0.5)", // Standardowy cień
+            ? "5px 10px 20px rgba(255, 165, 0, 0.8)" // Mocniejszy cień na hover
+            : "5px 10px 20px rgba(255, 165, 0, 0.5)", // Standardowy cień
         }}
         transition={{ duration: 0.3 }}
       />

@@ -14,15 +14,15 @@ export const SlideshowContainer = styled.div`
     overflow: hidden;
     border-radius: 10px;
     background: #000;
-    margin: 0px auto;
+    margin: 40px auto;
 
     @media (max-width: 768px) {
-        max-width: 95%;
+        max-width: 100%;
         height: 600px; /* Mobile wysokość */
     }
 
     @media (min-width: 768px) and (max-width: 1199px) {
-        max-width: 95%;
+        max-width: 100%;
         height: 800px; /* Tablet wysokość */
     }
 

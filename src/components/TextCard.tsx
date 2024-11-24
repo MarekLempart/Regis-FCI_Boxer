@@ -1,32 +1,5 @@
 // src/components/TextCard.tsx
 
-// import React from "react";
-// import { TextCardContainer, StyledText } from "../styles/TextCardStyles";
-// import { TypeAnimation } from "react-type-animation";
-
-// interface TextCardProps {
-//   text: string[];
-// }
-
-// const TextCard: React.FC<TextCardProps> = ({ text }) => {
-//   return (
-//     <TextCardContainer>
-//       <StyledText>
-//         <TypeAnimation
-//           sequence={[...text.flatMap((t) => [t, 1000])]} // Animacja tekstów z przerwą
-//           speed={50} // Prędkość pisania
-//           wrapper="h3" // Nagłówek HTML
-//           repeat={Infinity} // Powtarzanie animacji
-//         />
-//       </StyledText>
-//     </TextCardContainer>
-//   );
-// };
-
-// export default TextCard;
-
-// src/components/TextCard.tsx
-
 import React, { useState } from "react";
 import { TextCardContainer, StyledText } from "../styles/TextCardStyles";
 import { TypeAnimation } from "react-type-animation";

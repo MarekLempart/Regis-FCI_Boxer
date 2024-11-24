@@ -6,10 +6,10 @@ export const TextCardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 400px;
-  margin: 20px auto;
-  padding: 10px;
+  width: 780px;
+  height: 520px;
+  margin: 10px auto;
+  padding: 30px 20px 30px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);

@@ -2,11 +2,11 @@
 
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => theme.spacing.mobilePadding};
-  margin: auto;
+  margin: 0px auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: row;
@@ -37,3 +37,4 @@ export const TextContainer = styled.div`
   padding: 10px;
   text-align: left;
 `;
+
