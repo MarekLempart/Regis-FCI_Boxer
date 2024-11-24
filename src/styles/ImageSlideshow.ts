@@ -9,7 +9,7 @@ export const PositionImageContainer = styled.div `
     text-align: center;
     /* background-color: ; */
     /* color: ; */
-    padding: 25px 20px 25px;
+    padding: 30px 20px 30px;
 `;
 
 // Styled-component dla kontenera pokazu slajdów
@@ -21,8 +21,9 @@ export const SlideshowPositionContainer = styled.div`
     width: 600px;
     height: 400px;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
     background: #000;
+    box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);
     margin: 20px auto;
 `;
 
@@ -31,5 +32,5 @@ export const StyledImage = styled(motion.img)`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
 `;

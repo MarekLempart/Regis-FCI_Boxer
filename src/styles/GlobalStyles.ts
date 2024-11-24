@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    background-color: ${({ theme }) => theme.colors.bgDarkNavy};
+    background-color: ${({ theme }) => theme.colors.bgCrowBlack};
     color: ${({ theme }) => theme.colors.textWhite};
     min-height: 100vh;
     margin: 0;

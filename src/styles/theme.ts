@@ -11,7 +11,9 @@ export const theme = {
       bgLightGray: '#d3d3d3',
       bgDarkGray: '#a9a9a9',
       bgDarkNavy: '#0a1f44',
-      bgDarkBlue: '#162e5c',
+      bgLimoges: '#213e69',    
+      bgEliteBlue: '#1c314f',      
+      bgCrowBlack: '#263348',
       bgOrange: '#c87533',
       bgBrightBrown: '#a14d26',
     },
@@ -21,8 +23,8 @@ export const theme = {
       desktop: '1200px',
     },
     spacing: {
-      mobilePadding: '15px',
-      tabletPadding: '20px',
+      mobilePadding: '5px',
+      tabletPadding: '10px',
       desktopPadding: '0px',
     },
   };

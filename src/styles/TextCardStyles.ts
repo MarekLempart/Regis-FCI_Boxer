@@ -8,11 +8,11 @@ export const TextCardContainer = styled.div`
   align-items: center;
   width: 600px;
   height: 400px;
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);
 `;
 
 export const StyledText = styled.div`
@@ -20,5 +20,5 @@ export const StyledText = styled.div`
   font-size: 1.8rem;
   text-align: center;
   line-height: 1.5;
-  color: #333;
+  color: ${({ theme }) => theme.colors.textWhite};
 `;
