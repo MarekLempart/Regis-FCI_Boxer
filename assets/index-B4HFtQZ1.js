@@ -286,7 +286,7 @@ Error generating stack: `+o.message+`
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px 30px;
+    padding: 20px 10px 20px;
 `,fT=se.div`
     display: flex;
     justify-content: center;
@@ -299,7 +299,7 @@ Error generating stack: `+o.message+`
     border-radius: 10px;
     background: #000;
     box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
-    
+    transition: transform 0.3s ease-in-out;
 `,dT=se(sf.img)`
     width: 100%;
     height: 100%;
@@ -309,7 +309,7 @@ Error generating stack: `+o.message+`
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px 30px;
+    padding: 20px 10px 20px;
 `,pT=se.div`
   display: flex;
   justify-content: center;
@@ -338,7 +338,7 @@ Error generating stack: `+o.message+`
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px 30px;
+    padding: 20px 10px 20px;
 `,vT=se.div`
   display: flex;
   justify-content: center;
