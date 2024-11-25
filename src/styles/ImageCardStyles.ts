@@ -7,7 +7,7 @@ export const PositionImageContainer = styled.div `
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px 30px;
+    padding: 20px 10px 20px;
 `;
 
 // Kontener wokół obrazu

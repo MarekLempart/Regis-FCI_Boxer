@@ -1,5 +1,33 @@
 // src/pages/Home.tsx
 
+// import { Container, ItemContainer } from "../styles/HomeStyles";
+// import ImageSlideshow from "../components/ImageSlideshow";
+// import ImageCard from "../components/ImageCard";
+// import TextCard from "../components/TextCard";
+
+// const Home = () => {
+//   return (
+//     <Container>
+//       <ItemContainer>
+//         <TextCard text={textData.section1} />
+//       </ItemContainer>
+//       <ItemContainer>
+//         <ImageCard image={imageRegisPosition[0]} />
+//       </ItemContainer>
+//       <ItemContainer>
+//         <ImageSlideshow images={imageRegis} />
+//       </ItemContainer>
+//       <ItemContainer>
+//         <TextCard text={textData.section2} />
+//       </ItemContainer>
+//       {/* Dodaj kolejne komponenty w podobny sposób */}
+//     </Container>
+//   );
+// };
+
+// export default Home;
+
+
 import HeroSlideshow from "../components/HeroSlideshow";
 import ImageSlideshow from "../components/ImageSlideshow";
 import ImageCard from "../components/ImageCard";

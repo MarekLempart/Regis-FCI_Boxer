@@ -7,7 +7,7 @@ export const PositionImageContainer = styled.div `
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px 30px;
+    padding: 20px 10px 20px;
 `;
 
 // Styled-component dla kontenera pokazu slajdów
@@ -23,7 +23,7 @@ export const SlideshowPositionContainer = styled.div`
     border-radius: 10px;
     background: #000;
     box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
-    
+    transition: transform 0.3s ease-in-out;
 `;
 
 // Styled-component dla obrazu w pokazie slajdów
