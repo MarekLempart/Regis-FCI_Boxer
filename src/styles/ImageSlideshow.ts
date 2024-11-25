@@ -19,10 +19,11 @@ export const SlideshowPositionContainer = styled.div`
     width: 780px;
     height: 520px;
     overflow: hidden;
+    margin: 10px auto;
     border-radius: 10px;
     background: #000;
-    box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2);
-    margin: 10px auto;
+    box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
+    
 `;
 
 // Styled-component dla obrazu w pokazie slajdów

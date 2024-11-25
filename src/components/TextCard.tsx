@@ -1,7 +1,7 @@
 // src/components/TextCard.tsx
 
 import React, { useState } from "react";
-import { TextCardContainer, StyledText } from "../styles/TextCardStyles";
+import { PositionTextContainer, TextCardContainer, StyledText } from "../styles/TextCardStyles";
 import { TypeAnimation } from "react-type-animation";
 import { useInView } from "react-intersection-observer";
 
@@ -24,7 +24,8 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
   });
 
   return (
-    <TextCardContainer ref={ref}>
+    <PositionTextContainer>
+      <TextCardContainer ref={ref}>
       {isVisible && (
         <StyledText>
           <TypeAnimation
@@ -36,6 +37,8 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
         </StyledText>
       )}
     </TextCardContainer>
+    </PositionTextContainer>
+    
   );
 };
 

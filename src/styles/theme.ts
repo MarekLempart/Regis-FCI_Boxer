@@ -18,9 +18,9 @@ export const theme = {
       bgBrightBrown: '#a14d26',
     },
     breakpoints: {
-      mobile: '320px',
-      tablet: '768px',
-      desktop: '1200px',
+      mobile: '768px',
+      tablet: '1200px',
+      desktop: '1680px',
     },
     spacing: {
       mobilePadding: '5px',
@@ -29,3 +29,8 @@ export const theme = {
     },
   };
   
+  export const media = {
+    mobile: `(max-width: 767px)`,
+    tablet: `(min-width: 768px) and (max-width: 1199px)`,
+    desktop: `(min-width: 1200px)`,
+  };

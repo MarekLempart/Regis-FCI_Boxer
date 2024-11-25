@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   padding: 40px 16px;
   height: 70px;
-  background-color: ${({ theme }) => theme.colors.backgroundDark};
+  background-color: ${({ theme }) => theme.colors.bgEliteBlue};
   border-bottom: 1px solid transparent;
 `;
 
@@ -20,7 +20,7 @@ export const Logo = styled.div`
 export const Nav = styled.nav`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -70,7 +70,7 @@ export const MobileMenuIcon = styled.div`
   align-items: center;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
   }
 
@@ -159,7 +159,7 @@ export const SocialMediaWrapper = styled.div`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     margin-top: 0;
     gap: 24px;
   }

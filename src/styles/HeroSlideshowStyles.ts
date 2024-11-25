@@ -9,25 +9,21 @@ export const SlideshowContainer = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 1600px;
-    height: 1000px;
+    height: 100%;
     overflow: hidden;
     border-radius: 10px;
     background: #000;
     margin: 40px auto;
 
-    @media (max-width: 768px) {
-        max-width: 100%;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         height: 600px; /* Mobile wysokość */
     }
 
-    @media (min-width: 768px) and (max-width: 1199px) {
-        max-width: 100%;
+    @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         height: 800px; /* Tablet wysokość */
     }
 
-    @media (min-width: 1200px) {
-        max-width: 1600px;
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) and (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
         height: 1000px; /* Desktop wysokość */
     }
 `;

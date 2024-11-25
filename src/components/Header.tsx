@@ -1,19 +1,5 @@
 // src/components/Header.tsx
 
-// import { NavLink } from 'react-router-dom';
-
-// const Header = () => (
-//     <header>
-//         <nav>
-//             <NavLink to="/">Home</NavLink>
-//             <NavLink to="/about">About</NavLink>
-//             <NavLink to="/contact">Contact</NavLink>
-//         </nav>
-//     </header>
-// );
-
-// export default Header;
-
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog } from 'react-icons/fa';
