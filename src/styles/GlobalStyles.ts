@@ -40,9 +40,6 @@ const GlobalStyles = createGlobalStyle`
     text-align: left;
   }
 
-  /* Dodano czcionkę Caveat */
-  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;700&family=Oswald:wght@400;500;700&display=swap');
-
   h3, h4, h5, h6 {
     font-family: 'Caveat', cursive;
   }

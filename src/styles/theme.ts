@@ -22,15 +22,14 @@ export const theme = {
       tablet: '1200px',
       desktop: '1680px',
     },
+    media: {
+      mobile: `(max-width: 767px)`,
+      tablet: `(min-width: 768px) and (max-width: 1199px)`,
+      desktop: `(min-width: 1200px)`,
+    },
     spacing: {
       mobilePadding: '5px',
       tabletPadding: '10px',
       desktopPadding: '0px',
     },
-  };
-  
-  export const media = {
-    mobile: `(max-width: 767px)`,
-    tablet: `(min-width: 768px) and (max-width: 1199px)`,
-    desktop: `(min-width: 1200px)`,
   };

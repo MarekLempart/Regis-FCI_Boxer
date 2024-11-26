@@ -20,7 +20,7 @@ export const SlideshowPositionContainer = styled.div`
     height: 520px; */
 
     width: 100%; /* Domyślnie 100% szerokości ekranu */
-    max-width: 780px; /* Maksymalna szerokość */
+    max-width: 740px; /* Maksymalna szerokość */
     aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
     overflow: hidden;

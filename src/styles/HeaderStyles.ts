@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   padding: 40px 16px;
   height: 70px;
-  background-color: ${({ theme }) => theme.colors.bgEliteBlue};
+  background-color: ${({ theme }) => theme.colors.bgCrowBlack};
   border-bottom: 1px solid transparent;
 `;
 

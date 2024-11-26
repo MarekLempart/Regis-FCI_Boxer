@@ -7,6 +7,7 @@ export const PositionTextContainer = styled.div `
     flex-direction: column;
     text-align: center;
     padding: 10px 0px 10px;
+    width: 100%;
 `;
 
 export const TextCardContainer = styled.div`
@@ -18,7 +19,7 @@ export const TextCardContainer = styled.div`
   height: 520px; */
 
   width: 100%; /* Domyślnie 100% szerokości ekranu */
-  max-width: 1400px; /* Maksymalna szerokość */
+  max-width: 740px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
   overflow: hidden;
