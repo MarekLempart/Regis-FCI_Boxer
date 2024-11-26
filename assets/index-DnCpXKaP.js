@@ -295,8 +295,8 @@ Error generating stack: `+o.message+`
     /* width: 780px;
     height: 520px; */
 
-    width: 100%; /* Domyślnie 90% szerokości ekranu */
-    max-width: 1400px; /* Maksymalna szerokość */
+    width: 100%; /* Domyślnie 100% szerokości ekranu */
+    max-width: 780px; /* Maksymalna szerokość */
     aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
     overflow: hidden;
@@ -327,8 +327,8 @@ Error generating stack: `+o.message+`
   /* width: 780px;
   height: 520px; */
 
-  width: 100%; /* Domyślnie 90% szerokości ekranu */
-  max-width: 1400px; /* Maksymalna szerokość */
+  width: 100%; /* Domyślnie 100% szerokości ekranu */
+  max-width: 780px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
   overflow: hidden;
@@ -365,7 +365,7 @@ Error generating stack: `+o.message+`
   /* width: 780px;
   height: 520px; */
 
-  width: 100%; /* Domyślnie 90% szerokości ekranu */
+  width: 100%; /* Domyślnie 100% szerokości ekranu */
   max-width: 1400px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
@@ -385,9 +385,9 @@ Error generating stack: `+o.message+`
   line-height: 1.5;
   color: ${({theme:e})=>e.colors.textWhite};
 
-  width: 100%; /* Dopasowanie do szerokości kontenera */
+  width: 90%; /* Dopasowanie do szerokości kontenera */
   max-width: 100%; /* Bez przepełnienia */
-  white-space: normal; /* Pozwala na wielowierszowy tekst */
+  height: 90%;
   overflow: hidden;
 
   /* Dodano centrowanie w pionie */
@@ -451,7 +451,7 @@ Error generating stack: `+o.message+`
   padding: 0px;
   width: 100%; /* Zapewnia pełną szerokość w mobile */
 
-  @media (min-width: ${({theme:e})=>e.breakpoints.tablet}) {
+  @media (min-width: ${({theme:e})=>e.breakpoints.mobile}) {
     width: 50%; /* Na tabletach i desktopach, komponenty będą zajmować 50% szerokości (dla dwóch kolumn) */
   }
 
