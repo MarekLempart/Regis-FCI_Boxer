@@ -19,8 +19,8 @@ export const ImageCardContainer = styled.div`
   /* width: 780px;
   height: 520px; */
 
-  width: 100%; /* Domyślnie 90% szerokości ekranu */
-  max-width: 1400px; /* Maksymalna szerokość */
+  width: 100%; /* Domyślnie 100% szerokości ekranu */
+  max-width: 780px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
   overflow: hidden;

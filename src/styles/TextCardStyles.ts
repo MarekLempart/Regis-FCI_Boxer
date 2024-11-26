@@ -17,7 +17,7 @@ export const TextCardContainer = styled.div`
   /* width: 780px;
   height: 520px; */
 
-  width: 100%; /* Domyślnie 90% szerokości ekranu */
+  width: 100%; /* Domyślnie 100% szerokości ekranu */
   max-width: 1400px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
@@ -40,9 +40,9 @@ export const StyledText = styled.div`
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.textWhite};
 
-  width: 100%; /* Dopasowanie do szerokości kontenera */
+  width: 90%; /* Dopasowanie do szerokości kontenera */
   max-width: 100%; /* Bez przepełnienia */
-  white-space: normal; /* Pozwala na wielowierszowy tekst */
+  height: 90%;
   overflow: hidden;
 
   /* Dodano centrowanie w pionie */
