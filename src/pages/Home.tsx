@@ -20,7 +20,7 @@ const Home = () => {
             <TextCard text={textData.section1} />          
           </ItemContainer>
           <ItemContainer>
-            <ImageCard image={imageRegisPosition[4]} />          
+            <ImageCard image={imageRegisPosition[11]} />          
           </ItemContainer>
         </ItemsContainerNoirOrder>
 

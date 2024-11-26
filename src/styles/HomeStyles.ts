@@ -61,12 +61,13 @@ export const Container = styled.div`
 `;
 
 // Kontener dla par komponentów w układzie dwóch kolumn bez zmiany kolejności
-export const ItemsContainerNoirOrder = styled.div`
-  margin: 0px auto;
+export const ItemsContainerNoirOrder = styled.div`  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0px auto;
+  gap: 20px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: flex;
@@ -76,23 +77,29 @@ export const ItemsContainerNoirOrder = styled.div`
     gap: 50px;
   }
 `;
-
-// Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
-export const ItemsContainerReverseOrder = styled.div`
-  margin: 0px auto;
-  display: flex;  
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+export const ItemsContainerReverseOrder = styled(ItemsContainerNoirOrder)`
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    flex-direction: row-reverse; /* Odwrócona kolejność */
   }
 `;
+
+// // Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
+// export const ItemsContainerReverseOrder = styled.div`  
+//   display: flex;  
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0px auto;
+//   gap: 20px;  
+
+//   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+//     display: flex;
+//     flex-direction: row-reverse;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 50px;
+//   }
+// `;
 
 // Kontener dla poszczególnych komponentów w układzie dwóch kolumn
 export const ItemContainer = styled.div`
