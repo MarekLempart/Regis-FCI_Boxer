@@ -6,7 +6,7 @@ export const PositionTextContainer = styled.div `
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 20px 10px 20px;
+    padding: 10px 0px 10px;
 `;
 
 export const TextCardContainer = styled.div`
@@ -17,9 +17,9 @@ export const TextCardContainer = styled.div`
   width: 780px;
   height: 520px;
   overflow: hidden;
-  margin: 10px auto;  
+  margin: 0px auto;  
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
 `;
 

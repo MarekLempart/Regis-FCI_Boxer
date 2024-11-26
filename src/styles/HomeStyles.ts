@@ -46,7 +46,7 @@ export const Container = styled.div`
   flex-direction: column; /* Domyślnie dla mobile układ kolumnowy */
   gap: 20px; /* Odstęp między komponentami */
   padding: ${({ theme }) => theme.spacing.mobilePadding};
-  margin: auto;
+  margin: 0px auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-direction: row; /* Na tablet i desktop zmiana na układ wierszy */
@@ -60,56 +60,54 @@ export const Container = styled.div`
   }
 `;
 
+// Kontener dla par komponentów w układzie dwóch kolumn bez zmiany kolejności
+export const ItemsContainerNoirOrder = styled.div`
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+`;
+
+// Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
+export const ItemsContainerReverseOrder = styled.div`
+  margin: 0px auto;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+`;
+
 // Kontener dla poszczególnych komponentów w układzie dwóch kolumn
 export const ItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex: 1; /* Zapewnia, że komponenty będą się rozciągały równomiernie */
-  padding: 10px;
+  padding: 0px;
   width: 100%; /* Zapewnia pełną szerokość w mobile */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 48%; /* Na tabletach i desktopach, komponenty będą zajmować 48% szerokości (dla dwóch kolumn) */
+    width: 50%; /* Na tabletach i desktopach, komponenty będą zajmować 50% szerokości (dla dwóch kolumn) */
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 48%; /* Na desktopie ta sama szerokość jak na tablecie */
+    width: 50%; /* Na desktopie ta sama szerokość jak na tablecie */
   }
 `;
-
-// Stylizacja dla obrazów w ImageSlideshow i ImageCard
-export const StyledImageCard = styled.img`
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
-`;
-
-// Stylizacja dla TextCard - dla tekstu
-export const TextCardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: ${({ theme }) => theme.colors.bgLimoges};
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
-  transition: transform 0.3s ease-in-out;
-  
-  h3 {
-    font-size: 1.6rem;
-    color: ${({ theme }) => theme.colors.textWhite};
-  }
-
-  p {
-    color: ${({ theme }) => theme.colors.textWhite};
-    font-size: 1.2rem;
-  }
-`;
-
-
-

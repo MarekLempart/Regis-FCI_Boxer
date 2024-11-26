@@ -7,7 +7,7 @@ export const PositionImageContainer = styled.div `
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 20px 10px 20px;
+    padding: 10px 0px 10px;
 `;
 
 // Kontener wokół obrazu
@@ -19,11 +19,11 @@ export const ImageCardContainer = styled.div`
   width: 780px;
   height: 520px;
   overflow: hidden;
-  margin: 10px auto; 
+  margin: 0px auto; 
   border-radius: 10px;
   background: #000;
-  box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.5);
+  /* transition: transform 0.3s ease-in-out; */
 `;
 
 // Obraz z animowanym cieniem

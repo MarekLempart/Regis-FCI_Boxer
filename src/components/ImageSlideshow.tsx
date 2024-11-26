@@ -1,7 +1,7 @@
 // src/components/ImageSlideshow.tsx
 
 import { useState, useEffect } from "react";
-import { PositionImageContainer, SlideshowPositionContainer, StyledImage } from "../styles/ImageSlideshow";
+import { PositionImageContainer, SlideshowPositionContainer, StyledImage } from "../styles/ImageSlideshowStyles";
 
 interface ImageItem {
   id: string;
