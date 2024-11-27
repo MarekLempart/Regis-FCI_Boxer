@@ -8,6 +8,9 @@ export const PositionImageContainer = styled.div `
     flex-direction: column;
     text-align: center;
     padding: 10px 0px 10px;
+    width: 100%; /* Domyślnie 100% szerokości ekranu */
+    max-width: 1400px; /* Maksymalna szerokość */
+    aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 `;
 
 // Styled-component dla kontenera pokazu slajdów
@@ -19,9 +22,9 @@ export const SlideshowPositionContainer = styled.div`
     /* width: 780px;
     height: 520px; */
 
-    width: 100%; /* Domyślnie 100% szerokości ekranu */
-    max-width: 740px; /* Maksymalna szerokość */
-    aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
+    /* width: 100%;
+    max-width: 900px;
+    aspect-ratio: 3 / 2; */
 
     overflow: hidden;
     margin: 0px auto;

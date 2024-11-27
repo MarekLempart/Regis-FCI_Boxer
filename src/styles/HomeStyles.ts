@@ -30,7 +30,7 @@ export const ItemsContainerNoirOrder = styled.div`
   margin: 0px auto;
   gap: 20px;
 
-  @media ${({ theme }) => theme.media.tablet} {
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,29 +38,13 @@ export const ItemsContainerNoirOrder = styled.div`
     gap: 50px;
   }
 `;
+
+// Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
 export const ItemsContainerReverseOrder = styled(ItemsContainerNoirOrder)`
-  @media ${({ theme }) => theme.media.tablet} {
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: row-reverse; /* Odwrócona kolejność */
   }
 `;
-
-// // Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
-// export const ItemsContainerReverseOrder = styled.div`  
-//   display: flex;  
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 0px auto;
-//   gap: 20px;  
-
-//   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-//     display: flex;
-//     flex-direction: row-reverse;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 50px;
-//   }
-// `;
 
 // Kontener dla poszczególnych komponentów w układzie dwóch kolumn
 export const ItemContainer = styled.div`
@@ -71,11 +55,7 @@ export const ItemContainer = styled.div`
   padding: 0px;
   width: 100%; /* Zapewnia pełną szerokość w mobile */
 
-  @media ${({ theme }) => theme.media.tablet} {
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
     width: 50%; /* Na tabletach i desktopach, komponenty będą zajmować 50% szerokości (dla dwóch kolumn) */
-  }
-
-  @media ${({ theme }) => theme.media.desktop} {
-    width: 50%; /* Na desktopie ta sama szerokość jak na tablecie */
   }
 `;
