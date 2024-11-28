@@ -1,22 +1,23 @@
 // src/components/Footer.tsx
 
+import { FooterContainer, LogoContainer, Logo, FooterText, FooterTitle } from '../styles/FooterStyles'
 import reactLogo from '../assets/react.svg';
 import viteLogo from '/vite.svg';
 
 const Footer = () => {
     return (
-        <>
-            <p>&copy; 2024 Template Vite - React/TS</p>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                <img src={viteLogo} className="logo" alt="Vite logo" />
+        <FooterContainer>
+            <FooterText>&copy; 2024 Template Vite - React/TS</FooterText>
+            <LogoContainer>
+                <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
+                    <Logo src={viteLogo} alt="Vite logo" />
                 </a>
-                <a href="https://react.dev" target="_blank">
-                <img src={reactLogo} className="logo react" alt="React logo" />
+                <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
+                    <Logo src={reactLogo} className="react" alt="React logo" />
                 </a>
-            </div>
-            <h4>Vite + React</h4>
-        </>
+            </LogoContainer>
+            <FooterTitle>Vite + React</FooterTitle>
+        </FooterContainer>
     );
 }
 

@@ -1,6 +1,6 @@
 //src/app.tsx
-import { Routes, Route } from 'react-router-dom'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+// import './App.css';
 
 // Importuj strony oraz SharedLayout
 import Home from './pages/Home';
