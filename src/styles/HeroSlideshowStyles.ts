@@ -39,7 +39,10 @@ export const HeroText = styled(motion.h3)`
     position: absolute;
     font-family: "Caveat", cursive;
     font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
     color: ${({ theme }) => theme.colors.bgDarkRift};
+    padding: 5px 25px;
+    border-radius: 5px;
     text-align: center;
     line-height: 1.5;
 
