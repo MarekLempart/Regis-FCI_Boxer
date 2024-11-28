@@ -38,23 +38,29 @@ export const StyledImage = styled(motion.img)`
 export const HeroText = styled(motion.h3)`
     position: absolute;
     font-family: "Caveat", cursive;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.bgDarkRift};
     text-align: center;
     line-height: 1.5;
 
     /* Pozycjonowanie dla mobile */
-    bottom: 20px;
+    top: 80%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 
     /* Pozycjonowanie dla tablet i desktop */
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        bottom: 20px;
-        right: 20px;
+        font-size: 2.0rem;
+        top:unset;
+        bottom: 10px;
         left: unset;
-        transform: none;
+        right: 20px;
+        transform: none;        
         text-align: right;
+    }
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+        font-size: 3.5rem; /* Desktop: największa czcionka */
     }
 `;
