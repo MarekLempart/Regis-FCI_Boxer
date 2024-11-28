@@ -91,7 +91,7 @@ Error generating stack: `+o.message+`
   .page-container {
     width: 100%; /* Pełna szerokość kontenera */
     max-width: ${({theme:e})=>e.breakpoints.desktop}; /* Maksymalna szerokość 1680px */
-    padding: 0 20px; /* Odstępy wewnętrzne */
+    padding: 0px 0px; /* Odstępy wewnętrzne */
   }
 
   a {
