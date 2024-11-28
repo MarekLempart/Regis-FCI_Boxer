@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
   .page-container {
     width: 100%; /* Pełna szerokość kontenera */
     max-width: ${({ theme }) => theme.breakpoints.desktop}; /* Maksymalna szerokość 1680px */
-    padding: 0px 0px; /* Odstępy wewnętrzne */
+    padding: 0px 5px; /* Odstępy wewnętrzne */
   }
 
   a {
