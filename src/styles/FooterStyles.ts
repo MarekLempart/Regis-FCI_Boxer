@@ -3,43 +3,44 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   text-align: center;
-  padding: 2em;
+  padding: 2rem;
   background-color: ${({ theme }) => theme.colors.bgCrowBlack};
   color: ${({ theme }) => theme.colors.textWhite};
 `;
 
 export const LogoContainer = styled.div`
-  margin-top: 1em;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 1em;
+  gap: 1rem;
 `;
 
 export const Logo = styled.img`
-  height: 3em;
-  padding: 0.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 3rem;
+  padding: 0.5rem;
+  will-change: filter, transform;
+  transition: filter 300ms, transform 300ms;
 
   &:hover {
-    filter: drop-shadow(0 0 2em ${({ theme }) => theme.colors.textBrightBrown});
+    filter: drop-shadow(0 0 2rem ${({ theme }) => theme.colors.textBrightBrown});
+    transform: scale(1.1);
   }
 
   &.react:hover {
-    filter: drop-shadow(0 0 2em ${({ theme }) => theme.colors.textOrange});
+    filter: drop-shadow(0 0 2rem ${({ theme }) => theme.colors.textOrange});
+    transform: scale(1.1);
   }
 `;
 
 export const FooterText = styled.p`
-  margin: 1em auto 0em;
-  font-size: 0.75em;
+  margin: 1rem auto 0rem;
+  font-size: 0.75rem;
   text-align: center;
-  color: ${({ theme }) => theme.colors.textWhite};
-  margin-top: 0.5em;
+  color: ${({ theme }) => theme.colors.textWhite};  
 `;
 
 export const FooterTitle = styled.h4`
   font-family: 'Oswald', sans-serif;
-  margin: 0em auto 1em;
+  margin: 0rem auto 1rem;
   color: ${({ theme }) => theme.colors.textWhite};
 `;

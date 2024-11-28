@@ -14,6 +14,7 @@ export const theme = {
       bgLimoges: '#213e69',    
       bgEliteBlue: '#1c314f',      
       bgCrowBlack: '#263348',
+      bgDarkRift: '#070a13',
       bgOrange: '#c87533',
       bgBrightBrown: '#a14d26',
     },
