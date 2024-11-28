@@ -10,7 +10,8 @@ import SharedLayout from './components/SharedLayout';
 
 function App() {
   return (
-    <Routes>
+    <div className='page-container'>
+      <Routes>
       {/* Ścieżka z układem SharedLayout */}
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} /> {/* Domyślna strona */}
@@ -18,6 +19,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>  
+    </div>    
   );
 }
 

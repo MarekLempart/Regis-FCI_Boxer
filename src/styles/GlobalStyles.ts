@@ -20,6 +20,17 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  #root {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie poziome */
+  }
+
+  .page-container {
+    width: 100%; /* Pełna szerokość kontenera */
+    max-width: ${({ theme }) => theme.breakpoints.desktop}; /* Maksymalna szerokość 1680px */
+    padding: 0 20px; /* Odstępy wewnętrzne */
+  }
+
   a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -34,15 +45,16 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Oswald', sans-serif;
     text-align: center;
   }
+  
+  h3, h4, h5, h6 {
+    font-family: 'Caveat', cursive;
+  }
 
   p {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
   }
 
-  h3, h4, h5, h6 {
-    font-family: 'Caveat', cursive;
-  }
 `;
 
 export default GlobalStyles;
