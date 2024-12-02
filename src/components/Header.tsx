@@ -16,29 +16,39 @@ import {
   Overlay,
 } from '../styles/HeaderStyles';
 
-const Header: React.FC = () => {
-  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+// Definicja typów propsów
+interface HeaderProps {
+  isMenuOpen: boolean;
+  toggleMenu: () => void;
+}
 
-  const closeModalOnOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === e.currentTarget) {
-      setMobileNavOpen(false);
-    }
-  };
+const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
+  const [isHeaderVisible, setHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setMobileNavOpen(false);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setHeaderVisible(false); // Ukryj header przy przewijaniu w dół
+      } else {
+        setHeaderVisible(true); // Pokaż header przy przewijaniu w górę
       }
+
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper
+      className={`${isHeaderVisible ? 'visible' : 'hidden'} ${
+        isMenuOpen ? 'menu-open' : ''
+        }`}>
         <Logo><MdPets /> Logo <FaDog /></Logo>        
         <Nav>
           <StyledNavLink as={NavLink} to="/">
@@ -60,25 +70,25 @@ const Header: React.FC = () => {
             </a>
           </SocialMediaWrapper>
         </Nav>
-        <MobileMenuIcon onClick={() => setMobileNavOpen(true)}>
+        <MobileMenuIcon onClick={toggleMenu}>
           <FaBars />
         </MobileMenuIcon>
       </HeaderWrapper>
 
       {/* Overlay and Mobile Menu */}
-      {isMobileNavOpen && (
-        <Overlay onClick={closeModalOnOutsideClick}>
+      {isMenuOpen && (
+        <Overlay onClick={toggleMenu}>
           <MobileNav>
-            <button onClick={() => setMobileNavOpen(false)}>
+            <button onClick={toggleMenu}>
               <FaTimes />
             </button>
-            <MobileNavLink as={NavLink} to="/" onClick={() => setMobileNavOpen(false)}>
+            <MobileNavLink as={NavLink} to="/" onClick={toggleMenu}>
               Home
             </MobileNavLink>
-            <MobileNavLink as={NavLink} to="/about" onClick={() => setMobileNavOpen(false)}>
+            <MobileNavLink as={NavLink} to="/about" onClick={toggleMenu}>
               About
             </MobileNavLink>
-            <MobileNavLink as={NavLink} to="/contact" onClick={() => setMobileNavOpen(false)}>
+            <MobileNavLink as={NavLink} to="/contact" onClick={toggleMenu}>
               Contact
             </MobileNavLink>
             {/* Social Media Icons in Mobile Menu */}

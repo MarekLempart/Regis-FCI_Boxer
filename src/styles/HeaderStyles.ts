@@ -10,6 +10,32 @@ export const HeaderWrapper = styled.header`
   height: 70px;
   background-color: ${({ theme }) => theme.colors.bgCrowBlack};
   border-bottom: 1px solid transparent;
+
+  position: fixed; /* Utrzymujemy header na górze */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+   /* Dodajemy ograniczenie szerokości */
+   max-width: ${({ theme }) => theme.breakpoints.desktop};
+  margin: 0 auto; /* Wyśrodkowanie */
+  width: 100%; /* Pełna szerokość w granicach max-width */
+
+  /* Animacje */
+  transform: translateY(0); /* Domyślnie widoczny */
+  transition: transform 0.3s ease-in-out; /* Płynne przesuwanie */
+
+  &.hidden {
+    transform: translateY(-100%); /* Ukryty poza widokiem */
+  }
+
+  &.visible {
+    transform: translateY(0); /* Widoczny na ekranie */
+  }
+  &.menu-open {
+    display: none; /* Ukryj header, gdy menu jest otwarte */
+  }
 `;
 
 export const Logo = styled.div`

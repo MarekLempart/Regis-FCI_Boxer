@@ -18,6 +18,7 @@ export const theme = {
       bgOrange: '#c87533',
       bgBrightBrown: '#a14d26',
     },
+    headerHeight: '70px', // Dodajemy wysokość headera
     breakpoints: {
       mobile: '768px',
       tablet: '1200px',

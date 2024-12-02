@@ -12,9 +12,8 @@ import { Container, ItemContainer, ItemsContainerNoirOrder, ItemsContainerRevers
 const Home = () => {
     return (
       <Container>
-        <h2>Welcome to the Home Page!</h2>
         <HeroSlideshow />
-
+        
         <ItemsContainerNoirOrder>
           <ItemContainer>
             <TextCard text={textData.section1} />          
