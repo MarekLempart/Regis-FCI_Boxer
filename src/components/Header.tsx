@@ -1,6 +1,6 @@
 // src/components/Header.tsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog } from 'react-icons/fa';
 import { MdPets } from 'react-icons/md';
@@ -25,6 +25,11 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const [isHeaderVisible, setHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768); // 768px to próg dla tabletów i mniejszych ekranów
+
+  // Refs dla overlay i menu
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,33 +44,88 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       setLastScrollY(currentScrollY);
     };
 
+    const handleResize = () => {
+      const isNowMobile = window.innerWidth <= 768; // Sprawdzamy, czy ekran jest nadal mobilny
+      setIsMobile(isNowMobile);
+
+      // Jeśli przechodzimy z trybu mobilnego do desktopowego, zamykamy menu
+      if (!isNowMobile && isMenuOpen) {
+        toggleMenu(); // Zamykamy menu, gdy ekran staje się większy
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+    window.addEventListener('resize', handleResize); // Nasłuchuj zmiany rozmiaru okna
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize); // Usuwamy nasłuchiwanie podczas czyszczenia
+    };
+  }, [lastScrollY, isMenuOpen, toggleMenu]); // Zależności w useEffect uwzględniają zmiany w menu i rozmiarze okna
+
+  const handleMenuClick = (event: React.MouseEvent) => {
+    if (isMobile) {
+      toggleMenu();  // Tylko na urządzeniach mobilnych zamykamy menu
+    }
+    event.stopPropagation(); // Zatrzymuje propagację eventu, aby nie zamknąć menu podczas kliknięcia w sam link
+  };
+
+  // Funkcja do obsługi kliknięcia w przycisku zamykania
+  const handleCloseClick = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Zatrzymanie propagacji, aby kliknięcie w przycisk nie zamknęło menu
+    toggleMenu();  // Zamykanie menu przy kliknięciu w przycisk
+  };
+
+  // Funkcja do obsługi kliknięcia w overlay (tło), które zamyka menu
+  const handleOverlayClick = (event: React.MouseEvent) => {
+    // Jeśli klikniesz w tło (overlay), zamykamy menu
+    if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
+      toggleMenu(); // Zamykamy menu
+    }
+    event.stopPropagation(); // Zatrzymanie propagacji, żeby kliknięcie w tło zamknęło menu
+  };
+
+  // Funkcja do obsługi kliknięcia w ikony social media
+  const handleSocialMediaClick = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Zatrzymujemy propagację eventu, żeby nie zamknąć menu
+    // Zamykanie menu po kliknięciu w ikony
+    toggleMenu();
+  };
 
   return (
     <>
       <HeaderWrapper
-      className={`${isHeaderVisible ? 'visible' : 'hidden'} ${
-        isMenuOpen ? 'menu-open' : ''
-        }`}>
-        <Logo><MdPets /> Logo <FaDog /></Logo>        
+        className={`${isHeaderVisible ? 'visible' : 'hidden'} ${
+          isMenuOpen ? 'menu-open' : ''
+        }`}
+      >
+        <Logo><MdPets /> Logo <FaDog /></Logo>
         <Nav>
-          <StyledNavLink as={NavLink} to="/">
+          <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
             Home
           </StyledNavLink>
-          <StyledNavLink as={NavLink} to="/about">
+          <StyledNavLink as={NavLink} to="/about" onClick={handleMenuClick}>
             About
           </StyledNavLink>
-          <StyledNavLink as={NavLink} to="/contact">
+          <StyledNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
             Contact
           </StyledNavLink>
           {/* Social Media Icons on Desktop */}
           <SocialMediaWrapper>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleSocialMediaClick} // Obsługuje kliknięcie na ikony
+            >
               <FaInstagram />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleSocialMediaClick} // Obsługuje kliknięcie na ikony
+            >
               <FaFacebook />
             </a>
           </SocialMediaWrapper>
@@ -77,26 +137,39 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
       {/* Overlay and Mobile Menu */}
       {isMenuOpen && (
-        <Overlay onClick={toggleMenu}>
-          <MobileNav>
-            <button onClick={toggleMenu}>
+        <Overlay
+          ref={overlayRef} // Referencja do tła
+          onClick={handleOverlayClick} // Kliknięcie w tło zamyka menu
+        >
+          <MobileNav ref={menuRef}>
+            <button onClick={handleCloseClick}> {/* Obsługuje zamknięcie przycisku */}
               <FaTimes />
             </button>
-            <MobileNavLink as={NavLink} to="/" onClick={toggleMenu}>
+            <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>
               Home
             </MobileNavLink>
-            <MobileNavLink as={NavLink} to="/about" onClick={toggleMenu}>
+            <MobileNavLink as={NavLink} to="/about" onClick={handleMenuClick}>
               About
             </MobileNavLink>
-            <MobileNavLink as={NavLink} to="/contact" onClick={toggleMenu}>
+            <MobileNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
               Contact
             </MobileNavLink>
             {/* Social Media Icons in Mobile Menu */}
             <SocialMediaWrapper>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleSocialMediaClick} // Obsługuje kliknięcie na ikony
+              >
                 <FaInstagram />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleSocialMediaClick} // Obsługuje kliknięcie na ikony
+              >
                 <FaFacebook />
               </a>
             </SocialMediaWrapper>
