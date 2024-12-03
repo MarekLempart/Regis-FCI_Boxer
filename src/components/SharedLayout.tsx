@@ -14,7 +14,7 @@ const SharedLayout: React.FC = () => {
     <>
       <Header isMenuOpen={isMobileMenuOpen} toggleMenu={toggleMobileMenu} />
       <MainWrapper>
-        <Outlet /> {/* Miejsce na zmienianą zawartość strony */}
+        <Outlet />
       </MainWrapper>
       <Footer />
     </>

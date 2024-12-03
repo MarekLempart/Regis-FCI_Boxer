@@ -1,7 +1,8 @@
 // src/components/Header.tsx
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useTheme } from 'styled-components';
 import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog } from 'react-icons/fa';
 import { MdPets } from 'react-icons/md';
 import {
@@ -23,9 +24,12 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
+  const theme = useTheme();
+  const breakpointMobile = useMemo(() => parseInt(theme.breakpoints.mobile), [theme.breakpoints.mobile]);
+  
   const [isHeaderVisible, setHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768); // 768px to próg dla tabletów i mniejszych ekranów
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= breakpointMobile); // przerwanie dla mniejszych ekranów
 
   // Refs dla overlay i menu
   const overlayRef = useRef<HTMLDivElement | null>(null);
@@ -45,7 +49,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     };
 
     const handleResize = () => {
-      const isNowMobile = window.innerWidth <= 768; // Sprawdzamy, czy ekran jest nadal mobilny
+      const isNowMobile = window.innerWidth <= breakpointMobile; // Sprawdzamy, czy ekran jest nadal mobilny
       setIsMobile(isNowMobile);
 
       // Jeśli przechodzimy z trybu mobilnego do desktopowego, zamykamy menu
@@ -61,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize); // Usuwamy nasłuchiwanie podczas czyszczenia
     };
-  }, [lastScrollY, isMenuOpen, toggleMenu]); // Zależności w useEffect uwzględniają zmiany w menu i rozmiarze okna
+  }, [lastScrollY, isMenuOpen, toggleMenu, breakpointMobile]); // Zależności w useEffect uwzględniają zmiany w menu i rozmiarze okna
 
   const handleMenuClick = (event: React.MouseEvent) => {
     if (isMobile) {
@@ -99,7 +103,9 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
           isMenuOpen ? 'menu-open' : ''
         }`}
       >
-        <Logo><MdPets /> Logo <FaDog /></Logo>
+        <Logo>
+          <MdPets /> Logo <FaDog />
+        </Logo>
         <Nav>
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
             Home
