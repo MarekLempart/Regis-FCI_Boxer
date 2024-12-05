@@ -1,5 +1,5 @@
-import person1 from "../img/Person01_Marta.webp";
-import person2 from "../img/Person02_Marek.webp";
+import person1 from "../img/Person01_Regis.webp";
+import person2 from "../img/Person02_Marta.webp";
 import person3 from "../img/Person03_Marek.webp";
 
 // Definicja typu dla kazdego elementu w tablicy obrazów
