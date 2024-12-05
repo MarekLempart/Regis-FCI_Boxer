@@ -19,6 +19,7 @@ export const ImageCardContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  
   /* width: 780px;
   height: 520px; */
 
