@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ImageCardContainer, StyledImageCard } from "../styles/ImageCardStyles";
-import { TextCardContainer, StyledText } from "../styles/TextCardStyles";
+import { TextContainer, StyledText } from "../styles/PersonTextStyles";
 import { PersonCardContainer, TextWrapper, ImageWrapper } from "../styles/ContactStyles";
 
 interface PersonCardProps {
@@ -19,14 +19,14 @@ const PersonCard: React.FC<PersonCardProps> = ({ image, text, reverse = false })
       </ImageCardContainer>
     </ImageWrapper>
     <TextWrapper>
-      <TextCardContainer>
+      <TextContainer>
         <StyledText>
           <p>{text.description}</p>
           <blockquote>
             <em>{text.quote}</em>
           </blockquote>
         </StyledText>
-      </TextCardContainer>
+      </TextContainer>
     </TextWrapper>
   </PersonCardContainer>
 );
