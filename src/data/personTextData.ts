@@ -13,8 +13,8 @@ const personTextData = [
     },
     {
       id: "person3",
-      description: "Mike Johnson specializes in portrait photography, showcasing raw emotions.",
-      quote: '"The eyes are the window to the soul."',
+      description: "Natomiast zaprojektował i wykonał tę stronę mój Pan - Marek Lempart - FullStact Developer, urbanista, planista i mój przewodnik.",
+      quote: '"Od zawsze fascynowała mnie komputeryzacja, cyfrowa fotografia oraz proces digitalizacji. Z czasem odkryłem nową pasję – tworzenie aplikacji webowych, zarówno od strony front-endu, jak i back-endu. Obecnie zajmuję się projektowaniem i wdrażaniem nowoczesnych stron internetowych oraz aplikacji webowych. W pracy z front-endem korzystam z języków JavaScript i TypeScript oraz biblioteki React, natomiast na zapleczu wykorzystuję Node.js i Express.js. Każdy projekt traktuję jako wyzwanie, które pozwala mi rozwijać swoje umiejętności i tworzyć funkcjonalne, estetyczne rozwiązania dostosowane do potrzeb użytkowników."',
     },
   ];
   
