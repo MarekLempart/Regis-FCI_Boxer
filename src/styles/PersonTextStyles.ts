@@ -34,19 +34,12 @@ export const StyledText = styled.div`
     justify-content: center;
     text-align: start;
     gap: 50px;
+    padding: 30px;
     line-height: 1.5;
     color: ${({ theme }) => theme.colors.textWhite};
 
-    width: 90%; /* Dopasowanie do szerokości kontenera */
+    width: 100%; /* Dopasowanie do szerokości kontenera */
     max-width: 100%; /* Bez przepełnienia */
     height: 90%;
     overflow: hidden;
-
-    /* Dodano centrowanie w pionie */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* Zapewnia odstępy w obrębie tekstu */
-    padding: 10px;
 `;
