@@ -11,7 +11,11 @@ export const PersonCardContainer = styled.div<{ reverse: boolean }>`
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+  }
+
+  @media ${({ theme }) => theme.media.desktop} {
+    gap: 40px;
   }
 `;
 

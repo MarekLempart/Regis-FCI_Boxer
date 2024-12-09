@@ -3,8 +3,8 @@
 const personTextData = [
     {
       id: "person1",
-      description: "Mike Johnson specializes in portrait photography, showcasing raw emotions.",
-      quote: '"The Earth has music for those who listen."',
+      description: "Strona przedstawia psa rasy bokser, który nazywa się Regis czyli Remones Z Gangu Nieustaraszonych, pogodnego i wysportowanego, pięcio letniego Championa Polski FCI.",
+      quote: '"Jestem psem kochającym zabawę, treningi i długie wycieczki po lasach i górach. Jestem trochę niesformy, mam swoje zdanie, ale za to umiem stanąć w obronie mojego stada. Chcesz należeć do tego stada, to skontatuj się przez formularz na dole tej zakładki."',
     },
     {
       id: "person2",
@@ -13,8 +13,8 @@ const personTextData = [
     },
     {
       id: "person3",
-      description: "Natomiast zaprojektował i wykonał tę stronę mój Pan - Marek Lempart - FullStact Developer, urbanista, planista i mój przewodnik.",
-      quote: '"Od zawsze fascynowała mnie komputeryzacja, cyfrowa fotografia oraz proces digitalizacji. Z czasem odkryłem nową pasję – tworzenie aplikacji webowych, zarówno od strony front-endu, jak i back-endu. Obecnie zajmuję się projektowaniem i wdrażaniem nowoczesnych stron internetowych oraz aplikacji webowych. W pracy z front-endem korzystam z języków JavaScript i TypeScript oraz biblioteki React, natomiast na zapleczu wykorzystuję Node.js i Express.js. Każdy projekt traktuję jako wyzwanie, które pozwala mi rozwijać swoje umiejętności i tworzyć funkcjonalne, estetyczne rozwiązania dostosowane do potrzeb użytkowników."',
+      description: "Natomiast stronę zaprojektował i wykonał Marek Lempart - FullStact Developer, urbanista i mój przewodnik.",
+      quote: '"Od zawsze fascynowała mnie komputeryzacja i cyfrowa fotografia. Z czasem odkryłem nową pasję – tworzenie aplikacji webowych, zarówno od strony front-endu, jak i back-endu. Obecnie zajmuję się projektowaniem i wdrażaniem nowoczesnych aplikacji webowych. W pracy z front-endem korzystam z języków JavaScript i TypeScript oraz biblioteki React, natomiast na zapleczu wykorzystuję Node.js. Każdy projekt traktuję jako wyzwanie, które pozwala mi rozwijać swoje umiejętności i tworzyć funkcjonalne, estetyczne rozwiązania dostosowane do potrzeb użytkowników."',
     },
   ];
   
