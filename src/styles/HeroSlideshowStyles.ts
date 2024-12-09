@@ -35,32 +35,56 @@ export const StyledImage = styled(motion.img)`
     border-radius: 10px;
 `;
 
-export const HeroText = styled(motion.h3)`
+export const TextOverlay = styled.div`
     position: absolute;
+    bottom: 0;
+    width: 100%; /* Cała szerokość obrazu */
+    background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczysty pasek */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+// export const HeroText = styled(motion.h3)`
+//     position: absolute;
+//     font-family: "Caveat", cursive;
+//     font-size: 1.2rem;
+//     background-color: rgba(0, 0, 0, 0.6);
+//     color: ${({ theme }) => theme.colors.textWhite};
+//     padding: 5px 25px;
+//     border-radius: 5px;
+//     text-align: center;
+//     line-height: 1.5;
+//     top: 80%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: center;
+
+//     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+//         font-size: 2.0rem;
+//         top:unset;
+//         bottom: 10px;
+//         left: unset;
+//         right: 20px;
+//         transform: none;        
+//         text-align: right;
+//     }
+
+//     @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+//         font-size: 3.5rem; /* Desktop: największa czcionka */
+//     }
+// `;
+
+export const HeroText = styled(motion.h3)`
     font-family: "Caveat", cursive;
     font-size: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: ${({ theme }) => theme.colors.bgDarkRift};
-    padding: 5px 25px;
-    border-radius: 5px;
+    color: ${({ theme }) => theme.colors.textWhite};
     text-align: center;
     line-height: 1.5;
 
-    /* Pozycjonowanie dla mobile */
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    /* Pozycjonowanie dla tablet i desktop */
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        font-size: 2.0rem;
-        top:unset;
-        bottom: 10px;
-        left: unset;
-        right: 20px;
-        transform: none;        
-        text-align: right;
+        font-size: 2.0rem; /* Tablet: większa czcionka */
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {

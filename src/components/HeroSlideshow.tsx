@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import imageRegisHero from "../data/imageDataHero";
-import { SlideshowContainer, StyledImage, HeroText } from "../styles/HeroSlideshowStyles";
+import { SlideshowContainer, StyledImage, TextOverlay, HeroText } from "../styles/HeroSlideshowStyles";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSlideshow = () => {
@@ -59,11 +59,12 @@ const HeroSlideshow = () => {
                 transition={{ duration: 1 }}
                 onAnimationComplete={isAnimating ? handleAnimationComplete : undefined}
             />
-            <HeroText
+            <TextOverlay>
+                <HeroText
                 initial={{ opacity: 0, y: 20 }} // Startuje poniżej z zerową widocznością
                 animate={{ opacity: 1, y: 0 }} // Pojawia się z przesunięciem
                 transition={{ duration: 1, delay: 0.5 }} // Płynna animacja z opóźnieniem
-            >
+                >
                 <TypeAnimation
                     sequence={[
                         "Nazywam się Ramones z Gangu Nieustraszonych,",
@@ -76,7 +77,9 @@ const HeroSlideshow = () => {
                     wrapper="span"
                     repeat={0}
                 />
-            </HeroText>
+                </HeroText>
+            </TextOverlay>
+            
         </SlideshowContainer>
     );
 };

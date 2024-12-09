@@ -21,7 +21,7 @@ const SharedLayout: React.FC = () => {
   }, []);
 
   // Użycie niestandardowego wskaźnika spinnera
-  const antIcon = <LoadingOutlined style={{ fontSize: 48, color: theme.colors.textOrange }} spin />;
+  const antIcon = <LoadingOutlined style={{ fontSize: 96, color: theme.colors.textOrange }} spin />;
 
   return (
     <>
