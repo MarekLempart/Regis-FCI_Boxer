@@ -3,7 +3,7 @@
 const personTextData = [
     {
       id: "person1",
-      description: "Strona przedstawia psa rasy bokser, który nazywa się Regis czyli Remones Z Gangu Nieustaraszonych, pogodnego i wysportowanego, pięcio letniego Championa Polski FCI.",
+      description: "Strona przedstawia psa rasy bokser, który nazywa się Regis czyli Remones Z Gangu Nieustaraszonych, pogodnego i wysportowanego, pięcioletniego Championa Polski FCI.",
       quote: '"Jestem psem kochającym zabawę, treningi i długie wycieczki po lasach i górach. Jestem trochę niesformy, mam swoje zdanie, ale za to umiem stanąć w obronie mojego stada. Chcesz należeć do tego stada, to skontatuj się przez formularz na dole tej zakładki."',
     },
     {

@@ -46,6 +46,22 @@ export const TextOverlay = styled.div`
     align-items: center;
 `;
 
+export const HeroText = styled(motion.h3)`
+    font-family: "Caveat", cursive;
+    font-size: 28px;
+    color: ${({ theme }) => theme.colors.textWhite};
+    text-align: center;
+    line-height: 1.5;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+        font-size: 42px; /* Tablet: większa czcionka */
+    }
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+        font-size: 48px; /* Desktop: największa czcionka */
+    }
+`;
+
 // export const HeroText = styled(motion.h3)`
 //     position: absolute;
 //     font-family: "Caveat", cursive;
@@ -75,19 +91,3 @@ export const TextOverlay = styled.div`
 //         font-size: 3.5rem; /* Desktop: największa czcionka */
 //     }
 // `;
-
-export const HeroText = styled(motion.h3)`
-    font-family: "Caveat", cursive;
-    font-size: 1.2rem;
-    color: ${({ theme }) => theme.colors.textWhite};
-    text-align: center;
-    line-height: 1.5;
-
-    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        font-size: 2.0rem; /* Tablet: większa czcionka */
-    }
-
-    @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-        font-size: 3.5rem; /* Desktop: największa czcionka */
-    }
-`;
