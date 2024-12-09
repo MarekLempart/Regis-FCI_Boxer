@@ -8,6 +8,9 @@ export const MainWrapper = styled.div`
   min-height: 100vh; /* Zapewnia wypełnienie całej wysokości okna */
   display: flex;
   flex-direction: column; /* Ułożenie w kolumny (header -> main -> footer) */
+  align-items: center;
+  justify-content: center;
+  position: relative;
 `;
 
 export const Spinner = styled(Spin)`
