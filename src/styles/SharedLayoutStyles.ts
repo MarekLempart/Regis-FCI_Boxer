@@ -13,10 +13,9 @@ export const MainWrapper = styled.div`
   position: relative;
 `;
 
-export const Spinner = styled(Spin)`
+export const Spiner = styled(Spin)`
   position: absolute;
-  color: ${({ theme }) => theme.colors.bgWhite};
-  top: 25px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;

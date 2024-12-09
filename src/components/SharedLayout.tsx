@@ -1,13 +1,17 @@
 // src/components/SharedLayout.tsx
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useTheme } from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
-import { MainWrapper, Spinner } from '../styles/SharedLayoutStyles';
+import { MainWrapper, Spiner } from '../styles/SharedLayoutStyles';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const SharedLayout: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+
+  const theme = useTheme();
   
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
 
@@ -16,12 +20,15 @@ const SharedLayout: React.FC = () => {
     return () => clearTimeout(timer)
   }, []);
 
+  // Użycie niestandardowego wskaźnika spinnera
+  const antIcon = <LoadingOutlined style={{ fontSize: 48, color: theme.colors.textOrange }} spin />;
+
   return (
     <>
       <Header isMenuOpen={isMobileMenuOpen} toggleMenu={toggleMobileMenu} />
       <MainWrapper>
         {isLoading ? (
-          <Spinner size='large' tip='Loading...' />
+          <Spiner indicator={antIcon} tip='Loading...' />
         ) : (
           <Outlet />
         )}        
