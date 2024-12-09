@@ -715,6 +715,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   min-height: 100vh; /* Zapewnia wypełnienie całej wysokości okna */
   display: flex;
   flex-direction: column; /* Ułożenie w kolumny (header -> main -> footer) */
+  align-items: center;
+  justify-content: center;
+  position: relative;
 `,Fj=K(oC)`
   position: absolute;
   color: ${({theme:e})=>e.colors.bgWhite};
