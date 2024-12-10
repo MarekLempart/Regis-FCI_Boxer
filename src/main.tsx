@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <BrowserRouter basename="/Regis-FCI_Boxer">
+        <BrowserRouter >
           <App />
         </BrowserRouter>
       </ThemeProvider>        
