@@ -2,14 +2,14 @@
 
 import styled from "styled-components";
 
-export const PersonCardContainer = styled.div<{ reverse: boolean }>`
+export const PersonCardContainer = styled.div<{ $reverse: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin: 20px auto;
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
-    flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
+    flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
     align-items: center;
     gap: 20px;
   }

@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
             key={person.id}
             image={image}
             text={person}
-            reverse={index % 2 !== 0} // Odwracamy kolejność co drugi wiersz
+            $reverse={index % 2 !== 0} // Odwracamy kolejność co drugi wiersz
           />
         );
       })}

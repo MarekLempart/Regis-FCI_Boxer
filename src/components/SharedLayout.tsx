@@ -28,7 +28,7 @@ const SharedLayout: React.FC = () => {
       <Header isMenuOpen={isMobileMenuOpen} toggleMenu={toggleMobileMenu} />
       <MainWrapper>
         {isLoading ? (
-          <Spiner indicator={antIcon} tip='Loading...' />
+          <Spiner indicator={antIcon} />
         ) : (
           <Outlet />
         )}        

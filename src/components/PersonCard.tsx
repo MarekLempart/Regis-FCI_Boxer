@@ -8,11 +8,11 @@ import { PersonCardContainer, TextWrapper, ImageWrapper } from "../styles/Contac
 interface PersonCardProps {
   image: { id: string; src: string };
   text: { id: string; description: string; quote: string };
-  reverse?: boolean; // Określa kolejność
+  $reverse?: boolean; // Określa kolejność
 }
 
-const PersonCard: React.FC<PersonCardProps> = ({ image, text, reverse = false }) => (
-  <PersonCardContainer reverse={reverse}>
+const PersonCard: React.FC<PersonCardProps> = ({ image, text, $reverse = false }) => (
+  <PersonCardContainer $reverse={$reverse}>
     <ImageWrapper>
       <ImageCardContainer>
         <StyledImageCard src={image.src} alt={image.id} />
