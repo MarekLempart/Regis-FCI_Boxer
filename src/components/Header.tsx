@@ -114,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             Osiągnięcia
           </StyledNavLink>
           <StyledNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
-            Contact
+            Kontakt
           </StyledNavLink>
           {/* Social Media Icons on Desktop */}
           <SocialMediaWrapper>
@@ -158,7 +158,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
               Osiągnięcia
             </MobileNavLink>
             <MobileNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
-              Contact
+              Kontakt
             </MobileNavLink>
             {/* Social Media Icons in Mobile Menu */}
             <SocialMediaWrapper>
