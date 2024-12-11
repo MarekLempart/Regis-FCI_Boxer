@@ -550,7 +550,8 @@ Error generating stack: `+o.message+`
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   height: 100%;
   background-color: ${({theme:e})=>e.colors.bgDarkNavy};; /* bgDarkNavy */
   z-index: 999;
