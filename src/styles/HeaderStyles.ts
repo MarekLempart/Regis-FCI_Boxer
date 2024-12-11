@@ -121,7 +121,8 @@ export const MobileNav = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.bgDarkNavy};; /* bgDarkNavy */
   z-index: 999;
