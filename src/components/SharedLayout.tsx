@@ -1,11 +1,13 @@
 // src/components/SharedLayout.tsx
-import { Outlet } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { useTheme } from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
 import { MainWrapper, Spiner } from '../styles/SharedLayoutStyles';
 import { LoadingOutlined } from '@ant-design/icons';
+
+const LazyOutlet = lazy(() => import('react-router-dom').then(module => ({ default: module.Outlet })));
 
 const SharedLayout: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,7 +32,9 @@ const SharedLayout: React.FC = () => {
         {isLoading ? (
           <Spiner indicator={antIcon} />
         ) : (
-          <Outlet />
+          <Suspense fallback={<Spiner indicator={antIcon} />}>
+            <LazyOutlet />
+          </Suspense>          
         )}        
       </MainWrapper>
       <Footer />

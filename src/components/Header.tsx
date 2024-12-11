@@ -110,8 +110,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
             Home
           </StyledNavLink>
-          <StyledNavLink as={NavLink} to="/about" onClick={handleMenuClick}>
-            About
+          <StyledNavLink as={NavLink} to="/achievements" onClick={handleMenuClick}>
+            Achievements
           </StyledNavLink>
           <StyledNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
             Contact
@@ -154,8 +154,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>
               Home
             </MobileNavLink>
-            <MobileNavLink as={NavLink} to="/about" onClick={handleMenuClick}>
-              About
+            <MobileNavLink as={NavLink} to="/achievements" onClick={handleMenuClick}>
+              Achievements
             </MobileNavLink>
             <MobileNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
               Contact
