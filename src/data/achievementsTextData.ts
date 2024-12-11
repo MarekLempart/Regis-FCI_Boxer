@@ -3,7 +3,7 @@
 const achievementsTextData = [
     {
       id: "achievements1",
-      description: "Rodowód: RAMONES Z Gangu Nieustraszonych (FCI) - HD-A, HZ-0, SP-0; CH-PL.",
+      description: "Rodowód: RAMONES Z Gangu Nieustraszonych (FCI) - HD-A, HZ-0, SP-0; CH-PL; Pies Reproduktor od 19 listopada 2021r.",
       quote: '"Moim ojcem jest Samain Da Toleria Champion Czech pochodzący z renomowanej hodowli Optima Grata. Samain zdobył tytuły na wystawach FCI, w tym uzyskał oceny CAC i Res CAC w Czechach. Był również oceniany jako pies o doskonałym typie i ruchu. Dodatkowo, jego linia hodowlana wyróżnia się zdrowymi stawami i pozytywnymi wynikami testów ZTP. Natomiast moja matka to Toya z Gangu Nieustraszonych. Moja matka jest z linii hodowlanej cenionej za wysokiej klasy boksery. Zgobywała liczbe tytuły, w tym Młodzieżowego Championa Polski, Championa Polski. Teraz wygrywa wystawy w klasie weteranów."',
     },
     {
