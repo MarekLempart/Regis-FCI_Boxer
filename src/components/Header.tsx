@@ -3,8 +3,8 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from 'styled-components';
-import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog, FaHome } from 'react-icons/fa';
-import { MdPets } from 'react-icons/md';
+import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog, FaHome, FaAward } from 'react-icons/fa';
+import { MdPets, MdContactPhone } from 'react-icons/md';
 import {
   HeaderWrapper,
   Logo,
@@ -108,13 +108,13 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
         </Logo>
         <Nav>
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
-          <FaHome /> Home
+            <FaHome /> Home
           </StyledNavLink>
           <StyledNavLink as={NavLink} to="/achievements" onClick={handleMenuClick}>
-            Osiągnięcia
+            <FaAward /> Osiągnięcia
           </StyledNavLink>
           <StyledNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
-            Kontakt
+            <MdContactPhone /> Kontakt
           </StyledNavLink>
           {/* Social Media Icons on Desktop */}
           <SocialMediaWrapper>
@@ -152,13 +152,13 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
               <FaTimes />
             </button>
             <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>
-            <FaHome /> Home
+              <FaHome /> Home
             </MobileNavLink>
             <MobileNavLink as={NavLink} to="/achievements" onClick={handleMenuClick}>
-              Osiągnięcia
+              <FaAward /> Osiągnięcia
             </MobileNavLink>
             <MobileNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
-              Kontakt
+              <MdContactPhone /> Kontakt
             </MobileNavLink>
             {/* Social Media Icons in Mobile Menu */}
             <SocialMediaWrapper>
