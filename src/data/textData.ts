@@ -1,10 +1,10 @@
 // src/data/textData.ts
 
 const textData = {
-    section1: ["Welcome to our gallery!", "Explore the beauty of nature."],
-    section2: ["Photography is an art.", "Feel the emotions behind every shot."],
-    section3: ["Each photo tells a story.", "What's your favorite?"],
-    section4: ["Each photo tells a story."],
+    section1: ["Jestem dużym i postawnym psem ..."],
+    section2: ["ale nie umiem ustać w miejscu, bo wszystko dookoła mnie interesuje."],
+    section3: ["Mam silną i wysportowaną sylwetę ..."],
+    section4: ["bo ciągle gdzieś biegnę, biegnę i biegnę..."],
   };
   
   export default textData;

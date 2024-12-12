@@ -9,22 +9,21 @@ export const SlideshowContainer = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
-    height: 100%;
     overflow: hidden;
     border-radius: 10px;
     background: #000;
-    margin: 40px auto;
+    margin: 15px auto;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         height: 600px; /* Mobile wysokość */
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) and (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        height: 800px; /* Tablet wysokość */
+        height: 700px; /* Tablet wysokość */
     }
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) and (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
-        height: 1000px; /* Desktop wysokość */
+        height: 800px; /* Desktop wysokość */
     }
 `;
 
@@ -40,7 +39,7 @@ export const TextOverlay = styled.div`
     bottom: 0;
     width: 100%; /* Cała szerokość obrazu */
     background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczysty pasek */
-    padding: 10px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -5,7 +5,9 @@ import ImageSlideshow from "../components/ImageSlideshow";
 import ImageCard from "../components/ImageCard";
 import TextCard from "../components/TextCard";
 import imageRegisPosition from "../data/imageDateSection01";
-import imageRegis from "../data/imageData";
+import imageRegisCard from "../data/imageDataCard";
+import imageRegisRunBridge from "../data/imageDateRunBridge";
+// import imageRegis from "../data/imageData";
 import textData from "../data/textData";
 import { Container, ItemContainer, ItemsContainerNoirOrder, ItemsContainerReverseOrder } from "../styles/HomeStyles";
 
@@ -19,7 +21,7 @@ const Home = () => {
             <TextCard text={textData.section1} />          
           </ItemContainer>
           <ItemContainer>
-            <ImageCard image={imageRegisPosition[11]} />          
+            <ImageCard image={imageRegisPosition[0]} />          
           </ItemContainer>
         </ItemsContainerNoirOrder>
 
@@ -28,7 +30,7 @@ const Home = () => {
             <TextCard text={textData.section2} />
           </ItemContainer>
           <ItemContainer>
-            <ImageSlideshow images={imageRegis} />
+            <ImageSlideshow images={imageRegisPosition} />
           </ItemContainer>
         </ItemsContainerReverseOrder>
 
@@ -37,7 +39,7 @@ const Home = () => {
             <TextCard text={textData.section3} />
           </ItemContainer>
           <ItemContainer>
-            <ImageCard image={imageRegisPosition[7]} />
+            <ImageCard image={imageRegisCard[1]} />
           </ItemContainer>
         </ItemsContainerNoirOrder>
 
@@ -46,7 +48,7 @@ const Home = () => {
             <TextCard text={textData.section4} />
           </ItemContainer>
           <ItemContainer>
-            <ImageSlideshow images={imageRegisPosition} />
+            <ImageSlideshow images={imageRegisRunBridge} />
           </ItemContainer>
         </ItemsContainerReverseOrder>
       </Container>
