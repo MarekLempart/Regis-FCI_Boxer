@@ -2,7 +2,7 @@
 
 import imgRegis_Card_01 from "../img/RunNoTheBridge-1.webp";
 import imgRegis_Card_02 from "../img/Card-RegisOnTheBridge.webp";
-import imgRegis_Card_03 from "../img/RunNoTheBridge-3.webp";
+import imgRegis_Card_03 from "../img/Card-RegisOnATrunk.webp";
 import imgRegis_Card_04 from "../img/RunNoTheBridge-4.webp";
 import imgRegis_Card_05 from "../img/RunNoTheBridge-5.webp";
 import imgRegis_Card_06 from "../img/RunNoTheBridge-6.webp";

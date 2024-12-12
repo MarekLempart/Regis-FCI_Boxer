@@ -7,6 +7,7 @@ import TextCard from "../components/TextCard";
 import imageRegisPosition from "../data/imageDateSection01";
 import imageRegisCard from "../data/imageDataCard";
 import imageRegisRunBridge from "../data/imageDateRunBridge";
+import imageRegisOnATrunk from "../data/imageDataOnTrunk";
 // import imageRegis from "../data/imageData";
 import textData from "../data/textData";
 import { Container, ItemContainer, ItemsContainerNoirOrder, ItemsContainerReverseOrder } from "../styles/HomeStyles";
@@ -51,7 +52,25 @@ const Home = () => {
             <ImageSlideshow images={imageRegisRunBridge} />
           </ItemContainer>
         </ItemsContainerReverseOrder>
-      </Container>
+
+        <ItemsContainerNoirOrder>
+          <ItemContainer>
+            <TextCard text={textData.section5} />
+          </ItemContainer>
+          <ItemContainer>
+            <ImageCard image={imageRegisCard[2]} />
+          </ItemContainer>
+        </ItemsContainerNoirOrder>
+
+        <ItemsContainerReverseOrder>
+          <ItemContainer>
+            <TextCard text={textData.section6} />
+          </ItemContainer>
+          <ItemContainer>
+            <ImageSlideshow images={imageRegisOnATrunk} />
+          </ItemContainer>
+        </ItemsContainerReverseOrder>
+      </Container>      
     );
   };
 
