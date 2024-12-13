@@ -72,10 +72,12 @@ const HeroSlideshow = () => {
                         "ale wszyscy nazywają mnie Regis.",
                         1000,
                         "Jeśli chcesz mnie poznać, to oglądaj dalej...",
+                        3000,
                     ]}
                     speed={50}
                     wrapper="span"
-                    repeat={0}
+                    repeat={1}
+                    cursor={false}
                 />
                 </HeroText>
             </TextOverlay>

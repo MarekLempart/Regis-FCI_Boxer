@@ -28,8 +28,10 @@ export const TextCardContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%; /* Na tablet i desktop dwie kolumny */
+    background-color: transparent;
+    box-shadow: none;
   }
 `;
 

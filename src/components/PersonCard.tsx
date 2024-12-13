@@ -9,11 +9,12 @@ interface PersonCardProps {
   image: { id: string; src: string };
   text: { id: string; description: string; quote: string };
   $reverse?: boolean; // Określa kolejność
+  $smallImage?: boolean;
 }
 
-const PersonCard: React.FC<PersonCardProps> = ({ image, text, $reverse = false }) => (
+const PersonCard: React.FC<PersonCardProps> = ({ image, text, $reverse = false, $smallImage = false }) => (
   <PersonCardContainer $reverse={$reverse}>
-    <ImageWrapper>
+    <ImageWrapper $smallImage={$smallImage}>
       <ImageCardContainer>
         <StyledImageCard src={image.src} alt={image.id} />
       </ImageCardContainer>

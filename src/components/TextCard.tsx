@@ -33,6 +33,7 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
             speed={50} // Prędkość "pisania"
             wrapper="h3" // Nagłówek HTML
             repeat={0} // Animacja tylko raz
+            cursor={false}
           />
         </StyledText>
       )}

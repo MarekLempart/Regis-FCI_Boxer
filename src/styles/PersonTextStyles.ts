@@ -54,7 +54,7 @@ export const StyledText = styled.div`
     @media ${({ theme }) => theme.media.desktop} {
         gap: 25px;
         padding: 15px;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.5;
     };
     

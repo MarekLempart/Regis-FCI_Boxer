@@ -18,6 +18,7 @@ const Achievements: React.FC = () => {
             image={image}
             text={achievements}
             $reverse={index % 2 !== 0} // Odwracamy kolejność co drugi wiersz
+            // $smallImage={true}
           />
         );
       })}

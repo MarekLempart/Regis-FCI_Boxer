@@ -28,12 +28,25 @@ export const TextWrapper = styled.div`
   height: auto; /* Dopasowanie do wymiarów */
 `;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div<{ $smallImage?: boolean }>`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
+
+  /* Zmniejszanie rozmiaru obrazka na tablet i desktop */
+  width: ${({ $smallImage }) => ($smallImage ? "70%" : "100%")};
+  max-width: ${({ $smallImage }) => ($smallImage ? "600px" : "100%")};
+
+  @media ${({ theme }) => theme.media.tablet} {
+    width: ${({ $smallImage }) => ($smallImage ? "50%" : "100%")};
+  }
+
+  @media ${({ theme }) => theme.media.desktop} {
+    width: ${({ $smallImage }) => ($smallImage ? "40%" : "100%")};
+  }
+
   height: auto; /* Dopasowanie do wymiarów */
 `;
 
