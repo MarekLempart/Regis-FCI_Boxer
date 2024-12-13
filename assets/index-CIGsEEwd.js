@@ -465,6 +465,8 @@ Error generating stack: `+o.message+`
   height: 70px;
   background-color: ${({theme:e})=>e.colors.bgCrowBlack};
   border-bottom: 3px solid ${({theme:e})=>e.colors.textOrange};
+  box-shadow: 0 3px 0 0 ${({theme:e})=>e.colors.bgCrowBlack}, 
+              0 6px 0 0 ${({theme:e})=>e.colors.textOrange};
 
   position: fixed; /* Utrzymujemy header na górze */
   top: 0;
