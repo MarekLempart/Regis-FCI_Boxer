@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
   padding: 40px 16px;
   height: 130px;
   background-color: ${({ theme }) => theme.colors.bgCrowBlack};
-  border-bottom: 10px solid ${({ theme }) => theme.colors.textOrange};
+  border-bottom: 5px solid ${({ theme }) => theme.colors.textOrange};
   box-shadow: 0px 15px 20px 5px rgba(255, 165, 0, 0.5);
   /* box-shadow: 0 3px 0 0 ${({ theme }) => theme.colors.bgCrowBlack}, 
               0 6px 0 0 ${({ theme }) => theme.colors.textOrange}; */
@@ -39,6 +39,11 @@ export const HeaderWrapper = styled.header`
   &.menu-open {
     display: none; /* Ukryj header, gdy menu jest otwarte */
   }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    border-bottom: 10px solid ${({ theme }) => theme.colors.textOrange};
+  }
+
 `;
 
 export const Logo = styled.div`
