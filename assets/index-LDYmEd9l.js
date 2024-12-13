@@ -464,7 +464,7 @@ Error generating stack: `+o.message+`
   padding: 40px 16px;
   height: 130px;
   background-color: ${({theme:e})=>e.colors.bgCrowBlack};
-  border-bottom: 10px solid ${({theme:e})=>e.colors.textOrange};
+  border-bottom: 5px solid ${({theme:e})=>e.colors.textOrange};
   box-shadow: 0px 15px 20px 5px rgba(255, 165, 0, 0.5);
   /* box-shadow: 0 3px 0 0 ${({theme:e})=>e.colors.bgCrowBlack}, 
               0 6px 0 0 ${({theme:e})=>e.colors.textOrange}; */
@@ -494,6 +494,11 @@ Error generating stack: `+o.message+`
   &.menu-open {
     display: none; /* Ukryj header, gdy menu jest otwarte */
   }
+
+  @media screen and (min-width: ${({theme:e})=>e.breakpoints.mobile}) {
+    border-bottom: 10px solid ${({theme:e})=>e.colors.textOrange};
+  }
+
 `,Jj=ae.div`
   font-size: 1.5rem;
   color: ${({theme:e})=>e.colors.textWhite};
