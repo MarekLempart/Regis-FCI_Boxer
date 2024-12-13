@@ -9,7 +9,7 @@ export const HeaderWrapper = styled.header`
   padding: 40px 16px;
   height: 70px;
   background-color: ${({ theme }) => theme.colors.bgCrowBlack};
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid ${({ theme }) => theme.colors.textOrange};
 
   position: fixed; /* Utrzymujemy header na górze */
   top: 0;

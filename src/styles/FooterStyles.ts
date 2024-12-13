@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
   padding: 2rem;
   background-color: ${({ theme }) => theme.colors.bgCrowBlack};
   color: ${({ theme }) => theme.colors.textWhite};
+  border-top: 3px solid ${({ theme }) => theme.colors.textOrange};
 `;
 
 export const LogoContainer = styled.div`

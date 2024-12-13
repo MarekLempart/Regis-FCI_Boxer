@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column; /* Domyślnie dla mobile układ kolumnowy */
   gap: 20px; /* Odstęp między komponentami */
   padding: ${({ theme }) => theme.spacing.mobilePadding};
-  margin: 0px auto;
+  margin: 0px auto 20px;
 
   @media ${({ theme }) => theme.media.tablet} {
     flex-direction: row; /* Na tablet i desktop zmiana na układ wierszy */
