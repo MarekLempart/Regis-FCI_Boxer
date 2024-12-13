@@ -7,11 +7,12 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 40px 16px;
-  height: 70px;
+  height: 130px;
   background-color: ${({ theme }) => theme.colors.bgCrowBlack};
-  border-bottom: 3px solid ${({ theme }) => theme.colors.textOrange};
-  box-shadow: 0 3px 0 0 ${({ theme }) => theme.colors.bgCrowBlack}, 
-              0 6px 0 0 ${({ theme }) => theme.colors.textOrange};
+  border-bottom: 10px solid ${({ theme }) => theme.colors.textOrange};
+  box-shadow: 0px 15px 20px 5px rgba(255, 165, 0, 0.5);
+  /* box-shadow: 0 3px 0 0 ${({ theme }) => theme.colors.bgCrowBlack}, 
+              0 6px 0 0 ${({ theme }) => theme.colors.textOrange}; */
 
   position: fixed; /* Utrzymujemy header na górze */
   top: 0;
