@@ -128,7 +128,7 @@ Error generating stack: `+o.message+`
     overflow: hidden;
     border-radius: 10px;
     background: #000;
-    margin: 30px auto 0px;
+    margin: 90px auto 0px;
 
     @media (max-width: ${({theme:e})=>e.breakpoints.mobile}) {
         height: 600px; /* Mobile wysokość */
@@ -408,7 +408,7 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 20px auto;
+  margin: 90px auto 20px;
 
   @media ${({theme:e})=>e.media.tabletAndDesktop} {
     flex-direction: ${({$reverse:e})=>e?"row-reverse":"row"};
@@ -462,11 +462,12 @@ Error generating stack: `+o.message+`
   justify-content: space-between;
   align-items: center;
   padding: 40px 16px;
-  height: 70px;
+  height: 130px;
   background-color: ${({theme:e})=>e.colors.bgCrowBlack};
-  border-bottom: 3px solid ${({theme:e})=>e.colors.textOrange};
-  box-shadow: 0 3px 0 0 ${({theme:e})=>e.colors.bgCrowBlack}, 
-              0 6px 0 0 ${({theme:e})=>e.colors.textOrange};
+  border-bottom: 10px solid ${({theme:e})=>e.colors.textOrange};
+  box-shadow: 0px 15px 20px 5px rgba(255, 165, 0, 0.5);
+  /* box-shadow: 0 3px 0 0 ${({theme:e})=>e.colors.bgCrowBlack}, 
+              0 6px 0 0 ${({theme:e})=>e.colors.textOrange}; */
 
   position: fixed; /* Utrzymujemy header na górze */
   top: 0;
