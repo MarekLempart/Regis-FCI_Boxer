@@ -128,7 +128,7 @@ Error generating stack: `+o.message+`
     overflow: hidden;
     border-radius: 10px;
     background: #000;
-    margin: 15px auto;
+    margin: 30px auto 0px;
 
     @media (max-width: ${({theme:e})=>e.breakpoints.mobile}) {
         height: 600px; /* Mobile wysokość */
@@ -309,7 +309,7 @@ Error generating stack: `+o.message+`
   flex-direction: column; /* Domyślnie dla mobile układ kolumnowy */
   gap: 20px; /* Odstęp między komponentami */
   padding: ${({theme:e})=>e.spacing.mobilePadding};
-  margin: 0px auto;
+  margin: 0px auto 20px;
 
   @media ${({theme:e})=>e.media.tablet} {
     flex-direction: row; /* Na tablet i desktop zmiana na układ wierszy */
@@ -464,7 +464,7 @@ Error generating stack: `+o.message+`
   padding: 40px 16px;
   height: 70px;
   background-color: ${({theme:e})=>e.colors.bgCrowBlack};
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid ${({theme:e})=>e.colors.textOrange};
 
   position: fixed; /* Utrzymujemy header na górze */
   top: 0;
@@ -634,6 +634,7 @@ Error generating stack: `+o.message+`
   padding: 2rem;
   background-color: ${({theme:e})=>e.colors.bgCrowBlack};
   color: ${({theme:e})=>e.colors.textWhite};
+  border-top: 3px solid ${({theme:e})=>e.colors.textOrange};
 `,aL=ae.div`
   margin-top: 1rem;
   display: flex;
