@@ -4,6 +4,8 @@ import React from "react";
 import personImageData from "../data/personImageData";
 import personTextData from "../data/personTextData";
 import PersonCard from "../components/PersonCard";
+import ContactDetails from "../components/ContactDetails";
+import ContactForm from "../components/ContactForm";
 import { ContactContainer } from "../styles/ContactStyles";
 
 const Contact: React.FC = () => {
@@ -22,6 +24,8 @@ const Contact: React.FC = () => {
           />
         );
       })}
+      <ContactDetails />
+      <ContactForm />
     </ContactContainer>
   );
 };
