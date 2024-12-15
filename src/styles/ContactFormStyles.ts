@@ -28,7 +28,7 @@ export const Input = styled.input`
 
 export const Select = styled.select`
   padding: 10px;
-  border: 1px solid ${({ theme }) => theme.colors.primary};
+  border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
   border-radius: 5px;
 `;
 
