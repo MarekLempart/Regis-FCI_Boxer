@@ -518,7 +518,7 @@ attempted value: ${a}
   border-radius: 5px;
 `,rN=ie.select`
   padding: 10px;
-  border: 1px solid ${({theme:e})=>e.colors.primary};
+  border: 1px solid ${({theme:e})=>e.colors.textDarkBlue};
   border-radius: 5px;
 `,iN=ie.textarea`
   padding: 10px;
