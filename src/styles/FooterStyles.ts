@@ -45,3 +45,17 @@ export const FooterTitle = styled.h4`
   margin: 0rem auto 1rem;
   color: ${({ theme }) => theme.colors.textWhite};
 `;
+
+export const LogoKynological = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;  
+  margin: 0px auto;
+  gap: 10px;  
+`;
+
+export const LogoAssociation = styled.div`
+  width: 80px;
+  padding: 10px;
+`;

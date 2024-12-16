@@ -30,6 +30,7 @@ export const Select = styled.select`
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
   border-radius: 5px;
+  color: ${({ theme }) => theme.colors.textDarkNavy};
 `;
 
 export const TextArea = styled.textarea`

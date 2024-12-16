@@ -62,3 +62,13 @@ export const ContactContainer = styled.div`
     gap: 40px;
   }
 `;
+
+export const ContactContainerForm = styled.div `
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    flex-direction: row;
+  }
+`;

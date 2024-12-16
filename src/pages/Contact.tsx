@@ -6,7 +6,7 @@ import personTextData from "../data/personTextData";
 import PersonCard from "../components/PersonCard";
 import ContactDetails from "../components/ContactDetails";
 import ContactForm from "../components/ContactForm";
-import { ContactContainer } from "../styles/ContactStyles";
+import { ContactContainer, ContactContainerForm } from "../styles/ContactStyles";
 
 const Contact: React.FC = () => {
   return (
@@ -24,8 +24,10 @@ const Contact: React.FC = () => {
           />
         );
       })}
-      <ContactDetails />
-      <ContactForm />
+      <ContactContainerForm>
+        <ContactDetails />
+        <ContactForm />
+      </ContactContainerForm>      
     </ContactContainer>
   );
 };
