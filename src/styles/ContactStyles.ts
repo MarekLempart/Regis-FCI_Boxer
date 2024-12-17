@@ -66,7 +66,7 @@ export const ContactContainer = styled.div`
 export const ContactContainerForm = styled.div `
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  width: auto;
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: row;

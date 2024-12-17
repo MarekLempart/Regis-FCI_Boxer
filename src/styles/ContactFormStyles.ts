@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const FormContainer = styled.form`
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   gap: 15px;
   padding: 20px;
 
@@ -22,11 +22,10 @@ export const SectionTitle = styled.h2`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 600px;
+  justify-content: start;
+  align-items: start;  
+  width: 100%;
   gap: 10px;
-  margin: 0 auto;
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: row;
@@ -34,13 +33,15 @@ export const InputContainer = styled.div`
   `;
 
 export const InputTitle = styled.div`
-  width: 160px;
-  font-size: 16px;
-  color: ${({ theme }) => theme.colors.textWhite};
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 140px;
+  font-size: 16px;  color: ${({ theme }) => theme.colors.textWhite};
   `;
 
 export const Input = styled.input`
-  width: 400px;
+  width: 100%;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.colors.textOrange};
   color: ${({ theme }) => theme.colors.textDarkNavy};
@@ -48,7 +49,7 @@ export const Input = styled.input`
 `;
 
 export const Select = styled.select`
-  width: 400px;
+  width: 100%;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
   border-radius: 5px;
@@ -56,7 +57,7 @@ export const Select = styled.select`
 `;
 
 export const TextArea = styled.textarea`
-  width: 400px;
+  width: 100%;
   padding: 10px;
   color: ${({ theme }) => theme.colors.textDarkNavy};
   border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
@@ -81,13 +82,9 @@ export const SubmitButton = styled.button`
 
 export const ErrorText = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 10px;  
   color: red;
   font-size: 12px;
-
-  @media ${({ theme }) => theme.media.tabletAndDesktop} {
-    justify-content: start;
-  }
 `;
