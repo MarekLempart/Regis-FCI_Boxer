@@ -4,7 +4,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
-import { FormContainer, SectionTitle, Input, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
+import { FormContainer, SectionTitle, InputContainer, InputTitle, Input, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
 
 emailjs.init("xtkeKbpRdN9dos4sU");
 
@@ -15,7 +15,7 @@ const ContactForm: React.FC = () => {
       lastName: "",
       email: "",
       phone: "",
-      countryCode: "+48",
+      countryCode: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
     }),
     onSubmit: (values, { resetForm }) => {
       emailjs
-        .send("service_id", "template_id", values, "xtkeKbpRdN9dos4sU")
+        .send("service_jydn2ns", "template_ic5gljh", values, "xtkeKbpRdN9dos4sU")
         .then(() => {
           alert("Wiadomość wysłana!");
           resetForm();
@@ -38,52 +38,76 @@ const ContactForm: React.FC = () => {
 
   return (
     <FormContainer onSubmit={formik.handleSubmit}>
-        <SectionTitle>Kontakt</SectionTitle>
-      <Input
-        name="firstName"
-        placeholder="Imię"
-        value={formik.values.firstName}
-        onChange={formik.handleChange}
-      />
-      {formik.errors.firstName && <ErrorText>{formik.errors.firstName}</ErrorText>}
-      <Input
-        name="lastName"
-        placeholder="Nazwisko"
-        value={formik.values.lastName}
-        onChange={formik.handleChange}
-      />
-      {formik.errors.lastName && <ErrorText>{formik.errors.lastName}</ErrorText>}
-      <Input
-        name="email"
-        placeholder="Email"
-        value={formik.values.email}
-        onChange={formik.handleChange}
-      />
-      {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}
-      <Select
-        name="countryCode"
-        value={formik.values.countryCode}
-        onChange={formik.handleChange}
-      >
-        <option value="+48">Polska (+48)</option>
-        <option value="+44">Wielka Brytania (+44)</option>
-        <option value="+49">Niemcy (+49)</option>
-        <option value="+1">USA (+1)</option>
-      </Select>
-      <Input
-        name="phone"
-        placeholder="Numer telefonu"
-        value={formik.values.phone}
-        onChange={formik.handleChange}
-      />
-      {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
-      <TextArea
-        name="message"
-        placeholder="Treść zapytania"
-        value={formik.values.message}
-        onChange={formik.handleChange}
-      />
-      {formik.errors.message && <ErrorText>{formik.errors.message}</ErrorText>}
+      <SectionTitle>Kontakt</SectionTitle>
+      <InputContainer>
+        <InputTitle>Imię</InputTitle>
+          <Input
+            name="firstName"
+            placeholder="Imię"
+            value={formik.values.firstName}
+            onChange={formik.handleChange}
+          />        
+        </InputContainer>
+        {formik.errors.firstName && <ErrorText>{formik.errors.firstName}</ErrorText>}
+
+      <InputContainer>
+        <InputTitle>Nazwisko</InputTitle>
+        <Input
+          name="lastName"
+          placeholder="Nazwisko"
+          value={formik.values.lastName}
+          onChange={formik.handleChange}
+        />          
+        </InputContainer>
+        {formik.errors.lastName && <ErrorText>{formik.errors.lastName}</ErrorText>}
+
+        <InputContainer>
+          <InputTitle>Email</InputTitle>
+          <Input
+            name="email"
+            placeholder="Email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+          />
+        </InputContainer>
+          {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}        
+      
+        <InputContainer>
+          <InputTitle>Numer kierunkowy</InputTitle>
+          <Select
+            name="countryCode"        
+            value={formik.values.countryCode}
+            onChange={formik.handleChange}
+          >
+            <option value="">---</option>
+            <option value="+48">Polska (+48)</option>
+            <option value="+44">Wielka Brytania (+44)</option>
+            <option value="+49">Niemcy (+49)</option>
+            <option value="+1">USA (+1)</option>
+          </Select>
+        </InputContainer>
+
+        <InputContainer>
+          <InputTitle>Numer telefonu</InputTitle>
+          <Input
+            name="phone"
+            placeholder="Numer telefonu"
+            value={formik.values.phone}
+            onChange={formik.handleChange}
+          />
+        </InputContainer>      
+        {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
+
+        <InputContainer>
+          <InputTitle>Treść wiadomości</InputTitle>
+          <TextArea
+            name="message"
+            placeholder="Treść zapytania"
+            value={formik.values.message}
+            onChange={formik.handleChange}
+          />
+        </InputContainer>      
+        {formik.errors.message && <ErrorText>{formik.errors.message}</ErrorText>}
       <SubmitButton type="submit">Wyślij</SubmitButton>
     </FormContainer>
   );

@@ -19,7 +19,28 @@ export const SectionTitle = styled.h2`
   margin-bottom: 15px;
 `;
 
+export const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 600px;
+  gap: 10px;
+  margin: 0 auto;
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    flex-direction: row;
+  }
+  `;
+
+export const InputTitle = styled.div`
+  width: 160px;
+  font-size: 16px;
+  color: ${({ theme }) => theme.colors.textWhite};
+  `;
+
 export const Input = styled.input`
+  width: 400px;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.colors.textOrange};
   color: ${({ theme }) => theme.colors.textDarkNavy};
@@ -27,6 +48,7 @@ export const Input = styled.input`
 `;
 
 export const Select = styled.select`
+  width: 400px;
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
   border-radius: 5px;
@@ -34,6 +56,7 @@ export const Select = styled.select`
 `;
 
 export const TextArea = styled.textarea`
+  width: 400px;
   padding: 10px;
   color: ${({ theme }) => theme.colors.textDarkNavy};
   border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
@@ -42,6 +65,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const SubmitButton = styled.button`
+  margin: 0 auto;
   padding: 10px 20px;
   background: ${({ theme }) => theme.colors.bgOrange};
   color: ${({ theme }) => theme.colors.textDarkNavy};
@@ -56,6 +80,14 @@ export const SubmitButton = styled.button`
 `;
 
 export const ErrorText = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;  
   color: red;
   font-size: 12px;
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    justify-content: start;
+  }
 `;
