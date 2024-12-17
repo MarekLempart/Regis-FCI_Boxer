@@ -4,7 +4,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
-import { FormContainer, SectionTitle, InputContainer, InputTitle, Input, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
+import { FormContainer, SectionTitle, InputContainer, Input, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
 
 emailjs.init("xtkeKbpRdN9dos4sU");
 
@@ -39,8 +39,7 @@ const ContactForm: React.FC = () => {
   return (
     <FormContainer onSubmit={formik.handleSubmit}>
       <SectionTitle>Kontakt</SectionTitle>
-      <InputContainer>
-        <InputTitle>Imię</InputTitle>
+      <InputContainer>        
           <Input
             name="firstName"
             placeholder="Imię"
@@ -50,8 +49,7 @@ const ContactForm: React.FC = () => {
         </InputContainer>
         {formik.errors.firstName && <ErrorText>{formik.errors.firstName}</ErrorText>}
 
-      <InputContainer>
-        <InputTitle>Nazwisko</InputTitle>
+      <InputContainer>        
         <Input
           name="lastName"
           placeholder="Nazwisko"
@@ -61,8 +59,7 @@ const ContactForm: React.FC = () => {
         </InputContainer>
         {formik.errors.lastName && <ErrorText>{formik.errors.lastName}</ErrorText>}
 
-        <InputContainer>
-          <InputTitle>Email</InputTitle>
+        <InputContainer>          
           <Input
             name="email"
             placeholder="Email"
@@ -73,7 +70,6 @@ const ContactForm: React.FC = () => {
           {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}        
       
         <InputContainer>
-          <InputTitle>Numer kierunkowy</InputTitle>
           <Select
             name="countryCode"        
             value={formik.values.countryCode}
@@ -88,7 +84,6 @@ const ContactForm: React.FC = () => {
         </InputContainer>
 
         <InputContainer>
-          <InputTitle>Numer telefonu</InputTitle>
           <Input
             name="phone"
             placeholder="Numer telefonu"
@@ -99,7 +94,6 @@ const ContactForm: React.FC = () => {
         {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
 
         <InputContainer>
-          <InputTitle>Treść wiadomości</InputTitle>
           <TextArea
             name="message"
             placeholder="Treść zapytania"

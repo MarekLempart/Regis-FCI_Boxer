@@ -23,12 +23,17 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: start;  
+  align-items: start;
   width: 100%;
-  gap: 10px;
+  padding: 0px 20px;
 
-  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+  @media ${({ theme }) => theme.media.tablet} {
     flex-direction: row;
+    padding: 0px 40px;
+  }
+
+  @media ${({ theme }) => theme.media.desktop} {
+    padding: 0px 80px;
   }
   `;
 
