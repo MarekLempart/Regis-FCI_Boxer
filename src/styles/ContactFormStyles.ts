@@ -28,7 +28,6 @@ export const InputContainer = styled.div`
   padding: 0px 20px;
 
   @media ${({ theme }) => theme.media.tablet} {
-    flex-direction: row;
     padding: 0px 40px;
   }
 

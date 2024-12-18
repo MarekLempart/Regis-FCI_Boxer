@@ -40,14 +40,14 @@ const ContactForm: React.FC = () => {
     <FormContainer onSubmit={formik.handleSubmit}>
       <SectionTitle>Kontakt</SectionTitle>
       <InputContainer>        
-          <Input
-            name="firstName"
-            placeholder="Imię"
-            value={formik.values.firstName}
-            onChange={formik.handleChange}
-          />        
-        </InputContainer>
+        <Input
+          name="firstName"
+          placeholder="Imię"
+          value={formik.values.firstName}
+          onChange={formik.handleChange}
+        />
         {formik.errors.firstName && <ErrorText>{formik.errors.firstName}</ErrorText>}
+      </InputContainer>
 
       <InputContainer>        
         <Input
@@ -55,20 +55,20 @@ const ContactForm: React.FC = () => {
           placeholder="Nazwisko"
           value={formik.values.lastName}
           onChange={formik.handleChange}
-        />          
+        />
+          {formik.errors.lastName && <ErrorText>{formik.errors.lastName}</ErrorText>}
         </InputContainer>
-        {formik.errors.lastName && <ErrorText>{formik.errors.lastName}</ErrorText>}
 
-        <InputContainer>          
+      <InputContainer>          
           <Input
             name="email"
             placeholder="Email"
             value={formik.values.email}
             onChange={formik.handleChange}
           />
+          {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}
         </InputContainer>
-          {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}        
-      
+
         <InputContainer>
           <Select
             name="countryCode"        
@@ -90,8 +90,8 @@ const ContactForm: React.FC = () => {
             value={formik.values.phone}
             onChange={formik.handleChange}
           />
-        </InputContainer>      
-        {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
+          {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
+        </InputContainer>
 
         <InputContainer>
           <TextArea
@@ -100,8 +100,9 @@ const ContactForm: React.FC = () => {
             value={formik.values.message}
             onChange={formik.handleChange}
           />
+          {formik.errors.message && <ErrorText>{formik.errors.message}</ErrorText>}
         </InputContainer>      
-        {formik.errors.message && <ErrorText>{formik.errors.message}</ErrorText>}
+
       <SubmitButton type="submit">Wyślij</SubmitButton>
     </FormContainer>
   );

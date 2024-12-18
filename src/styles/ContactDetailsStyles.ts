@@ -33,6 +33,10 @@ export const DetailText = styled.div`
   font-size: 16px;
   color: ${({ theme }) => theme.colors.textWhite};
 
+  &:hover {
+      color: ${({ theme }) => theme.colors.textOrange};
+    }
+
   a {
     color: ${({ theme }) => theme.colors.textWhite};
     text-decoration: none;
