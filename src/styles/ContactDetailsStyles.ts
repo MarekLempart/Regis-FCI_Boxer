@@ -7,6 +7,7 @@ export const DetailsContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex: 1;
   }
@@ -33,9 +34,23 @@ export const DetailText = styled.div`
   font-size: 16px;
   color: ${({ theme }) => theme.colors.textWhite};
 
-  &:hover {
+  display: flex;
+  align-items: center;
+
+  button {    
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    color: ${({ theme }) => theme.colors.textWhite};
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
       color: ${({ theme }) => theme.colors.textOrange};
     }
+  }
 
   a {
     color: ${({ theme }) => theme.colors.textWhite};
