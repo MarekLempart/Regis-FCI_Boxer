@@ -192,6 +192,7 @@ Error generating stack: `+s.message+`
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
     /* width: 780px;
     height: 520px; */
 
@@ -215,11 +216,11 @@ Error generating stack: `+s.message+`
     object-fit: cover;
     border-radius: 10px;
 `,Am=({images:e})=>{const[t,n]=x.useState(0),[r,i]=x.useState(!1),[s,a]=x.useState(!1),u=()=>{i(!0)},c=()=>{n(d=>d===e.length-1?0:d+1),i(!1)};return x.useEffect(()=>{const d=setInterval(u,2e3);return()=>clearInterval(d)},[]),z.jsx(rF,{children:z.jsx(iF,{children:z.jsx(oF,{src:e[t].src,alt:e[t].id,initial:{filter:"blur(0px)"},onMouseEnter:()=>a(!0),onMouseLeave:()=>a(!1),animate:{filter:r?"blur(20px)":"blur(0px)",scale:s?1.05:1},transition:{duration:.3},onAnimationComplete:r?c:void 0})})})},sF=ve.div`
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0px 10px;
-    width: 100%; /* Domyślnie 100% szerokości ekranu */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0px 10px;
+  width: 100%; /* Domyślnie 100% szerokości ekranu */
   max-width: 1400px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 `,mk=ve.div`
@@ -227,6 +228,7 @@ Error generating stack: `+s.message+`
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
   
   /* width: 780px;
   height: 520px; */
@@ -326,6 +328,7 @@ Error generating stack: `+s.message+`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin: 0px auto;
   gap: 20px;
 
@@ -334,6 +337,7 @@ Error generating stack: `+s.message+`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 50px;
   }
 `,Mm=ve(Uf)`
