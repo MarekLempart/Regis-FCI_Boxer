@@ -19,6 +19,7 @@ export const SlideshowPositionContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
     /* width: 780px;
     height: 520px; */
 

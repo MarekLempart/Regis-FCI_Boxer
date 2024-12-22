@@ -27,6 +27,7 @@ export const ItemsContainerNoirOrder = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin: 0px auto;
   gap: 20px;
 
@@ -35,6 +36,7 @@ export const ItemsContainerNoirOrder = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 50px;
   }
 `;

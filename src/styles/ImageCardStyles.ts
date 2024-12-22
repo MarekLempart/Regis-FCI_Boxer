@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const PositionImageContainer = styled.div `
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0px 10px;
-    width: 100%; /* Domyślnie 100% szerokości ekranu */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0px 10px;
+  width: 100%; /* Domyślnie 100% szerokości ekranu */
   max-width: 1400px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 `;
@@ -19,6 +19,7 @@ export const ImageCardContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
   
   /* width: 780px;
   height: 520px; */
