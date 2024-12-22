@@ -8,9 +8,13 @@ import Achievements from './pages/Achievements';
 import Contact from './pages/Contact';
 import SharedLayout from './components/SharedLayout';
 
+// Import ScrollToTop
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
     <div className='page-container'>
+      <ScrollToTop />
       <Routes>
       {/* Ścieżka z układem SharedLayout */}
       <Route path="/" element={<SharedLayout />}>
