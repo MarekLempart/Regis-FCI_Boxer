@@ -6,7 +6,7 @@ export const PersonCardContainer = styled.div<{ $reverse: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 90px auto 20px;
+  margin: 0px auto 20px;
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
