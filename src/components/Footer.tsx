@@ -25,11 +25,11 @@ const Footer = () => {
                         <ImageCard image={imageDataLogoKynological[1]} />
                     </a>
                 </LogoAssociation>
-                <LogoAssociation>
+                {/* <LogoAssociation>
                     <a href="https://www.fci.be/en/" target="_blank" rel="noopener noreferrer">
                         <ImageCard image={imageDataLogoKynological[0]} />
                     </a>
-                </LogoAssociation>
+                </LogoAssociation> */}
                 <LogoAssociation>
                     <a href="https://zkwpwroclaw.pl" target="_blank" rel="noopener noreferrer">
                         <ImageCard image={imageDataLogoKynological[2]} />
