@@ -4,7 +4,21 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
-import { FormContainer, SectionTitle, PhoneContainer, InputContainer, SelectPhoneContainer, InputPhoneContainer, Input, InputPhone, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
+import PhoneInput from "react-phone-number-input";
+import { toast } from "react-toastify"; 
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-phone-number-input/style.css';
+// import { FormContainer, SectionTitle, PhoneContainer, InputContainer, SelectPhoneContainer, InputPhoneContainer, Input, InputPhone, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
+import {
+  FormContainer,
+  SectionTitle,
+  InputContainer,
+  Input,
+  TextArea,
+  SubmitButton,
+  ErrorText,
+  PhoneInputStyledContainer,
+} from "../styles/ContactFormStyles";
 
 emailjs.init("xtkeKbpRdN9dos4sU");
 
@@ -15,7 +29,7 @@ const ContactForm: React.FC = () => {
       lastName: "",
       email: "",
       phone: "",
-      countryCode: "",
+      // countryCode: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -29,11 +43,37 @@ const ContactForm: React.FC = () => {
       emailjs
         .send("service_jydn2ns", "template_ic5gljh", values, "xtkeKbpRdN9dos4sU")
         .then(() => {
-          alert("Wiadomość wysłana!");
+          toast.success("Wiadomość wysłana!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
           resetForm();
         })
-        .catch(() => alert("Wystąpił błąd. Spróbuj ponownie."));
+        .catch(() =>
+          toast.error("Wystąpił błąd. Spróbuj ponownie.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          })
+        );
     },
+    //     .then(() => {
+    //       alert("Wiadomość wysłana!");
+    //       resetForm();
+    //     })
+    //     .catch(() => alert("Wystąpił błąd. Spróbuj ponownie."));
+    // },
   });
 
   return (
@@ -69,7 +109,17 @@ const ContactForm: React.FC = () => {
           {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}
         </InputContainer>
 
-        <PhoneContainer>
+        <PhoneInputStyledContainer>
+          <PhoneInput
+            placeholder="Numer telefonu"
+            defaultCountry="PL"
+            value={formik.values.phone}
+            onChange={(value) => formik.setFieldValue("phone", value || "")}
+          />
+          {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
+      </PhoneInputStyledContainer>
+
+        {/* <PhoneContainer>
           <SelectPhoneContainer>
             <Select
               name="countryCode"        
@@ -93,7 +143,7 @@ const ContactForm: React.FC = () => {
             />
             {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
           </InputPhoneContainer>
-        </PhoneContainer>
+        </PhoneContainer> */}
 
         <InputContainer>
           <TextArea
@@ -111,127 +161,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-
-
-
-// // src/components/ContactForm.tsx
-
-// import React from "react";
-// import PhoneInput from "react-phone-input-2"; // Poprawny import
-// import emailjs from "emailjs-com";
-// import { FormContainer, Input, TextArea, SubmitButton, ErrorText, SectionTitle } from "../styles/ContactFormStyles";
-// import { useFormik } from "formik";
-// import * as Yup from "yup";
-
-// emailjs.init("xtkeKbpRdN9dos4sU");
-
-// const ContactForm: React.FC = () => {
-//   const formik = useFormik({
-//     initialValues: {
-//       name: "",
-//       surname: "",
-//       email: "",
-//       phone: "",
-//       message: "",
-//     },
-//     validationSchema: Yup.object({
-//       name: Yup.string().required("Imię jest wymagane"),
-//       surname: Yup.string().required("Nazwisko jest wymagane"),
-//       email: Yup.string().email("Nieprawidłowy adres email").required("Email jest wymagany"),
-//       phone: Yup.string().required("Numer telefonu jest wymagany"),
-//       message: Yup.string().required("Treść wiadomości jest wymagana"),
-//     }),
-//     onSubmit: (values) => {
-//       emailjs
-//         .sendForm(
-//           "service_id",
-//           "template_id",
-//           "#contactForm", // ID formularza
-//           "user_id"
-//         )
-//         .then((result) => {
-//           console.log(result.text);
-//         })
-//         .catch((error) => {
-//           console.error(error.text);
-//         });
-//     },
-//   });
-
-//   // Typowanie parametrów w onChange
-//   const handlePhoneChange = (
-//     value: string,
-//     countryData: CountryData,
-//     event: React.ChangeEvent<HTMLInputElement>,
-//     formattedValue: string
-//   ) => {
-//     formik.setFieldValue("phone", value);
-//   };
-
-//   return (
-//     <FormContainer id="contactForm" onSubmit={formik.handleSubmit}>
-//       <SectionTitle>Kontakt</SectionTitle>
-
-//       <div>
-//         <Input
-//           type="text"
-//           name="name"
-//           placeholder="Imię"
-//           value={formik.values.name}
-//           onChange={formik.handleChange}
-//           onBlur={formik.handleBlur}
-//         />
-//         {formik.touched.name && formik.errors.name && <ErrorText>{formik.errors.name}</ErrorText>}
-//       </div>
-
-//       <div>
-//         <Input
-//           type="text"
-//           name="surname"
-//           placeholder="Nazwisko"
-//           value={formik.values.surname}
-//           onChange={formik.handleChange}
-//           onBlur={formik.handleBlur}
-//         />
-//         {formik.touched.surname && formik.errors.surname && <ErrorText>{formik.errors.surname}</ErrorText>}
-//       </div>
-
-//       <div>
-//         <Input
-//           type="email"
-//           name="email"
-//           placeholder="Email"
-//           value={formik.values.email}
-//           onChange={formik.handleChange}
-//           onBlur={formik.handleBlur}
-//         />
-//         {formik.touched.email && formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}
-//       </div>
-
-//       <div>
-//         <PhoneInput
-//           country="pl"
-//           value={formik.values.phone}
-//           onChange={handlePhoneChange}
-//           preferredCountries={["gb", "de", "us"]}
-//         />
-//         {formik.touched.phone && formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
-//       </div>
-
-//       <div>
-//         <TextArea
-//           name="message"
-//           placeholder="Treść zapytania"
-//           value={formik.values.message}
-//           onChange={formik.handleChange}
-//           onBlur={formik.handleBlur}
-//         />
-//         {formik.touched.message && formik.errors.message && <ErrorText>{formik.errors.message}</ErrorText>}
-//       </div>
-
-//       <SubmitButton type="submit">Wyślij</SubmitButton>
-//     </FormContainer>
-//   );
-// };
-
-// export default ContactForm;
