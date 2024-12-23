@@ -4,7 +4,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
-import { FormContainer, SectionTitle, InputContainer, Input, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
+import { FormContainer, SectionTitle, PhoneContainer, InputContainer, SelectPhoneContainer, InputPhoneContainer, Input, InputPhone, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
 
 emailjs.init("xtkeKbpRdN9dos4sU");
 
@@ -22,7 +22,7 @@ const ContactForm: React.FC = () => {
       firstName: Yup.string().required("Imię jest wymagane"),
       lastName: Yup.string().required("Nazwisko jest wymagane"),
       email: Yup.string().email("Nieprawidłowy email").required("Email jest wymagany"),
-      phone: Yup.string().required("Numer telefonu jest wymagany"),
+      phone: Yup.string().required("Numer jest wymagany"),
       message: Yup.string().required("Treść zapytania jest wymagana"),
     }),
     onSubmit: (values, { resetForm }) => {
@@ -69,29 +69,31 @@ const ContactForm: React.FC = () => {
           {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}
         </InputContainer>
 
-        <InputContainer>
-          <Select
-            name="countryCode"        
-            value={formik.values.countryCode}
-            onChange={formik.handleChange}
-          >
-            <option value="">---</option>
-            <option value="+48">Polska (+48)</option>
-            <option value="+44">Wielka Brytania (+44)</option>
-            <option value="+49">Niemcy (+49)</option>
-            <option value="+1">USA (+1)</option>
-          </Select>
-        </InputContainer>
+        <PhoneContainer>
+          <SelectPhoneContainer>
+            <Select
+              name="countryCode"        
+              value={formik.values.countryCode}
+              onChange={formik.handleChange}
+            >
+              <option value="">---</option>
+              <option value="+48">Polska (+48)</option>
+              <option value="+44">Wielka Brytania (+44)</option>
+              <option value="+49">Niemcy (+49)</option>
+              <option value="+1">USA (+1)</option>
+            </Select>
+          </SelectPhoneContainer>
 
-        <InputContainer>
-          <Input
-            name="phone"
-            placeholder="Numer telefonu"
-            value={formik.values.phone}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
-        </InputContainer>
+          <InputPhoneContainer>
+            <InputPhone
+              name="phone"
+              placeholder="Numer telefonu"
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+            />
+            {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
+          </InputPhoneContainer>
+        </PhoneContainer>
 
         <InputContainer>
           <TextArea
