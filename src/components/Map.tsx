@@ -46,7 +46,7 @@ const Map: React.FC<MapProps> = ({ latitude, longitude, address, onClose }) => {
   return (
     <MapOverlay onClick={onClose}>
       <MapWrapper onClick={(e) => e.stopPropagation()}>
-        <MapCloseButton onClick={onClose}>X</MapCloseButton>
+        <MapCloseButton onClick={onClose}>x</MapCloseButton>
         <div id="leaflet-map" style={{ width: "100%", height: "100%" }} />
       </MapWrapper>
     </MapOverlay>
