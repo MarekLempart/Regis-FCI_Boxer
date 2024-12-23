@@ -1,6 +1,6 @@
 // src/data/imageDataLogo.ts
 
-import imgLogoFCI from "../img/logo_FCI.png";
+import imgLogoFCI from "../img/Logo_FCI.webp";
 import imgLogoZKwP from "../img/Logo_ZKwP.webp";
 import imgLogoZKwPWw from "../img/Logo_ZKwPww.webp";
 
