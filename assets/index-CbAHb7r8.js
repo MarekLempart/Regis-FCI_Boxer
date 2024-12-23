@@ -412,7 +412,7 @@ Error generating stack: `+a.message+`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 90px auto 20px;
+  margin: 0px auto 20px;
 
   @media ${({theme:e})=>e.media.tabletAndDesktop} {
     flex-direction: ${({$reverse:e})=>e?"row-reverse":"row"};
