@@ -10,15 +10,12 @@ export const PersonCardContainer = styled.div<{ $reverse: boolean }>`
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
-    flex-wrap: wrap;
     align-items: center;
-    column-gap: 20px;
-    row-gap: 0px;
+    gap: 20px;
   }
 
   @media ${({ theme }) => theme.media.desktop} {
-    column-gap: 40px;
-    row-gap: 0px;
+    gap: 40px;
   }
 `;
 
