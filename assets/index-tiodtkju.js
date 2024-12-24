@@ -430,15 +430,12 @@ Error generating stack: `+a.message+`
 
   @media ${({theme:e})=>e.media.tabletAndDesktop} {
     flex-direction: ${({$reverse:e})=>e?"row-reverse":"row"};
-    flex-wrap: wrap;
     align-items: center;
-    column-gap: 20px;
-    row-gap: 0px;
+    gap: 20px;
   }
 
   @media ${({theme:e})=>e.media.desktop} {
-    column-gap: 40px;
-    row-gap: 0px;
+    gap: 40px;
   }
 `,uj=$e.div`
   flex: 1;
