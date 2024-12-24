@@ -10,12 +10,15 @@ export const PersonCardContainer = styled.div<{ $reverse: boolean }>`
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 0px;
   }
 
   @media ${({ theme }) => theme.media.desktop} {
-    gap: 40px;
+    column-gap: 40px;
+    row-gap: 0px;
   }
 `;
 
@@ -56,10 +59,12 @@ export const ContactContainer = styled.div`
   gap: 20px;
   padding: ${({ theme }) => theme.spacing.mobilePadding};
   margin: 0 auto;
+  padding-top: 95px;
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     padding: ${({ theme }) => theme.spacing.tabletPadding};
     gap: 40px;
+    padding-top: 100px;
   }
 `;
 

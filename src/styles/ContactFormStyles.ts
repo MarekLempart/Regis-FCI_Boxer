@@ -174,7 +174,7 @@ export const ErrorText = styled.div`
   justify-content: start;
   align-items: center;
   gap: 10px;  
-  color: red;
+  color: ${({ theme }) => theme.colors.textChickenComb};
   font-size: 12px;
   margin-top: 5px;
   position: absolute;

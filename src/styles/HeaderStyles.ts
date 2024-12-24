@@ -132,7 +132,7 @@ export const MobileNav = styled.div`
   /* width: 50%; */
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.bgDarkNavy};; /* bgDarkNavy */
+  background-color: ${({ theme }) => theme.colors.bgDarkNavy}; /* bgDarkNavy */
   z-index: 999;
   padding: 24px 16px;
 

@@ -12,12 +12,17 @@ const GlobalStyles = createGlobalStyle`
 
   html, body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 400;
     background-color: ${({ theme }) => theme.colors.bgCrowBlack};
     color: ${({ theme }) => theme.colors.textWhite};
     min-height: 100vh;
     margin: 0;
+
+    @media ${({ theme }) => theme.media.tabletAndDesktop} {
+      font-size: 16px;
+    }
   }
 
   #root {
@@ -55,6 +60,15 @@ const GlobalStyles = createGlobalStyle`
     text-align: left;
   }
 
+  .header-visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .header-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
 `;
 
 export default GlobalStyles;
