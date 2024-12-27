@@ -1,4 +1,4 @@
-// hooks/useHeaderVisibility.tsx
+// src/hooks/useHeaderVisibility.tsx
 
 import { useState, useEffect } from 'react';
 

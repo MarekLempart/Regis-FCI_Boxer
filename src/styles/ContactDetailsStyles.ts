@@ -15,7 +15,7 @@ export const DetailsContainer = styled.div`
 
 export const SectionTitle = styled.h2`
   font-size: 24px;
-  color: ${({ theme }) => theme.colors.textOrange};
+  color: ${({ theme }) => theme.colors.distinction};
   margin-bottom: 15px;
 `;
 
@@ -27,12 +27,12 @@ export const DetailItem = styled.div`
 
 export const DetailIcon = styled.div`
   font-size: 20px;
-  color: ${({ theme }) => theme.colors.textOrange};
+  color: ${({ theme }) => theme.colors.distinction};
 `;
 
 export const DetailText = styled.div`
   font-size: 16px;
-  color: ${({ theme }) => theme.colors.textWhite};
+  color: ${({ theme }) => theme.colors.textPrimary};
 
   display: flex;
   align-items: center;
@@ -42,22 +42,22 @@ export const DetailText = styled.div`
     border: none;
     padding: 0;
     font-size: inherit;
-    color: ${({ theme }) => theme.colors.textWhite};
+    color: ${({ theme }) => theme.colors.textPrimary};
     text-decoration: none;
     cursor: pointer;
     text-align: left;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.textOrange};
+      color: ${({ theme }) => theme.colors.hover};
     }
   }
 
   a {
-    color: ${({ theme }) => theme.colors.textWhite};
+    color: ${({ theme }) => theme.colors.textPrimary};
     text-decoration: none;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.textOrange};
+      color: ${({ theme }) => theme.colors.hover};
     }
   }
 `;

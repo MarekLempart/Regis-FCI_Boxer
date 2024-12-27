@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
     font-size: 14px;
     line-height: 1.5;
     font-weight: 400;
-    background-color: ${({ theme }) => theme.colors.bgCrowBlack};
-    color: ${({ theme }) => theme.colors.textWhite};
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     min-height: 100vh;
     margin: 0;
 
@@ -39,11 +39,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    color: ${({ theme }) => theme.colors.textOrange};
+    color: ${({ theme }) => theme.colors.accent};
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.textBrightBrown};
+    color: ${({ theme }) => theme.colors.hover};
   }
 
   h1, h2 {

@@ -41,7 +41,7 @@ export const StyledText = styled.div`
   font-size: 1.8rem;
   text-align: center;
   line-height: 1.5;
-  color: ${({ theme }) => theme.colors.textWhite};
+  color: ${({ theme }) => theme.colors.textPrimary};
 
   width: 90%; /* Dopasowanie do szerokości kontenera */
   max-width: 100%; /* Bez przepełnienia */

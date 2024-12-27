@@ -37,7 +37,7 @@ export const StyledText = styled.div`
     padding: 10px;
     text-align: start;
     line-height: 1.2;
-    color: ${({ theme }) => theme.colors.textWhite};
+    color: ${({ theme }) => theme.colors.textPrimary};
 
     width: 100%; /* Dopasowanie do szerokości kontenera */
     max-width: 100%; /* Bez przepełnienia */

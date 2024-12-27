@@ -4,8 +4,8 @@ import styled from 'styled-components';
 export const FooterContainer = styled.footer`
   text-align: center;
   padding: 2rem;
-  background-color: ${({ theme }) => theme.colors.bgCrowBlack};
-  color: ${({ theme }) => theme.colors.textWhite};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
+  color: ${({ theme }) => theme.colors.textPrimary};
   border-top: 3px solid ${({ theme }) => theme.colors.textOrange};
 `;
 
@@ -37,13 +37,13 @@ export const FooterText = styled.p`
   margin: 1rem auto 0rem;
   font-size: 0.75rem;
   text-align: center;
-  color: ${({ theme }) => theme.colors.textWhite};  
+  color: ${({ theme }) => theme.colors.textPrimary};  
 `;
 
 export const FooterTitle = styled.h4`
   font-family: 'Oswald', sans-serif;
   margin: 0rem auto 1rem;
-  color: ${({ theme }) => theme.colors.textWhite};
+  color: ${({ theme }) => theme.colors.textPrimary};
 `;
 
 export const LogoKynological = styled.div`

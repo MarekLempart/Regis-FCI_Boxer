@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   padding: 40px 16px;
   height: 130px;
-  background-color: ${({ theme }) => theme.colors.bgCrowBlack};
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   border-bottom: 5px solid ${({ theme }) => theme.colors.textOrange};
   box-shadow: 0px 15px 20px 5px rgba(255, 165, 0, 0.5);
   /* box-shadow: 0 3px 0 0 ${({ theme }) => theme.colors.bgCrowBlack}, 
@@ -48,7 +48,7 @@ export const HeaderWrapper = styled.header`
 
 export const Logo = styled.div`
   font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.textWhite};
+  color: ${({ theme }) => theme.colors.textPrimary};
 `;
 
 export const Nav = styled.nav`
@@ -63,14 +63,14 @@ export const Nav = styled.nav`
 
 export const StyledNavLink = styled.a`
   position: relative;
-  color: ${({ theme }) => theme.colors.textWhite};
+  color: ${({ theme }) => theme.colors.textPrimary};
   text-decoration: none;
   font-size: 1rem;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
-    color: ${({ theme }) => theme.colors.textOrange};
+    color: ${({ theme }) => theme.colors.hover};
   }
 
   &::after {
@@ -91,7 +91,7 @@ export const StyledNavLink = styled.a`
 
   /* Aktywna zakładka */
   &.active {
-    color: ${({ theme }) => theme.colors.textOrange};
+    color: ${({ theme }) => theme.colors.accent};
 
     &::after {
       width: 100%;
@@ -109,7 +109,7 @@ export const MobileMenuIcon = styled.div`
   }
 
   svg {
-    fill: ${({ theme }) => theme.colors.textWhite};
+    fill: ${({ theme }) => theme.colors.textPrimary};
     width: 28px;
     height: 28px;
   }
@@ -132,7 +132,7 @@ export const MobileNav = styled.div`
   /* width: 50%; */
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.bgDarkNavy}; /* bgDarkNavy */
+  background-color: ${({ theme }) => theme.colors.bgPrimary}; /* bgDarkNavy */
   z-index: 999;
   padding: 24px 16px;
 
@@ -140,15 +140,17 @@ export const MobileNav = styled.div`
   flex-direction: column;
   gap: 16px;
 
+  align-items: flex-start;
+
   & > button {
     align-self: flex-end; /* Align close button to the right */
     background: none;
     border: none;
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.textWhite};
+    color: ${({ theme }) => theme.colors.textPrimary};
 
     &:hover {
-      color: ${({ theme }) => theme.colors.textOrange};
+      color: ${({ theme }) => theme.colors.hover};
     }
 
     svg {
@@ -162,16 +164,16 @@ export const MobileNavLink = styled(StyledNavLink)`
   align-self: flex-start; /* Align links to the left */
   margin-left: 15px;
   font-size: 1.2rem;
-  color: ${({ theme }) => theme.colors.textWhite};
+  color: ${({ theme }) => theme.colors.textPrimary};
   transition: color 250ms ease-in-out;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.textOrange};
+    color: ${({ theme }) => theme.colors.hover};
   }
 
   /* Aktywna zakładka */
   &.active {
-    color: ${({ theme }) => theme.colors.textOrange};
+    color: ${({ theme }) => theme.colors.accent};
 
     &::after {
       width: 100%;
@@ -185,12 +187,12 @@ export const SocialMediaWrapper = styled.div`
   margin-top: auto; /* Push icons to the bottom in mobile */
 
   a {
-    color: ${({ theme }) => theme.colors.textWhite};
+    color: ${({ theme }) => theme.colors.textPrimary};
     font-size: 1.5rem;
     transition: color 250ms ease-in-out;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.textOrange};
+      color: ${({ theme }) => theme.colors.hover};
     }
   }
 
@@ -199,3 +201,22 @@ export const SocialMediaWrapper = styled.div`
     gap: 24px;
   }
 `;
+
+export const ThemeToggleButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.textPrimary};
+  font-size: 1.5rem;
+  margin: 20px auto 0px 20px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.hover};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1.8rem;
+    margin: 10px auto 10px 10px;
+  }
+`;
+

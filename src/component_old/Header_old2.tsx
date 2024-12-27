@@ -6,7 +6,6 @@ import { useTheme } from 'styled-components';
 import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog, FaHome, FaAward, FaSun, FaMoon } from 'react-icons/fa';
 import { MdPets, MdContactPhone } from 'react-icons/md';
 import { useHeaderVisibility } from '../hooks/useHeaderVisibility';
-import useThemeContext from '../hooks/useThemeContext';
 import {
   HeaderWrapper,
   Logo,
@@ -28,12 +27,19 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const theme = useTheme();
-  const { theme: currentTheme, toggleTheme } = useThemeContext();
   const breakpointMobile = useMemo(() => parseInt(theme.breakpoints.mobile), [theme.breakpoints.mobile]);
   const isHeaderVisible = useHeaderVisibility(); // Hook do zarządzania widocznością nagłówka
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= breakpointMobile);// przerwanie dla mniejszych ekranów
+  const [isDarkMode, setDarkMode] = useState<boolean>(true); // Stan dla motywu (domyślnie dark)
 
   const overlayRef = useRef<HTMLDivElement | null>(null); // Refs dla overlay i menu
+
+  // Zmieniamy body i globalne style przy zmianie motywu
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--background-color', isDarkMode ? theme.colors.bgCrowBlack : theme.colors.bgLupineBlue);
+    root.style.setProperty('--text-color', isDarkMode ? theme.colors.textWhite : theme.colors.textDarkNavy);
+  }, [isDarkMode, theme]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,6 +81,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     toggleMenu();
   };
 
+  const toggleTheme = () => setDarkMode((prev) => !prev);
+
   return (
     <>
       <HeaderWrapper
@@ -114,15 +122,13 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             </a>
           </SocialMediaWrapper>
           <ThemeToggleButton onClick={toggleTheme}>
-            {currentTheme === 'dark' ? <FaMoon /> : <FaSun />}
+            {isDarkMode ? <FaMoon /> : <FaSun />}
           </ThemeToggleButton>
         </Nav>
         
         <MobileMenuIcon onClick={toggleMenu}>
           <FaBars />
         </MobileMenuIcon>
-        
-        
       </HeaderWrapper>
 
       {isMenuOpen && (
@@ -132,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
               <FaTimes />
             </button>
             <ThemeToggleButton onClick={toggleTheme}>
-            {currentTheme === 'dark' ? <FaMoon /> : <FaSun />}
+              {isDarkMode ? <FaMoon /> : <FaSun />}
             </ThemeToggleButton>
             
             <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>

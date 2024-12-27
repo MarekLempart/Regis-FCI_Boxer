@@ -70,7 +70,7 @@ export const FormContainer = styled.form`
 
 export const SectionTitle = styled.h2`
   font-size: 24px;
-  color: ${({ theme }) => theme.colors.textOrange};
+  color: ${({ theme }) => theme.colors.distinction};
   margin-bottom: 10px;
 `;
 
@@ -107,7 +107,7 @@ export const InputTitle = styled.div`
   justify-content: start;
   align-items: center;
   width: 140px;
-  font-size: 16px;  color: ${({ theme }) => theme.colors.textWhite};
+  font-size: 16px;  color: ${({ theme }) => theme.colors.textPrimary};
   `;
 
 export const Input = styled.input`
@@ -149,7 +149,7 @@ export const TextArea = styled.textarea`
   width: 100%;
   padding: 10px;
   color: ${({ theme }) => theme.colors.textDarkNavy};
-  border: 1px solid ${({ theme }) => theme.colors.textDarkBlue};
+  border: 1px solid ${({ theme }) => theme.colors.textOrange};
   border-radius: 5px;
   resize: none;
 `;
@@ -165,7 +165,7 @@ export const SubmitButton = styled.button`
   align-self: flex-start;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.bgDarkGray};
+    background: ${({ theme }) => theme.colors.hoverButton};
   }
 `;
 
