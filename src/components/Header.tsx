@@ -3,8 +3,10 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from 'styled-components';
-import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog, FaHome, FaAward, FaCloudSun, FaCloudMoon } from 'react-icons/fa';
-import { MdPets, MdContactPhone } from 'react-icons/md';
+import ImageCard from './ImageCard';
+import imageDataLogoKynological from '../data/imageDataLogo';
+import { FaBars, FaTimes, FaInstagram, FaFacebook, FaHome, FaAward, FaCloudSun, FaCloudMoon } from 'react-icons/fa';
+import { MdContactPhone } from 'react-icons/md';
 import { useHeaderVisibility } from '../hooks/useHeaderVisibility';
 import useThemeContext from '../hooks/useThemeContext';
 import {
@@ -19,6 +21,8 @@ import {
   Overlay,
   ThemeToggleButton,
   MobileIconsContainer,
+  LogoAssociationHeader,
+  LogoKynologicalHeader,
 } from '../styles/HeaderStyles';
 
 // Definicja typów propsów
@@ -84,7 +88,15 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
         }`}
       >
         <Logo>
-          <MdPets /> Logo <FaDog />
+          <LogoKynologicalHeader>
+            {imageDataLogoKynological.map((image, index) => (
+              <LogoAssociationHeader key={index}>
+                <a href={image.link} target="_blank" rel="noopener noreferrer">
+                  <ImageCard image={image} />
+                </a>
+              </LogoAssociationHeader>
+            ))}
+          </LogoKynologicalHeader>
         </Logo>
         <Nav>
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
@@ -119,8 +131,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
           </ThemeToggleButton>
         </Nav>
         
-{/* Kontener dla mobilnych ikon */}
-{isMobile && (
+      {/* Kontener dla mobilnych ikon */}
+        {isMobile && (
           <MobileIconsContainer>
             <ThemeToggleButton onClick={toggleTheme}>
               {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
@@ -139,9 +151,6 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             <button onClick={handleCloseClick}>
               <FaTimes />
             </button>
-            {/* <ThemeToggleButton onClick={toggleTheme}>
-            {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
-            </ThemeToggleButton> */}
             
             <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>
               <FaHome /> Home

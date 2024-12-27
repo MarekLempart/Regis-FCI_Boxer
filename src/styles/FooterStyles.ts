@@ -4,24 +4,25 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
   background-color: ${({ theme }) => theme.colors.bgPrimary};
   color: ${({ theme }) => theme.colors.textPrimary};
   border-top: 3px solid ${({ theme }) => theme.colors.textOrange};
 `;
 
 export const ContactSection = styled.div`
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
   text-align: center;
 `;
 
 export const ContactLine = styled.p`
-  margin: 0.2rem 0;
-  font-size: 0.85rem;
+  margin: 2px 0;
+  font-size: 15px;
+  line-height: 1,5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
 
   a {
     color: ${({ theme }) => theme.colors.textPrimary};
@@ -35,31 +36,31 @@ export const ContactLine = styled.p`
   }
 
   svg {
-    font-size: 1rem;
+    font-size: 15px;
   }
 `;
 
 export const LogoContainer = styled.div`
-  margin: 1.5rem 0;
+  margin: 15px 0;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 15px;
 `;
 
 export const Logo = styled.img`
-  height: 3rem;
-  padding: 0.5rem;
+  height: 40px;
+  padding: 5px;
   will-change: filter, transform;
   transition: filter 300ms, transform 300ms;
 
   &:hover {
-    filter: drop-shadow(0 0 2rem ${({ theme }) => theme.colors.textBrightBrown});
+    filter: drop-shadow(0 0 15px ${({ theme }) => theme.colors.textBrightBrown});
     transform: scale(1.1);
   }
 `;
 
 export const PhotographerLogo = styled.div`
-  margin: 1rem 0;
+  margin: 15px 0;
   img {
     height: 50px;
     width: auto;
@@ -71,17 +72,21 @@ export const LogoKynological = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 1.5rem auto;
+  margin: 10px auto;
 `;
 
 export const LogoAssociation = styled.div`
-  width: 80px;
-  padding: 10px;
+  width: 50px;
+  padding: 5px;
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    width: 60px;
+  }
 `;
 
 export const FooterText = styled.p`
-  margin-top: 2rem;
-  font-size: 0.75rem;
+  margin-top: 10px;
+  font-size: 10px;
   text-align: center;
   color: ${({ theme }) => theme.colors.textPrimary};
 `;

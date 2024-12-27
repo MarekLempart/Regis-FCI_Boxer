@@ -229,3 +229,20 @@ export const MobileIconsContainer = styled.div`
     display: none; /* Ukryj w wersji tablet/desktop */
   }
 `;
+
+export const LogoAssociationHeader = styled.div`
+  width: 40px;
+  padding: 5px;
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    width: 50px;
+  }
+`;
+
+export const LogoKynologicalHeader = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px auto;
+`;

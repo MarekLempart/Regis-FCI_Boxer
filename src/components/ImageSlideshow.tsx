@@ -43,7 +43,7 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({ images }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           animate={{ 
-            filter: isAnimating ? "blur(20px)" : "blur(0px)",
+            filter: isAnimating ? "blur(2px)" : "blur(0px)",
             scale: isHovered ? 1.05 : 1, // Powiększenie o 5% na hover
             // boxShadow: isHovered
             //   ? "5px 10px 20px rgba(255, 165, 0, 0.8)"
