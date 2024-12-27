@@ -17,7 +17,7 @@ export const ContactSection = styled.div`
 
 export const ContactLine = styled.p`
   margin: 2px 0;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1,5rem;
   display: flex;
   justify-content: center;
@@ -37,6 +37,10 @@ export const ContactLine = styled.p`
 
   svg {
     font-size: 15px;
+  }
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    font-size: 16px;
   }
 `;
 
@@ -85,10 +89,14 @@ export const LogoAssociation = styled.div`
 `;
 
 export const FooterText = styled.p`
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 10px;
   text-align: center;
   color: ${({ theme }) => theme.colors.textPrimary};
+
+  @media ${({ theme }) => theme.media.tabletAndDesktop} {
+    font-size: 12px;
+  }
 `;
 
 // // src/components/FooterStyles.ts
