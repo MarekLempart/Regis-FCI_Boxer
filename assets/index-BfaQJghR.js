@@ -665,7 +665,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   display: flex;
   flex-direction: column; 
   gap: 30px;
-  padding: 20px;
+  padding: 10px;
 
   @media ${({theme:e})=>e.media.tabletAndDesktop} {
     flex: 1;
