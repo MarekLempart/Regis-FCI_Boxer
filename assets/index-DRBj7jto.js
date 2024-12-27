@@ -962,7 +962,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   text-align: center;
 `,vs=_e.p`
   margin: 2px 0;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1,5rem;
   display: flex;
   justify-content: center;
@@ -982,6 +982,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
   svg {
     font-size: 15px;
+  }
+
+  @media ${({theme:e})=>e.media.tabletAndDesktop} {
+    font-size: 16px;
   }
 `,WY=_e.div`
   margin: 15px 0;
@@ -1018,10 +1022,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     width: 60px;
   }
 `,KY=_e.p`
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 10px;
   text-align: center;
   color: ${({theme:e})=>e.colors.textPrimary};
+
+  @media ${({theme:e})=>e.media.tabletAndDesktop} {
+    font-size: 12px;
+  }
 `,XY="/Regis-FCI_Boxer/assets/react-CHdo91hT.svg",YY="/Regis-FCI_Boxer/vite.svg",qY="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20512%20512'%20width='35.93'%20height='32'%3e%3crect%20width='512'%20height='512'%20fill='%233178C6'/%3e%3cpath%20fill='%23FFF'%20d='M235.038%20271.038h-69.131v-32.562h172.186v32.562h-69.079v171.236h-34.054zM349.944%20349.176c0-19.059%202.91-30.362%209.084-33.908%206.223-3.545%2016.264-5.317%2030.121-5.317h4.414c6.555%200%2013.496.466%2020.823%201.397v33.302c-7.833-.62-15.725-.93-23.674-.93-10.638%200-17.905%201.689-21.805%205.065-3.899%203.376-5.849%2010.113-5.849%2020.212%200%208.817%202.075%2014.931%206.228%2018.34%204.153%203.409%2013.049%206.113%2026.686%208.111%2019.415%202.951%2033.417%208.184%2041.994%2015.698%208.578%207.513%2012.865%2019.439%2012.865%2035.775%200%2018.056-6.365%2030.963-19.096%2038.719-12.731%207.756-29.958%2011.634-51.679%2011.634-12.582%200-25.739-.886-39.47-2.66v-35.882c9.572%201.309%2019.465%202.092%2029.681%202.352%2010.423.31%2018.382-1.276%2023.878-4.726%205.496-3.449%208.244-9.915%208.244-19.397%200-9.059-3.104-15.264-9.312-18.615-6.209-3.351-15.9-5.708-29.072-7.071-21.667-2.343-37.1-6.678-46.3-12.005-9.201-5.327-15.85-12.714-19.948-22.163-4.097-9.45-6.147-21.234-6.147-35.351z'/%3e%3c/svg%3e";function Kw(e){return Nn({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"path",attr:{d:"M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"},child:[]}]})(e)}const QY=()=>N.jsxs(HY,{children:[N.jsxs(Zw,{children:[N.jsx(vs,{children:"Web Application Designer & Developer:"}),N.jsx(vs,{children:"Marek Lempart"}),N.jsx(vs,{children:N.jsxs("a",{href:"tel:+48664174400",children:[N.jsx(Kw,{})," +48 664 174 400"]})})]}),N.jsxs(WY,{children:[N.jsx("a",{href:"https://react.dev",target:"_blank",rel:"noopener noreferrer",children:N.jsx(B0,{src:XY,alt:"React logo"})}),N.jsx("a",{href:"https://www.typescriptlang.org/",target:"_blank",rel:"noopener noreferrer",children:N.jsx(B0,{src:qY,alt:"TypeScript logo"})}),N.jsx("a",{href:"https://vite.dev",target:"_blank",rel:"noopener noreferrer",children:N.jsx(B0,{src:YY,alt:"Vite logo"})})]}),N.jsxs(Zw,{children:[N.jsx(vs,{children:"Photographer:"}),N.jsx(vs,{children:"Marta Matczuk-Pisarek"}),N.jsx(vs,{children:N.jsxs("a",{href:"tel:+48603758565",children:[N.jsx(Kw,{})," +48 603 758 565"]})})]}),N.jsx(GY,{children:WP.map((e,t)=>N.jsx(ZY,{children:N.jsx("a",{href:e.link,target:"_blank",rel:"noopener noreferrer",children:N.jsx(Iu,{image:e})})},t))}),N.jsx(KY,{children:"© 2024 Template Vite - React/TS"})]});function yl(){return yl=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},yl.apply(null,arguments)}var GP={exports:{}},qe={};/**
  * @license React
  * react-is.production.min.js
