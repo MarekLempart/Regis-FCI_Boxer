@@ -8,7 +8,6 @@ import PhoneInput from "react-phone-number-input";
 import { toast } from "react-toastify"; 
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-phone-number-input/style.css';
-// import { FormContainer, SectionTitle, PhoneContainer, InputContainer, SelectPhoneContainer, InputPhoneContainer, Input, InputPhone, TextArea, SubmitButton, ErrorText, Select } from "../styles/ContactFormStyles";
 import {
   FormContainer,
   SectionTitle,
@@ -29,7 +28,6 @@ const ContactForm: React.FC = () => {
       lastName: "",
       email: "",
       phone: "",
-      // countryCode: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -68,12 +66,6 @@ const ContactForm: React.FC = () => {
           })
         );
     },
-    //     .then(() => {
-    //       alert("Wiadomość wysłana!");
-    //       resetForm();
-    //     })
-    //     .catch(() => alert("Wystąpił błąd. Spróbuj ponownie."));
-    // },
   });
 
   return (
@@ -118,32 +110,6 @@ const ContactForm: React.FC = () => {
           />
           {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
       </PhoneInputStyledContainer>
-
-        {/* <PhoneContainer>
-          <SelectPhoneContainer>
-            <Select
-              name="countryCode"        
-              value={formik.values.countryCode}
-              onChange={formik.handleChange}
-            >
-              <option value="">---</option>
-              <option value="+48">Polska (+48)</option>
-              <option value="+44">Wielka Brytania (+44)</option>
-              <option value="+49">Niemcy (+49)</option>
-              <option value="+1">USA (+1)</option>
-            </Select>
-          </SelectPhoneContainer>
-
-          <InputPhoneContainer>
-            <InputPhone
-              name="phone"
-              placeholder="Numer telefonu"
-              value={formik.values.phone}
-              onChange={formik.handleChange}
-            />
-            {formik.errors.phone && <ErrorText>{formik.errors.phone}</ErrorText>}
-          </InputPhoneContainer>
-        </PhoneContainer> */}
 
         <InputContainer>
           <TextArea
