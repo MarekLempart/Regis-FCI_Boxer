@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from 'styled-components';
-import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog, FaHome, FaAward, FaSun, FaMoon } from 'react-icons/fa';
+import { FaBars, FaTimes, FaInstagram, FaFacebook, FaDog, FaHome, FaAward, FaCloudSun, FaCloudMoon } from 'react-icons/fa';
 import { MdPets, MdContactPhone } from 'react-icons/md';
 import { useHeaderVisibility } from '../hooks/useHeaderVisibility';
 import useThemeContext from '../hooks/useThemeContext';
@@ -18,6 +18,7 @@ import {
   SocialMediaWrapper,
   Overlay,
   ThemeToggleButton,
+  MobileIconsContainer,
 } from '../styles/HeaderStyles';
 
 // Definicja typów propsów
@@ -114,14 +115,21 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             </a>
           </SocialMediaWrapper>
           <ThemeToggleButton onClick={toggleTheme}>
-            {currentTheme === 'dark' ? <FaMoon /> : <FaSun />}
+            {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
           </ThemeToggleButton>
         </Nav>
         
-        <MobileMenuIcon onClick={toggleMenu}>
-          <FaBars />
-        </MobileMenuIcon>
-        
+{/* Kontener dla mobilnych ikon */}
+{isMobile && (
+          <MobileIconsContainer>
+            <ThemeToggleButton onClick={toggleTheme}>
+              {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
+            </ThemeToggleButton>
+            <MobileMenuIcon onClick={toggleMenu}>
+              <FaBars />
+            </MobileMenuIcon>
+          </MobileIconsContainer>
+        )}        
         
       </HeaderWrapper>
 
@@ -131,9 +139,9 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             <button onClick={handleCloseClick}>
               <FaTimes />
             </button>
-            <ThemeToggleButton onClick={toggleTheme}>
-            {currentTheme === 'dark' ? <FaMoon /> : <FaSun />}
-            </ThemeToggleButton>
+            {/* <ThemeToggleButton onClick={toggleTheme}>
+            {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
+            </ThemeToggleButton> */}
             
             <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>
               <FaHome /> Home

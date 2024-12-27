@@ -104,15 +104,15 @@ export const MobileMenuIcon = styled.div`
   align-items: center;
   cursor: pointer;
 
+  svg {
+      fill: ${({ theme }) => theme.colors.textPrimary};
+      width: 28px;
+      height: 28px;
+    }
+
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
-  }
-
-  svg {
-    fill: ${({ theme }) => theme.colors.textPrimary};
-    width: 28px;
-    height: 28px;
-  }
+  }  
 `;
 
 export const Overlay = styled.div`
@@ -208,7 +208,7 @@ export const ThemeToggleButton = styled.button`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.textPrimary};
   font-size: 1.5rem;
-  margin: 20px auto 0px 20px;
+  margin: 5px auto 0px 0px;
 
   &:hover {
     color: ${({ theme }) => theme.colors.hover};
@@ -220,3 +220,12 @@ export const ThemeToggleButton = styled.button`
   }
 `;
 
+export const MobileIconsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none; /* Ukryj w wersji tablet/desktop */
+  }
+`;
