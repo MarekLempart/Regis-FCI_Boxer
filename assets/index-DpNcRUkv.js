@@ -293,13 +293,13 @@ Error generating stack: `+a.message+`
   overflow: hidden;
   margin: 0px auto;  
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4); */
 
   @media (min-width: ${({theme:e})=>e.breakpoints.mobile}) {
     width: 100%; /* Na tablet i desktop dwie kolumny */
-    background-color: transparent;
-    box-shadow: none;
+    /* background-color: transparent;
+    box-shadow: none; */
   }
 `,RD=xe.div`
   font-family: "Caveat", cursive;
