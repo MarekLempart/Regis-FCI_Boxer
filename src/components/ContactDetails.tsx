@@ -20,7 +20,7 @@ const ContactDetails: React.FC = () => {
       <DetailItem>
         <DetailIcon><FaMapMarkerAlt /></DetailIcon>
         <DetailText>
-          <button onClick={toggleMap}>ul. Obornicka 78/29, 51-114 Wrocław, Polska</button>
+          <button onClick={toggleMap}>Wrocław, Polska</button>
         </DetailText>
       </DetailItem>
       <DetailItem>
@@ -34,9 +34,9 @@ const ContactDetails: React.FC = () => {
 
       {showMap && (
         <Map
-          latitude={51.14015}
-          longitude={17.02654}
-          address="ul. Obornicka 78/29, 51-114 Wrocław, Polska"
+          latitude={51.11075}
+          longitude={17.03129}
+          address="Wrocław, Polska"
           onClose={toggleMap}
         />
       )}
