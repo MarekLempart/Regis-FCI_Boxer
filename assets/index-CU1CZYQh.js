@@ -796,29 +796,29 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   flex-direction: row;
   color: ${({theme:e})=>e.colors.textPrimary};
 `,IY=_e.h3`
-  font-size: 36px;
-  margin: 20px 10px;
+  font-size: 24px;
+  margin: 30px 5px;
   color: ${({theme:e})=>e.colors.accent};
 
   @media ${({theme:e})=>e.media.tablet} {
-    font-size: 48px;
-    margin: 10px 0px;
+    font-size: 30px;
+    margin: 10px 10px;
   }
 
   @media ${({theme:e})=>e.media.desktop} {
-    font-size: 58px;
-    margin: 5px 0px;
+    font-size: 52px;
+    margin: 10px 20px;
   }
 `,NY=_e.img`
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   background-color: transparent; /* Wymuszenie przezroczystości */
-  margin: 10px 0px 0px;
+  margin: 15px 0px 0px;
 
   @media ${({theme:e})=>e.media.tablet} {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 0px 5px 0px;
   }
 
@@ -988,7 +988,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media screen and (min-width: ${({theme:e})=>e.breakpoints.mobile}) {
     display: none; /* Ukryj w wersji tablet/desktop */
   }
-`,zY="/assets/Logo_Regis1-BqQgaI7S.png",BY=({isMenuOpen:e,toggleMenu:t})=>{const n=c8(),{theme:r,toggleTheme:i}=AY(),a=x.useMemo(()=>parseInt(n.breakpoints.mobile),[n.breakpoints.mobile]),s=kY(),[u,c]=x.useState(window.innerWidth<=a),d=x.useRef(null);x.useEffect(()=>{const S=()=>{const P=window.innerWidth<=a;c(P),!P&&e&&t()};return window.addEventListener("resize",S),()=>{window.removeEventListener("resize",S)}},[e,t,a]);const h=S=>{u&&t(),S.stopPropagation()},p=S=>{S.stopPropagation(),t()},m=S=>{d.current&&!d.current.contains(S.target)&&t(),S.stopPropagation()},y=S=>{S.stopPropagation(),t()},w=()=>R.jsx(NY,{src:zY,alt:"Regis Logo"});return R.jsxs(R.Fragment,{children:[R.jsxs(OY,{className:`${s?"visible":"hidden"} ${e?"menu-open":""}`,children:[R.jsxs(LY,{children:[R.jsx(w,{}),R.jsx(IY,{children:"REGIS"})]}),R.jsxs(RY,{children:[R.jsxs(Ef,{as:ca,to:"/",onClick:h,children:[R.jsx(u$,{})," Home"]}),R.jsxs(Ef,{as:ca,to:"/achievements",onClick:h,children:[R.jsx(a$,{})," Osiągnięcia"]}),R.jsxs(Ef,{as:ca,to:"/contact",onClick:h,children:[R.jsx(Hw,{})," Kontakt"]}),R.jsxs(Ww,{children:[R.jsx("a",{href:"https://instagram.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(o$,{})}),R.jsx("a",{href:"https://facebook.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(i$,{})})]}),R.jsx(Gw,{onClick:i,children:r==="dark"?R.jsx(s$,{}):R.jsx(l$,{})})]}),u&&R.jsxs(FY,{children:[R.jsx(Gw,{onClick:i,children:r==="dark"?R.jsx(s$,{}):R.jsx(l$,{})}),R.jsx(MY,{onClick:t,children:R.jsx(IF,{})})]})]}),e&&R.jsx(DY,{ref:d,onClick:m,children:R.jsxs(jY,{children:[R.jsx("button",{onClick:p,children:R.jsx(DF,{})}),R.jsxs(z0,{as:ca,to:"/",onClick:h,children:[R.jsx(u$,{})," Home"]}),R.jsxs(z0,{as:ca,to:"/achievements",onClick:h,children:[R.jsx(a$,{})," Osiągnięcia"]}),R.jsxs(z0,{as:ca,to:"/contact",onClick:h,children:[R.jsx(Hw,{})," Kontakt"]}),R.jsxs(Ww,{children:[R.jsx("a",{href:"https://instagram.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(o$,{})}),R.jsx("a",{href:"https://facebook.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(i$,{})})]})]})})]})},VY=_e.footer`
+`,zY="/assets/Logo_Regis1-DxhTsBgH.png",BY=({isMenuOpen:e,toggleMenu:t})=>{const n=c8(),{theme:r,toggleTheme:i}=AY(),a=x.useMemo(()=>parseInt(n.breakpoints.mobile),[n.breakpoints.mobile]),s=kY(),[u,c]=x.useState(window.innerWidth<=a),d=x.useRef(null);x.useEffect(()=>{const S=()=>{const P=window.innerWidth<=a;c(P),!P&&e&&t()};return window.addEventListener("resize",S),()=>{window.removeEventListener("resize",S)}},[e,t,a]);const h=S=>{u&&t(),S.stopPropagation()},p=S=>{S.stopPropagation(),t()},m=S=>{d.current&&!d.current.contains(S.target)&&t(),S.stopPropagation()},y=S=>{S.stopPropagation(),t()},w=()=>R.jsx(NY,{src:zY,alt:"Regis Logo"});return R.jsxs(R.Fragment,{children:[R.jsxs(OY,{className:`${s?"visible":"hidden"} ${e?"menu-open":""}`,children:[R.jsxs(LY,{children:[R.jsx(w,{}),R.jsx(IY,{children:"REGIS - bokser"})]}),R.jsxs(RY,{children:[R.jsxs(Ef,{as:ca,to:"/",onClick:h,children:[R.jsx(u$,{})," Home"]}),R.jsxs(Ef,{as:ca,to:"/achievements",onClick:h,children:[R.jsx(a$,{})," Osiągnięcia"]}),R.jsxs(Ef,{as:ca,to:"/contact",onClick:h,children:[R.jsx(Hw,{})," Kontakt"]}),R.jsxs(Ww,{children:[R.jsx("a",{href:"https://instagram.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(o$,{})}),R.jsx("a",{href:"https://facebook.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(i$,{})})]}),R.jsx(Gw,{onClick:i,children:r==="dark"?R.jsx(s$,{}):R.jsx(l$,{})})]}),u&&R.jsxs(FY,{children:[R.jsx(Gw,{onClick:i,children:r==="dark"?R.jsx(s$,{}):R.jsx(l$,{})}),R.jsx(MY,{onClick:t,children:R.jsx(IF,{})})]})]}),e&&R.jsx(DY,{ref:d,onClick:m,children:R.jsxs(jY,{children:[R.jsx("button",{onClick:p,children:R.jsx(DF,{})}),R.jsxs(z0,{as:ca,to:"/",onClick:h,children:[R.jsx(u$,{})," Home"]}),R.jsxs(z0,{as:ca,to:"/achievements",onClick:h,children:[R.jsx(a$,{})," Osiągnięcia"]}),R.jsxs(z0,{as:ca,to:"/contact",onClick:h,children:[R.jsx(Hw,{})," Kontakt"]}),R.jsxs(Ww,{children:[R.jsx("a",{href:"https://instagram.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(o$,{})}),R.jsx("a",{href:"https://facebook.com",target:"_blank",rel:"noopener noreferrer",onClick:y,children:R.jsx(i$,{})})]})]})})]})},VY=_e.footer`
   text-align: center;
   padding: 20px;
   background-color: ${({theme:e})=>e.colors.bgPrimary};
