@@ -3,8 +3,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from 'styled-components';
-import ImageCard from './ImageCard';
-import imageDataLogoKynological from '../data/imageDataLogo';
 import { FaBars, FaTimes, FaInstagram, FaFacebook, FaHome, FaAward, FaCloudSun, FaCloudMoon } from 'react-icons/fa';
 import { MdContactPhone } from 'react-icons/md';
 import { useHeaderVisibility } from '../hooks/useHeaderVisibility';
@@ -12,6 +10,8 @@ import useThemeContext from '../hooks/useThemeContext';
 import {
   HeaderWrapper,
   Logo,
+  StyledImage,
+  LogoName,
   Nav,
   StyledNavLink,
   MobileMenuIcon,
@@ -21,9 +21,8 @@ import {
   Overlay,
   ThemeToggleButton,
   MobileIconsContainer,
-  LogoAssociationHeader,
-  LogoKynologicalHeader,
 } from '../styles/HeaderStyles';
+import LogoRegisImage from '../img/Logo_Regis1.png';
 
 // Definicja typów propsów
 interface HeaderProps {
@@ -80,6 +79,10 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     toggleMenu();
   };
 
+  const ImageComponent = () => (
+    <StyledImage src={LogoRegisImage} alt='Regis Logo' />
+  );
+
   return (
     <>
       <HeaderWrapper
@@ -88,15 +91,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
         }`}
       >
         <Logo>
-          <LogoKynologicalHeader>
-            {imageDataLogoKynological.map((image, index) => (
-              <LogoAssociationHeader key={index}>
-                <a href={image.link} target="_blank" rel="noopener noreferrer">
-                  <ImageCard image={image} />
-                </a>
-              </LogoAssociationHeader>
-            ))}
-          </LogoKynologicalHeader>
+            <ImageComponent />
+            <LogoName>REGIS</LogoName>
         </Logo>
         <Nav>
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>

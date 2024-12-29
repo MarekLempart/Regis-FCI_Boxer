@@ -47,8 +47,45 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const Logo = styled.div`
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
   color: ${({ theme }) => theme.colors.textPrimary};
+`;
+
+export const LogoName = styled.h3`
+  font-size: 36px;
+  margin: 20px 10px;
+  color: ${({ theme }) => theme.colors.accent};
+
+  @media ${({ theme }) => theme.media.tablet} {
+    font-size: 48px;
+    margin: 10px 0px;
+  }
+
+  @media ${({ theme }) => theme.media.desktop} {
+    font-size: 58px;
+    margin: 5px 0px;
+  }
+`
+
+export const StyledImage = styled.img`
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-color: transparent; /* Wymuszenie przezroczystości */
+  margin: 10px 0px 0px;
+
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 80px;
+    height: 80px;
+    margin: 0px 5px 0px;
+  }
+
+  @media ${({ theme }) => theme.media.desktop} {
+    width: 100px;
+    height: 100px;
+    margin: 0px 10px 10px;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -65,7 +102,7 @@ export const StyledNavLink = styled.a`
   position: relative;
   color: ${({ theme }) => theme.colors.textPrimary};
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
@@ -163,7 +200,7 @@ export const MobileNav = styled.div`
 export const MobileNavLink = styled(StyledNavLink)`
   align-self: flex-start; /* Align links to the left */
   margin-left: 15px;
-  font-size: 1.2rem;
+  font-size: 18px;
   color: ${({ theme }) => theme.colors.textPrimary};
   transition: color 250ms ease-in-out;
 
@@ -188,7 +225,7 @@ export const SocialMediaWrapper = styled.div`
 
   a {
     color: ${({ theme }) => theme.colors.textPrimary};
-    font-size: 1.5rem;
+    font-size: 24px;
     transition: color 250ms ease-in-out;
 
     &:hover {
@@ -207,7 +244,7 @@ export const ThemeToggleButton = styled.button`
   border: none;
   cursor: pointer;
   color: ${({ theme }) => theme.colors.textPrimary};
-  font-size: 1.5rem;
+  font-size: 24px;
   margin: 5px auto 0px 0px;
 
   &:hover {
@@ -215,7 +252,7 @@ export const ThemeToggleButton = styled.button`
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1.8rem;
+    font-size: 30px;
     margin: 10px auto 10px 10px;
   }
 `;
@@ -228,21 +265,4 @@ export const MobileIconsContainer = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none; /* Ukryj w wersji tablet/desktop */
   }
-`;
-
-export const LogoAssociationHeader = styled.div`
-  width: 40px;
-  padding: 5px;
-
-  @media ${({ theme }) => theme.media.tabletAndDesktop} {
-    width: 50px;
-  }
-`;
-
-export const LogoKynologicalHeader = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  margin: 10px auto;
 `;
