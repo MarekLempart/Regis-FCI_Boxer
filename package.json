@@ -5,12 +5,15 @@
   "type": "module",
   "homepage": "https://MarekLempart.github.is/Regis-FCI_Boxer/",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",  
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:ghpages": "VITE_DEPLOY_ENV=ghpages vite build",
+    "build:netlify": "VITE_DEPLOY_ENV=netlify vite build",
+    "build:ovhcloud": "VITE_DEPLOY_ENV=ovh vite build",
+    "deploy": "npm run build:ghpages && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
