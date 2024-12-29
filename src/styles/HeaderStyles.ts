@@ -53,31 +53,31 @@ export const Logo = styled.div`
 `;
 
 export const LogoName = styled.h3`
-  font-size: 36px;
-  margin: 20px 10px;
+  font-size: 24px;
+  margin: 30px 5px;
   color: ${({ theme }) => theme.colors.accent};
 
   @media ${({ theme }) => theme.media.tablet} {
-    font-size: 48px;
-    margin: 10px 0px;
+    font-size: 30px;
+    margin: 10px 10px;
   }
 
   @media ${({ theme }) => theme.media.desktop} {
-    font-size: 58px;
-    margin: 5px 0px;
+    font-size: 52px;
+    margin: 10px 20px;
   }
 `
 
 export const StyledImage = styled.img`
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   background-color: transparent; /* Wymuszenie przezroczystości */
-  margin: 10px 0px 0px;
+  margin: 15px 0px 0px;
 
   @media ${({ theme }) => theme.media.tablet} {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 0px 5px 0px;
   }
 

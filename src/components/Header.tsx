@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       >
         <Logo>
             <ImageComponent />
-            <LogoName>REGIS</LogoName>
+            <LogoName>REGIS - bokser</LogoName>
         </Logo>
         <Nav>
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
