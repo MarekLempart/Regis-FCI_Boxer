@@ -106,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
           </StyledNavLink>
           <SocialMediaWrapper>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/kama.zakupy/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleSocialMediaClick}
@@ -114,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
               <FaInstagram />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61571282583600"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleSocialMediaClick}
@@ -159,7 +159,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             </MobileNavLink>
             <SocialMediaWrapper>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/kama.zakupy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleSocialMediaClick}
@@ -167,7 +167,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
                 <FaInstagram />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61571282583600"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleSocialMediaClick}
