@@ -13,8 +13,7 @@ export const theme = {
       bgDarkGray: '#a9a9a9',
       bgRichPewter: '#6a6f70',
       bgDarkNavy: '#0a1f44',
-      bgSterlingBlue: '#a3b9c1',
-      bgWindy: '#b8ced1',
+      bgJacarandaLight: '#a7acb9',
       bgCrowBlack: '#263348',
       bgOrange: '#c87533',
       bgBrightBrown: '#a14d26',
@@ -44,7 +43,7 @@ export const theme = {
     ...theme,
     colors: {
       ...theme.colors,
-      bgPrimary: theme.colors.bgWindy,
+      bgPrimary: theme.colors.bgJacarandaLight,
       textPrimary: theme.colors.textDarkNavy,
       accent: theme.colors.textBrightBrown,
       hover: theme.colors.textBrightBrown,
