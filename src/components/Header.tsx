@@ -76,7 +76,9 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
   const handleSocialMediaClick = (event: React.MouseEvent) => {
     event.stopPropagation();
-    toggleMenu();
+    if (isMobile) {
+      toggleMenu();
+    }    
   };
 
   const ImageComponent = () => (
