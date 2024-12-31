@@ -2,7 +2,8 @@
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeContextProvider } from './context/ThemeContext';
 import GlobalStyles from './styles/GlobalStyles';
 import 'antd/dist/reset.css';
@@ -12,9 +13,9 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeContextProvider>
       <GlobalStyles />
-      <HashRouter>
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </ThemeContextProvider>
   </StrictMode>
 );
