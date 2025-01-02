@@ -61,7 +61,7 @@ const HeroSlideshow = () => {
             />
             <TextOverlay>
                 <HeroText
-                initial={{ opacity: 0, y: 20 }} // Startuje poniżej z zerową widocznością
+                initial={{ opacity: 0, y: 10 }} // Startuje poniżej z zerową widocznością
                 animate={{ opacity: 1, y: 0 }} // Pojawia się z przesunięciem
                 transition={{ duration: 1, delay: 0.5 }} // Płynna animacja z opóźnieniem
                 >
@@ -76,7 +76,7 @@ const HeroSlideshow = () => {
                     ]}
                     speed={50}
                     wrapper="span"
-                    repeat={1}
+                    repeat={5}
                     cursor={false}
                 />
                 </HeroText>
