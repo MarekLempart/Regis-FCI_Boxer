@@ -16,7 +16,6 @@ interface MapProps {
 
 const Map: React.FC<MapProps> = ({ latitude, longitude, address, onClose }) => {
   useEffect(() => {
-    // Ustawienie niestandardowej ikony
     const defaultIcon = L.icon({
       iconUrl: markerIcon,
       shadowUrl: markerShadow,
@@ -39,7 +38,7 @@ const Map: React.FC<MapProps> = ({ latitude, longitude, address, onClose }) => {
       .openPopup();
 
     return () => {
-      map.remove(); // Usunięcie instancji mapy przy odmontowaniu komponentu
+      map.remove();
     };
   }, [latitude, longitude, address]);
 

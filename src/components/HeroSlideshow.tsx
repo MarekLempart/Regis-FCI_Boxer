@@ -39,7 +39,7 @@ const HeroSlideshow = () => {
 
   useEffect(() => {
     window.addEventListener("resize", updateScreenSize);
-    updateScreenSize(); // Aktualizujemy przy pierwszym renderze
+    updateScreenSize();
     const interval = setInterval(nextSlide, 5000);
     return () => {
       window.removeEventListener("resize", updateScreenSize);

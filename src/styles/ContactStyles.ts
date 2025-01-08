@@ -25,7 +25,7 @@ export const TextWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto; /* Dopasowanie do wymiarów */
+  height: auto;
 `;
 
 export const ImageWrapper = styled.div<{ $smallImage?: boolean }>`
@@ -33,9 +33,6 @@ export const ImageWrapper = styled.div<{ $smallImage?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-
-  /* Zmniejszanie rozmiaru obrazka na tablet i desktop */
   width: ${({ $smallImage }) => ($smallImage ? "70%" : "100%")};
   max-width: ${({ $smallImage }) => ($smallImage ? "600px" : "100%")};
 
@@ -47,7 +44,7 @@ export const ImageWrapper = styled.div<{ $smallImage?: boolean }>`
     width: ${({ $smallImage }) => ($smallImage ? "40%" : "100%")};
   }
 
-  height: auto; /* Dopasowanie do wymiarów */
+  height: auto;
 `;
 
 export const ContactContainer = styled.div`

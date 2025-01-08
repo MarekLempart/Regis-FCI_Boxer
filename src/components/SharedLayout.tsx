@@ -24,7 +24,6 @@ const SharedLayout: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Użycie niestandardowego wskaźnika spinnera
   const antIcon = (
     <LoadingOutlined
       style={{ fontSize: 96, color: theme.colors.textOrange }}

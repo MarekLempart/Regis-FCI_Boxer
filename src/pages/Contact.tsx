@@ -23,7 +23,6 @@ const Contact: React.FC = () => {
             image={image}
             text={person}
             $reverse={index % 2 !== 0} // Odwracamy kolejność co drugi wiersz
-            // $smallImage={true} // remove it
           />
         );
       })}

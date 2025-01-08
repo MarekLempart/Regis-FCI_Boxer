@@ -8,9 +8,9 @@ export const PositionImageContainer = styled.div`
   flex-direction: column;
   text-align: center;
   padding: 10px 0px 10px;
-  width: 100%; /* Domyślnie 100% szerokości ekranu */
-  max-width: 1400px; /* Maksymalna szerokość */
-  aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
+  width: 100%;
+  max-width: 1400px;
+  aspect-ratio: 3 / 2;
 `;
 
 // Kontener wokół obrazu
@@ -21,35 +21,20 @@ export const ImageCardContainer = styled.div`
   position: relative;
   width: 100%;
 
-  /* width: 780px;
-  height: 520px; */
-
-  /* width: 100%;
-  max-width: 740px;
-  aspect-ratio: 3 / 2; */
-
   overflow: hidden;
   margin: 0px auto;
   border-radius: 10px;
   background: #000;
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.5);
-  /* transition: transform 0.3s ease-in-out; */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 100%; /* Na tablet i desktop dwie kolumny */
+    width: 100%;
   }
 `;
 
-// Obraz z animowanym cieniem
 export const StyledImageCard = styled(motion.img)`
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  /* box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.2); // Pomarańczowy cień
-  transition: transform 0.3s ease-in-out; */
-
-  /* &:hover {
-    cursor: pointer;
-  } */
 `;

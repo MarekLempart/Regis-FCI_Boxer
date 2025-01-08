@@ -27,14 +27,14 @@ const GlobalStyles = createGlobalStyle`
 
   #root {
     display: flex;
-    justify-content: center; /* Wyśrodkowanie poziome */
+    justify-content: center;
   }
 
   .page-container {
-    width: 100%; /* Pełna szerokość kontenera */
+    width: 100%;
     max-width: ${({ theme }) =>
-      theme.breakpoints.desktop}; /* Maksymalna szerokość 1680px */
-    padding: 0px 5px; /* Odstępy wewnętrzne */
+      theme.breakpoints.desktop};
+    padding: 0px 5px;
   }
 
   a {

@@ -15,9 +15,9 @@ export const useHeaderVisibility = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY) {
-        setIsVisible(false); // Ukryj nagłówek
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Pokaż nagłówek
+        setIsVisible(true);
       }
 
       setLastScrollY(currentScrollY);

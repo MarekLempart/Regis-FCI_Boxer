@@ -11,33 +11,29 @@ export const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.bgPrimary};
   border-bottom: 5px solid ${({ theme }) => theme.colors.textOrange};
   box-shadow: 0px 15px 20px 5px rgba(255, 165, 0, 0.5);
-  /* box-shadow: 0 3px 0 0 ${({ theme }) => theme.colors.bgCrowBlack}, 
-              0 6px 0 0 ${({ theme }) => theme.colors.textOrange}; */
 
-  position: fixed; /* Utrzymujemy header na górze */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
 
-  /* Dodajemy ograniczenie szerokości */
   max-width: ${({ theme }) => theme.breakpoints.desktop};
-  margin: 0 auto; /* Wyśrodkowanie */
-  width: 100%; /* Pełna szerokość w granicach max-width */
+  margin: 0 auto;
+  width: 100%;
 
-  /* Animacje */
-  transform: translateY(0); /* Domyślnie widoczny */
-  transition: transform 0.3s ease-in-out; /* Płynne przesuwanie */
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
 
   &.hidden {
-    transform: translateY(-100%); /* Ukryty poza widokiem */
+    transform: translateY(-100%);
   }
 
   &.visible {
-    transform: translateY(0); /* Widoczny na ekranie */
+    transform: translateY(0);
   }
   &.menu-open {
-    display: none; /* Ukryj header, gdy menu jest otwarte */
+    display: none;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -71,7 +67,7 @@ export const StyledImage = styled.img`
   display: block;
   width: 55px;
   height: 55px;
-  background-color: transparent; /* Wymuszenie przezroczystości */
+  background-color: transparent;
   margin: 15px 0px 0px;
 
   @media ${({ theme }) => theme.media.tablet} {
@@ -125,7 +121,6 @@ export const StyledNavLink = styled.a`
     width: 100%;
   }
 
-  /* Aktywna zakładka */
   &.active {
     color: ${({ theme }) => theme.colors.accent};
 
@@ -157,7 +152,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 998;
 `;
 
@@ -165,10 +160,9 @@ export const MobileNav = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  /* width: 50%; */
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.bgPrimary}; /* bgDarkNavy */
+  background-color: ${({ theme }) => theme.colors.bgPrimary};
   z-index: 999;
   padding: 24px 16px;
 
@@ -179,7 +173,7 @@ export const MobileNav = styled.div`
   align-items: flex-start;
 
   & > button {
-    align-self: flex-end; /* Align close button to the right */
+    align-self: flex-end;
     background: none;
     border: none;
     cursor: pointer;
@@ -197,7 +191,7 @@ export const MobileNav = styled.div`
 `;
 
 export const MobileNavLink = styled(StyledNavLink)`
-  align-self: flex-start; /* Align links to the left */
+  align-self: flex-start;
   margin-left: 15px;
   font-size: 18px;
   color: ${({ theme }) => theme.colors.textPrimary};
@@ -207,7 +201,6 @@ export const MobileNavLink = styled(StyledNavLink)`
     color: ${({ theme }) => theme.colors.hover};
   }
 
-  /* Aktywna zakładka */
   &.active {
     color: ${({ theme }) => theme.colors.accent};
 
@@ -220,7 +213,7 @@ export const MobileNavLink = styled(StyledNavLink)`
 export const SocialMediaWrapper = styled.div`
   display: flex;
   gap: 16px;
-  margin-top: auto; /* Push icons to the bottom in mobile */
+  margin-top: auto;
 
   a {
     color: ${({ theme }) => theme.colors.textPrimary};
@@ -262,6 +255,6 @@ export const MobileIconsContainer = styled.div`
   gap: 10px;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    display: none; /* Ukryj w wersji tablet/desktop */
+    display: none;
   }
 `;

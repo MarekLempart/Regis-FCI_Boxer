@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles.ts';
 import { theme } from './styles/theme.ts';
 import 'antd/dist/reset.css';
-// import './index.css';
 import App from './App.tsx';
 
 createRoot(document.getElementById('root')!).render(  

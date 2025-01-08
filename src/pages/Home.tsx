@@ -8,7 +8,6 @@ import imageRegisPosition from "../data/imageDateSection01";
 import imageRegisCard from "../data/imageDataCard";
 import imageRegisRunBridge from "../data/imageDateRunBridge";
 import imageRegisOnATrunk from "../data/imageDataOnTrunk";
-// import imageRegis from "../data/imageData"; // remove it
 import textData from "../data/textData";
 import {
   Container,

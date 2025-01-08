@@ -5,10 +5,10 @@ import { Spin } from "antd";
 // Stylizowany główny kontener dla zawartości stron
 export const MainWrapper = styled.div`
   padding-top: ${({ theme }) =>
-    theme.headerHeight}; /* Rezerwacja miejsca na header */
-  min-height: 100vh; /* Zapewnia wypełnienie całej wysokości okna */
+    theme.headerHeight};
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Ułożenie w kolumny (header -> main -> footer) */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;

@@ -46,12 +46,12 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     () => parseInt(theme.breakpoints.mobile),
     [theme.breakpoints.mobile]
   );
-  const isHeaderVisible = useHeaderVisibility(); // Hook do zarządzania widocznością nagłówka
+  const isHeaderVisible = useHeaderVisibility();
   const [isMobile, setIsMobile] = useState<boolean>(
     window.innerWidth <= breakpointMobile
-  ); // przerwanie dla mniejszych ekranów
+  );
 
-  const overlayRef = useRef<HTMLDivElement | null>(null); // Refs dla overlay i menu
+  const overlayRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       setIsMobile(isNowMobile);
 
       if (!isNowMobile && isMenuOpen) {
-        toggleMenu(); // Zamknij menu, jeśli przechodzimy z trybu mobilnego do desktopowego
+        toggleMenu();
       }
     };
 

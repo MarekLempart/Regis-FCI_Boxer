@@ -7,16 +7,15 @@ import {
   FooterText,
   ContactSection,
   ContactLine,
-  // PhotographerLogo, // remove it
   LogoKynological,
   LogoAssociation,
 } from "../styles/FooterStyles";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
-import tsLogo from "../assets/typescript.svg"; // Dodano logo TypeScript
+import tsLogo from "../assets/typescript.svg";
 import ImageCard from "./ImageCard";
 import imageDataLogoKynological from "../data/imageDataLogo";
-import { FiPhoneCall } from "react-icons/fi"; // Ikona telefonu
+import { FiPhoneCall } from "react-icons/fi";
 
 const Footer = () => {
   return (

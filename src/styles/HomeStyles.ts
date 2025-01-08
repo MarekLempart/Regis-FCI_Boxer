@@ -1,18 +1,17 @@
 // src/styles/HomeStyles.ts // remove it
-import styled from "styled-components"; // remove it
+import styled from "styled-components";
 
-// Kontener główny dla strony Home
 export const Container = styled.div`
   display: flex;
-  flex-direction: column; /* Domyślnie dla mobile układ kolumnowy */
-  gap: 20px; /* Odstęp między komponentami */
+  flex-direction: column;
+  gap: 20px;
   padding: ${({ theme }) => theme.spacing.mobilePadding};
   margin: 0px auto 20px;
 
   @media ${({ theme }) => theme.media.tablet} {
-    flex-direction: row; /* Na tablet i desktop zmiana na układ wierszy */
-    flex-wrap: wrap; /* Pozwalamy na zawijanie komponentów */
-    gap: 20px; /* Odstęp między kolumnami */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: ${({ theme }) => theme.spacing.tabletPadding};
   }
 
@@ -44,7 +43,7 @@ export const ItemsContainerNoirOrder = styled.div`
 // Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
 export const ItemsContainerReverseOrder = styled(ItemsContainerNoirOrder)`
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
-    flex-direction: row-reverse; /* Odwrócona kolejność */
+    flex-direction: row-reverse;
   }
 `;
 
@@ -53,11 +52,11 @@ export const ItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1; /* Zapewnia, że komponenty będą się rozciągały równomiernie */
+  flex: 1;
   padding: 0px;
-  width: 100%; /* Zapewnia pełną szerokość w mobile */
+  width: 100%;
 
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
-    width: 50%; /* Na tabletach i desktopach, komponenty będą zajmować 50% szerokości (dla dwóch kolumn) */
+    width: 50%;
   }
 `;

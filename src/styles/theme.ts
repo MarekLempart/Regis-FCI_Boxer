@@ -19,12 +19,12 @@ export const theme = {
     bgBrightBrown: "#a14d26",
   },
 
-  headerHeight: "70px", // Dodajemy wysokość headera
+  headerHeight: "70px",
 
   breakpoints: {
     mobile: "768px",
     tablet: "1200px",
-    desktop: "1680px",
+    desktop: "1440px",
   },
   media: {
     mobile: `(max-width: 767px)`,

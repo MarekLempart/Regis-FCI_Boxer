@@ -18,8 +18,8 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
 
   // Deklaracja typu dla `useInView`
   const { ref } = useInView({
-    threshold: 0.5, // Procent widoczności komponentu przed aktywacją
-    triggerOnce: true, // Uruchamia tylko raz
+    threshold: 0.5,
+    triggerOnce: true,
     onChange: (inView: boolean) => {
       if (inView) {
         setIsVisible(true);
@@ -35,8 +35,8 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
             <TypeAnimation
               sequence={[...text.flatMap((t) => [t, 1000])]} // Animowany tekst i pauza
               speed={50} // Prędkość "pisania"
-              wrapper="h3" // Nagłówek HTML
-              repeat={0} // Animacja tylko raz
+              wrapper="h3"
+              repeat={0} // Animacja
               cursor={false}
             />
           </StyledText>
