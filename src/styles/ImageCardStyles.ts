@@ -1,9 +1,9 @@
-// src/styles/ImageCardStyles.ts
+// src/styles/ImageCardStyles.ts // remove it
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const PositionImageContainer = styled.div `
+export const PositionImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -20,7 +20,7 @@ export const ImageCardContainer = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  
+
   /* width: 780px;
   height: 520px; */
 
@@ -29,7 +29,7 @@ export const ImageCardContainer = styled.div`
   aspect-ratio: 3 / 2; */
 
   overflow: hidden;
-  margin: 0px auto; 
+  margin: 0px auto;
   border-radius: 10px;
   background: #000;
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.5);

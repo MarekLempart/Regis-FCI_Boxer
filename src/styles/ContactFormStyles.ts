@@ -1,4 +1,4 @@
-// src/styles/ContactFormStyles.ts
+// src/styles/ContactFormStyles.ts // remove it
 
 import styled from "styled-components";
 
@@ -59,7 +59,7 @@ export const PhoneInputStyledContainer = styled.div`
 
 export const FormContainer = styled.form`
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 30px;
   padding: 10px;
 
@@ -90,15 +90,16 @@ export const InputContainer = styled.div`
   @media ${({ theme }) => theme.media.desktop} {
     padding: 0px 80px;
   }
-  `;
+`;
 
 export const InputTitle = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
   width: 140px;
-  font-size: 16px;  color: ${({ theme }) => theme.colors.textPrimary};
-  `;
+  font-size: 16px;
+  color: ${({ theme }) => theme.colors.textPrimary};
+`;
 
 export const Input = styled.input`
   width: 100%;
@@ -136,7 +137,7 @@ export const ErrorText = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 10px;  
+  gap: 10px;
   color: ${({ theme }) => theme.colors.textChickenComb};
   font-size: 12px;
   margin-top: 5px;

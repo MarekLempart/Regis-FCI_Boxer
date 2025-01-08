@@ -1,4 +1,4 @@
-// src/pages/Home.tsx
+// src/pages/Home.tsx // remove it
 
 import HeroSlideshow from "../components/HeroSlideshow";
 import ImageSlideshow from "../components/ImageSlideshow";
@@ -8,70 +8,75 @@ import imageRegisPosition from "../data/imageDateSection01";
 import imageRegisCard from "../data/imageDataCard";
 import imageRegisRunBridge from "../data/imageDateRunBridge";
 import imageRegisOnATrunk from "../data/imageDataOnTrunk";
-// import imageRegis from "../data/imageData";
+// import imageRegis from "../data/imageData"; // remove it
 import textData from "../data/textData";
-import { Container, ItemContainer, ItemsContainerNoirOrder, ItemsContainerReverseOrder } from "../styles/HomeStyles";
+import {
+  Container,
+  ItemContainer,
+  ItemsContainerNoirOrder,
+  ItemsContainerReverseOrder,
+} from "../styles/HomeStyles";
 
 const Home = () => {
-    return (
-      <Container>
-        <HeroSlideshow />
-        
-        <ItemsContainerNoirOrder>
-          <ItemContainer>
-            <TextCard text={textData.section1} />          
-          </ItemContainer>
-          <ItemContainer>
-            <ImageCard image={imageRegisPosition[0]} />          
-          </ItemContainer>
-        </ItemsContainerNoirOrder>
+  return (
+    <Container>
+      <HeroSlideshow />
 
-        <ItemsContainerReverseOrder>
-          <ItemContainer>
-            <TextCard text={textData.section2} />
-          </ItemContainer>
-          <ItemContainer>
-            <ImageSlideshow images={imageRegisPosition} />
-          </ItemContainer>
-        </ItemsContainerReverseOrder>
+      <ItemsContainerNoirOrder>
+        <ItemContainer>
+          <TextCard text={textData.section1} />
+        </ItemContainer>
+        <ItemContainer>
+          <ImageCard image={imageRegisPosition[0]} />
+        </ItemContainer>
+      </ItemsContainerNoirOrder>
 
-        <ItemsContainerNoirOrder>
-          <ItemContainer>
-            <TextCard text={textData.section3} />
-          </ItemContainer>
-          <ItemContainer>
-            <ImageCard image={imageRegisCard[1]} />
-          </ItemContainer>
-        </ItemsContainerNoirOrder>
+      <ItemsContainerReverseOrder>
+        <ItemContainer>
+          <TextCard text={textData.section2} />
+        </ItemContainer>
+        <ItemContainer>
+          <ImageSlideshow images={imageRegisPosition} />
+        </ItemContainer>
+      </ItemsContainerReverseOrder>
 
-        <ItemsContainerReverseOrder>
-          <ItemContainer>
-            <TextCard text={textData.section4} />
-          </ItemContainer>
-          <ItemContainer>
-            <ImageSlideshow images={imageRegisRunBridge} />
-          </ItemContainer>
-        </ItemsContainerReverseOrder>
+      <ItemsContainerNoirOrder>
+        <ItemContainer>
+          <TextCard text={textData.section3} />
+        </ItemContainer>
+        <ItemContainer>
+          <ImageCard image={imageRegisCard[1]} />
+        </ItemContainer>
+      </ItemsContainerNoirOrder>
 
-        <ItemsContainerNoirOrder>
-          <ItemContainer>
-            <TextCard text={textData.section5} />
-          </ItemContainer>
-          <ItemContainer>
-            <ImageCard image={imageRegisCard[2]} />
-          </ItemContainer>
-        </ItemsContainerNoirOrder>
+      <ItemsContainerReverseOrder>
+        <ItemContainer>
+          <TextCard text={textData.section4} />
+        </ItemContainer>
+        <ItemContainer>
+          <ImageSlideshow images={imageRegisRunBridge} />
+        </ItemContainer>
+      </ItemsContainerReverseOrder>
 
-        <ItemsContainerReverseOrder>
-          <ItemContainer>
-            <TextCard text={textData.section6} />
-          </ItemContainer>
-          <ItemContainer>
-            <ImageSlideshow images={imageRegisOnATrunk} />
-          </ItemContainer>
-        </ItemsContainerReverseOrder>
-      </Container>      
-    );
-  };
+      <ItemsContainerNoirOrder>
+        <ItemContainer>
+          <TextCard text={textData.section5} />
+        </ItemContainer>
+        <ItemContainer>
+          <ImageCard image={imageRegisCard[2]} />
+        </ItemContainer>
+      </ItemsContainerNoirOrder>
+
+      <ItemsContainerReverseOrder>
+        <ItemContainer>
+          <TextCard text={textData.section6} />
+        </ItemContainer>
+        <ItemContainer>
+          <ImageSlideshow images={imageRegisOnATrunk} />
+        </ItemContainer>
+      </ItemsContainerReverseOrder>
+    </Container>
+  );
+};
 
 export default Home;

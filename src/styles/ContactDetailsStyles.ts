@@ -1,4 +1,4 @@
-// src/styles/ContactDetailsStyles.ts
+// src/styles/ContactDetailsStyles.ts // remove it
 
 import styled from "styled-components";
 
@@ -31,7 +31,6 @@ export const DetailItem = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  
 
   @media ${({ theme }) => theme.media.tablet} {
     margin-left: 60px;
@@ -54,7 +53,7 @@ export const DetailText = styled.div`
   display: flex;
   align-items: center;
 
-  button {    
+  button {
     background: none;
     border: none;
     padding: 0;

@@ -1,12 +1,21 @@
-// src/components/Header.tsx
+// src/components/Header.tsx // remove it
 
-import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useTheme } from 'styled-components';
-import { FaBars, FaTimes, FaInstagram, FaFacebook, FaHome, FaAward, FaCloudSun, FaCloudMoon } from 'react-icons/fa';
-import { MdContactPhone } from 'react-icons/md';
-import { useHeaderVisibility } from '../hooks/useHeaderVisibility';
-import useThemeContext from '../hooks/useThemeContext';
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { NavLink } from "react-router-dom";
+import { useTheme } from "styled-components";
+import {
+  FaBars,
+  FaTimes,
+  FaInstagram,
+  FaFacebook,
+  FaHome,
+  FaAward,
+  FaCloudSun,
+  FaCloudMoon,
+} from "react-icons/fa";
+import { MdContactPhone } from "react-icons/md";
+import { useHeaderVisibility } from "../hooks/useHeaderVisibility";
+import useThemeContext from "../hooks/useThemeContext";
 import {
   HeaderWrapper,
   Logo,
@@ -21,8 +30,8 @@ import {
   Overlay,
   ThemeToggleButton,
   MobileIconsContainer,
-} from '../styles/HeaderStyles';
-import LogoRegisImage from '../img/Logo_Regis1.png';
+} from "../styles/HeaderStyles";
+import LogoRegisImage from "../img/Logo_Regis1.png";
 
 // Definicja typów propsów
 interface HeaderProps {
@@ -33,9 +42,14 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const theme = useTheme();
   const { theme: currentTheme, toggleTheme } = useThemeContext();
-  const breakpointMobile = useMemo(() => parseInt(theme.breakpoints.mobile), [theme.breakpoints.mobile]);
+  const breakpointMobile = useMemo(
+    () => parseInt(theme.breakpoints.mobile),
+    [theme.breakpoints.mobile]
+  );
   const isHeaderVisible = useHeaderVisibility(); // Hook do zarządzania widocznością nagłówka
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= breakpointMobile);// przerwanie dla mniejszych ekranów
+  const [isMobile, setIsMobile] = useState<boolean>(
+    window.innerWidth <= breakpointMobile
+  ); // przerwanie dla mniejszych ekranów
 
   const overlayRef = useRef<HTMLDivElement | null>(null); // Refs dla overlay i menu
 
@@ -49,9 +63,9 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [isMenuOpen, toggleMenu, breakpointMobile]);
 
@@ -68,7 +82,10 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   };
 
   const handleOverlayClick = (event: React.MouseEvent) => {
-    if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
+    if (
+      overlayRef.current &&
+      !overlayRef.current.contains(event.target as Node)
+    ) {
       toggleMenu();
     }
     event.stopPropagation();
@@ -78,29 +95,33 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
     event.stopPropagation();
     if (isMobile) {
       toggleMenu();
-    }    
+    }
   };
 
   const ImageComponent = () => (
-    <StyledImage src={LogoRegisImage} alt='Regis Logo' />
+    <StyledImage src={LogoRegisImage} alt="Regis Logo" />
   );
 
   return (
     <>
       <HeaderWrapper
-        className={`${isHeaderVisible ? 'visible' : 'hidden'} ${
-          isMenuOpen ? 'menu-open' : ''
+        className={`${isHeaderVisible ? "visible" : "hidden"} ${
+          isMenuOpen ? "menu-open" : ""
         }`}
       >
         <Logo>
-            <ImageComponent />
-            <LogoName>REGIS - bokser</LogoName>
+          <ImageComponent />
+          <LogoName>REGIS - bokser</LogoName>
         </Logo>
         <Nav>
           <StyledNavLink as={NavLink} to="/" onClick={handleMenuClick}>
             <FaHome /> Home
           </StyledNavLink>
-          <StyledNavLink as={NavLink} to="/achievements" onClick={handleMenuClick}>
+          <StyledNavLink
+            as={NavLink}
+            to="/achievements"
+            onClick={handleMenuClick}
+          >
             <FaAward /> Osiągnięcia
           </StyledNavLink>
           <StyledNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>
@@ -125,22 +146,21 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             </a>
           </SocialMediaWrapper>
           <ThemeToggleButton onClick={toggleTheme}>
-            {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
+            {currentTheme === "dark" ? <FaCloudMoon /> : <FaCloudSun />}
           </ThemeToggleButton>
         </Nav>
-        
-      {/* Kontener dla mobilnych ikon */}
+
+        {/* Kontener dla mobilnych ikon */}
         {isMobile && (
           <MobileIconsContainer>
             <ThemeToggleButton onClick={toggleTheme}>
-              {currentTheme === 'dark' ? <FaCloudMoon /> : <FaCloudSun />}
+              {currentTheme === "dark" ? <FaCloudMoon /> : <FaCloudSun />}
             </ThemeToggleButton>
             <MobileMenuIcon onClick={toggleMenu}>
               <FaBars />
             </MobileMenuIcon>
           </MobileIconsContainer>
-        )}        
-        
+        )}
       </HeaderWrapper>
 
       {isMenuOpen && (
@@ -149,11 +169,15 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
             <button onClick={handleCloseClick}>
               <FaTimes />
             </button>
-            
+
             <MobileNavLink as={NavLink} to="/" onClick={handleMenuClick}>
               <FaHome /> Home
             </MobileNavLink>
-            <MobileNavLink as={NavLink} to="/achievements" onClick={handleMenuClick}>
+            <MobileNavLink
+              as={NavLink}
+              to="/achievements"
+              onClick={handleMenuClick}
+            >
               <FaAward /> Osiągnięcia
             </MobileNavLink>
             <MobileNavLink as={NavLink} to="/contact" onClick={handleMenuClick}>

@@ -1,6 +1,6 @@
-// src/components/FooterStyles.ts
+// src/components/FooterStyles.ts // remove it
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   text-align: center;
@@ -18,7 +18,7 @@ export const ContactSection = styled.div`
 export const ContactLine = styled.p`
   margin: 2px 0;
   font-size: 13px;
-  line-height: 1,5rem;
+  line-height: 1, 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,9 @@ export const Logo = styled.img`
   transition: filter 300ms, transform 300ms;
 
   &:hover {
-    filter: drop-shadow(0 0 15px ${({ theme }) => theme.colors.textBrightBrown});
+    filter: drop-shadow(
+      0 0 15px ${({ theme }) => theme.colors.textBrightBrown}
+    );
     transform: scale(1.1);
   }
 `;
@@ -140,7 +142,7 @@ export const FooterText = styled.p`
 //   margin: 1rem auto 0rem;
 //   font-size: 0.75rem;
 //   text-align: center;
-//   color: ${({ theme }) => theme.colors.textPrimary};  
+//   color: ${({ theme }) => theme.colors.textPrimary};
 // `;
 
 // export const FooterTitle = styled.h4`
@@ -153,9 +155,9 @@ export const FooterText = styled.p`
 //   display: flex;
 //   flex-direction: row;
 //   justify-content: center;
-//   align-items: center;  
+//   align-items: center;
 //   margin: 0px auto;
-//   gap: 10px;  
+//   gap: 10px;
 // `;
 
 // export const LogoAssociation = styled.div`

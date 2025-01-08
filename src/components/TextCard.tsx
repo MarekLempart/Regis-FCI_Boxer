@@ -1,7 +1,11 @@
-// src/components/TextCard.tsx
+// src/components/TextCard.tsx // remove it
 
 import React, { useState } from "react";
-import { PositionTextContainer, TextCardContainer, StyledText } from "../styles/TextCardStyles";
+import {
+  PositionTextContainer,
+  TextCardContainer,
+  StyledText,
+} from "../styles/TextCardStyles";
 import { TypeAnimation } from "react-type-animation";
 import { useInView } from "react-intersection-observer";
 
@@ -26,20 +30,19 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
   return (
     <PositionTextContainer>
       <TextCardContainer ref={ref}>
-      {isVisible && (
-        <StyledText>
-          <TypeAnimation
-            sequence={[...text.flatMap((t) => [t, 1000])]} // Animowany tekst i pauza
-            speed={50} // Prędkość "pisania"
-            wrapper="h3" // Nagłówek HTML
-            repeat={0} // Animacja tylko raz
-            cursor={false}
-          />
-        </StyledText>
-      )}
-    </TextCardContainer>
+        {isVisible && (
+          <StyledText>
+            <TypeAnimation
+              sequence={[...text.flatMap((t) => [t, 1000])]} // Animowany tekst i pauza
+              speed={50} // Prędkość "pisania"
+              wrapper="h3" // Nagłówek HTML
+              repeat={0} // Animacja tylko raz
+              cursor={false}
+            />
+          </StyledText>
+        )}
+      </TextCardContainer>
     </PositionTextContainer>
-    
   );
 };
 

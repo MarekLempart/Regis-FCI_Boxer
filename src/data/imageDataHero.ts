@@ -1,4 +1,4 @@
-// src/data/imageDataHero.ts
+// src/data/imageDataHero.ts // remove it
 
 import imgRegis_01_mobile from "../img/RegisCapture-1_mobile.webp";
 import imgRegis_01_tablet from "../img/RegisCapture-1_tablet.webp";
@@ -12,17 +12,32 @@ import imgRegis_03_desktop from "../img/RegisCapture-3_desktop.webp";
 
 // Definicja typu dla kazdego elementu w tablicy obrazów
 interface ImageItem {
-    id: string;
-    srcMobile: string;
-    srcTablet: string;
-    srcDesktop: string;
+  id: string;
+  srcMobile: string;
+  srcTablet: string;
+  srcDesktop: string;
 }
 
 // Tworzenie tablicy obrazów z typu 'ImageItem[]'
 const imageRegisHero: ImageItem[] = [
-    { id: "Regis_01", srcMobile: imgRegis_01_mobile, srcTablet: imgRegis_01_tablet, srcDesktop: imgRegis_01_desktop},
-    { id: "Regis_02", srcMobile: imgRegis_02_mobile, srcTablet: imgRegis_02_tablet, srcDesktop: imgRegis_02_desktop},
-    { id: "Regis_03", srcMobile: imgRegis_03_mobile, srcTablet: imgRegis_03_tablet, srcDesktop: imgRegis_03_desktop},
-]
+  {
+    id: "Regis_01",
+    srcMobile: imgRegis_01_mobile,
+    srcTablet: imgRegis_01_tablet,
+    srcDesktop: imgRegis_01_desktop,
+  },
+  {
+    id: "Regis_02",
+    srcMobile: imgRegis_02_mobile,
+    srcTablet: imgRegis_02_tablet,
+    srcDesktop: imgRegis_02_desktop,
+  },
+  {
+    id: "Regis_03",
+    srcMobile: imgRegis_03_mobile,
+    srcTablet: imgRegis_03_tablet,
+    srcDesktop: imgRegis_03_desktop,
+  },
+];
 
 export default imageRegisHero;
