@@ -1,7 +1,11 @@
-// src/components/ImageSlideshow.tsx
+// src/components/ImageSlideshow.tsx // remove it
 
 import { useState, useEffect } from "react";
-import { PositionImageContainer, SlideshowPositionContainer, StyledImage } from "../styles/ImageSlideshowStyles";
+import {
+  PositionImageContainer,
+  SlideshowPositionContainer,
+  StyledImage,
+} from "../styles/ImageSlideshowStyles";
 
 interface ImageItem {
   id: string;
@@ -42,15 +46,17 @@ const ImageSlideshow: React.FC<ImageSlideshowProps> = ({ images }) => {
           initial={{ filter: "blur(0px)" }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          animate={{ 
+          animate={{
             filter: isAnimating ? "blur(2px)" : "blur(0px)",
             scale: isHovered ? 1.05 : 1, // Powiększenie o 5% na hover
-            // boxShadow: isHovered
+            // boxShadow: isHovered // remove it
             //   ? "5px 10px 20px rgba(255, 165, 0, 0.8)"
             //   : "5px 10px 20px rgba(255, 165, 0, 0.5)",
           }}
           transition={{ duration: 0.3 }}
-          onAnimationComplete={isAnimating ? handleAnimationComplete : undefined}
+          onAnimationComplete={
+            isAnimating ? handleAnimationComplete : undefined
+          }
         />
       </SlideshowPositionContainer>
     </PositionImageContainer>

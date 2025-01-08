@@ -1,4 +1,4 @@
-// src/pages/Achievements.tsx
+// src/pages/Achievements.tsx // remove it
 
 import React from "react";
 import achievementsImageData from "../data/achievementsImageData";
@@ -10,7 +10,9 @@ const Achievements: React.FC = () => {
   return (
     <ContactContainer>
       {achievementsTextData.map((achievements, index) => {
-        const image = achievementsImageData.find((img) => img.id === achievements.id);
+        const image = achievementsImageData.find(
+          (img) => img.id === achievements.id
+        );
         if (!image) return null;
         return (
           <PersonCard
@@ -18,7 +20,7 @@ const Achievements: React.FC = () => {
             image={image}
             text={achievements}
             $reverse={index % 2 !== 0} // Odwracamy kolejność co drugi wiersz
-            // $smallImage={true}
+            // $smallImage={true} // remove it
           />
         );
       })}

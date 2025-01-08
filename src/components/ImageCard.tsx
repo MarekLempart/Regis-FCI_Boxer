@@ -1,7 +1,11 @@
-// src/components/ImageCard.tsx
+// src/components/ImageCard.tsx // remove it
 
 import { useState } from "react";
-import { PositionImageContainer, ImageCardContainer, StyledImageCard } from "../styles/ImageCardStyles";
+import {
+  PositionImageContainer,
+  ImageCardContainer,
+  StyledImageCard,
+} from "../styles/ImageCardStyles";
 
 interface ImageCardProps {
   image: {
@@ -23,15 +27,14 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
           onMouseLeave={() => setIsHovered(false)}
           animate={{
             scale: isHovered ? 1.05 : 1, // Powiększenie o 5% na hover
-            // boxShadow: isHovered
+            // boxShadow: isHovered // remove it
             //   ? "5px 10px 20px rgba(255, 165, 0, 0.8)"
             //   : "5px 10px 20px rgba(255, 165, 0, 0.5)",
           }}
           transition={{ duration: 0.3 }}
         />
-    </ImageCardContainer>
+      </ImageCardContainer>
     </PositionImageContainer>
-    
   );
 };
 

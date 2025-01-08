@@ -1,5 +1,5 @@
-// src/styles/HomeStyles.ts
-import styled from 'styled-components';
+// src/styles/HomeStyles.ts // remove it
+import styled from "styled-components"; // remove it
 
 // Kontener główny dla strony Home
 export const Container = styled.div`
@@ -22,7 +22,7 @@ export const Container = styled.div`
 `;
 
 // Kontener dla par komponentów w układzie dwóch kolumn bez zmiany kolejności
-export const ItemsContainerNoirOrder = styled.div`  
+export const ItemsContainerNoirOrder = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

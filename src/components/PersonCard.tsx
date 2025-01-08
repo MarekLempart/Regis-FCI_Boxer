@@ -1,9 +1,13 @@
-// src/components/PersonCard.tsx
+// src/components/PersonCard.tsx // remove it
 
 import React from "react";
 import { ImageCardContainer, StyledImageCard } from "../styles/ImageCardStyles";
 import { TextContainer, StyledText } from "../styles/PersonTextStyles";
-import { PersonCardContainer, TextWrapper, ImageWrapper } from "../styles/ContactStyles";
+import {
+  PersonCardContainer,
+  TextWrapper,
+  ImageWrapper,
+} from "../styles/ContactStyles";
 
 interface PersonCardProps {
   image: { id: string; src: string };
@@ -12,7 +16,12 @@ interface PersonCardProps {
   $smallImage?: boolean;
 }
 
-const PersonCard: React.FC<PersonCardProps> = ({ image, text, $reverse = false, $smallImage = false }) => (
+const PersonCard: React.FC<PersonCardProps> = ({
+  image,
+  text,
+  $reverse = false,
+  $smallImage = false,
+}) => (
   <PersonCardContainer $reverse={$reverse}>
     <ImageWrapper $smallImage={$smallImage}>
       <ImageCardContainer>

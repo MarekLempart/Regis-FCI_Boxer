@@ -1,6 +1,6 @@
-// src/styles/GlobalStyles.ts
+// src/styles/GlobalStyles.ts // remove it
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   /* Reset */
@@ -32,7 +32,8 @@ const GlobalStyles = createGlobalStyle`
 
   .page-container {
     width: 100%; /* Pełna szerokość kontenera */
-    max-width: ${({ theme }) => theme.breakpoints.desktop}; /* Maksymalna szerokość 1680px */
+    max-width: ${({ theme }) =>
+      theme.breakpoints.desktop}; /* Maksymalna szerokość 1680px */
     padding: 0px 5px; /* Odstępy wewnętrzne */
   }
 

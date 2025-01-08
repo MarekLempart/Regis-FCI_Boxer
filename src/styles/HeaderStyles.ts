@@ -1,6 +1,6 @@
-// src/styles/HeaderStyles.ts
+// src/styles/HeaderStyles.ts // remove it
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -20,8 +20,8 @@ export const HeaderWrapper = styled.header`
   right: 0;
   z-index: 1000;
 
-   /* Dodajemy ograniczenie szerokości */
-   max-width: ${({ theme }) => theme.breakpoints.desktop};
+  /* Dodajemy ograniczenie szerokości */
+  max-width: ${({ theme }) => theme.breakpoints.desktop};
   margin: 0 auto; /* Wyśrodkowanie */
   width: 100%; /* Pełna szerokość w granicach max-width */
 
@@ -43,7 +43,6 @@ export const HeaderWrapper = styled.header`
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     border-bottom: 10px solid ${({ theme }) => theme.colors.textOrange};
   }
-
 `;
 
 export const Logo = styled.div`
@@ -66,7 +65,7 @@ export const LogoName = styled.h3`
     font-size: 52px;
     margin: 10px 20px;
   }
-`
+`;
 
 export const StyledImage = styled.img`
   display: block;
@@ -111,7 +110,7 @@ export const StyledNavLink = styled.a`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -142,14 +141,14 @@ export const MobileMenuIcon = styled.div`
   cursor: pointer;
 
   svg {
-      fill: ${({ theme }) => theme.colors.textPrimary};
-      width: 28px;
-      height: 28px;
-    }
+    fill: ${({ theme }) => theme.colors.textPrimary};
+    width: 28px;
+    height: 28px;
+  }
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: none;
-  }  
+  }
 `;
 
 export const Overlay = styled.div`

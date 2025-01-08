@@ -1,7 +1,6 @@
-// src/hooks/useHeaderVisibility.tsx
+// src/hooks/useHeaderVisibility.tsx // remove it
 
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect } from "react";
 
 // Hook do obsługi widoczności nagłówka.
 // Nagłówek staje się niewidoczny, gdy użytkownik przewija w dół,
@@ -24,10 +23,10 @@ export const useHeaderVisibility = () => {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
 

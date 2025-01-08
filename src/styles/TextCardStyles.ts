@@ -1,13 +1,13 @@
-// src/styles/TextCardStyles.ts
+// src/styles/TextCardStyles.ts // remove it
 
 import styled from "styled-components";
 
-export const PositionTextContainer = styled.div `
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0px 10px;
-    width: 100%;
+export const PositionTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0px 10px;
+  width: 100%;
 `;
 
 export const TextCardContainer = styled.div`
@@ -15,23 +15,23 @@ export const TextCardContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  /* width: 780px;
-  height: 520px; */
+  /* width: 780px; // remove it
+  height: 520px; */ // remove it
 
   width: 100%; /* Domyślnie 100% szerokości ekranu */
   max-width: 840px; /* Maksymalna szerokość */
   aspect-ratio: 3 / 2; /* Zachowanie proporcji 3:2 */
 
   overflow: hidden;
-  margin: 0px auto;  
+  margin: 0px auto;
   border-radius: 10px;
   /* background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 5px 15px 20px rgba(255, 165, 0, 0.4); */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%; /* Na tablet i desktop dwie kolumny */
-    /* background-color: transparent;
-    box-shadow: none; */
+    /* background-color: transparent; // remove it
+    box-shadow: none; */ // remove it
   }
 `;
 

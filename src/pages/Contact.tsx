@@ -1,4 +1,4 @@
-// src/pages/Contact.tsx
+// src/pages/Contact.tsx // remove it
 
 import React from "react";
 import personImageData from "../data/personImageData";
@@ -6,7 +6,10 @@ import personTextData from "../data/personTextData";
 import PersonCard from "../components/PersonCard";
 import ContactDetails from "../components/ContactDetails";
 import ContactForm from "../components/ContactForm";
-import { ContactContainer, ContactContainerForm } from "../styles/ContactStyles";
+import {
+  ContactContainer,
+  ContactContainerForm,
+} from "../styles/ContactStyles";
 
 const Contact: React.FC = () => {
   return (
@@ -20,14 +23,14 @@ const Contact: React.FC = () => {
             image={image}
             text={person}
             $reverse={index % 2 !== 0} // Odwracamy kolejność co drugi wiersz
-            // $smallImage={true}
+            // $smallImage={true} // remove it
           />
         );
       })}
       <ContactContainerForm>
         <ContactDetails />
         <ContactForm />
-      </ContactContainerForm>      
+      </ContactContainerForm>
     </ContactContainer>
   );
 };

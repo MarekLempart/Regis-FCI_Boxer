@@ -1,4 +1,4 @@
-// src/components/Map.tsx
+// src/components/Map.tsx // remove it
 
 import React, { useEffect } from "react";
 import L from "leaflet";
@@ -16,27 +16,27 @@ interface MapProps {
 
 const Map: React.FC<MapProps> = ({ latitude, longitude, address, onClose }) => {
   useEffect(() => {
-
-     // Ustawienie niestandardowej ikony
-     const defaultIcon = L.icon({
-        iconUrl: markerIcon,
-        shadowUrl: markerShadow,
-        iconSize: [25, 41], // Domyślny rozmiar Leaflet
-        iconAnchor: [12, 41], // Punkt zaczepienia
-        popupAnchor: [1, -34], // Pozycja popupu względem ikony
-        shadowSize: [41, 41], // Rozmiar cienia
-      });
+    // Ustawienie niestandardowej ikony
+    const defaultIcon = L.icon({
+      iconUrl: markerIcon,
+      shadowUrl: markerShadow,
+      iconSize: [25, 41], // Domyślny rozmiar Leaflet
+      iconAnchor: [12, 41], // Punkt zaczepienia
+      popupAnchor: [1, -34], // Pozycja popupu względem ikony
+      shadowSize: [41, 41], // Rozmiar cienia
+    });
 
     const map = L.map("leaflet-map").setView([latitude, longitude], 16);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
+      attribution:
+        "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors",
     }).addTo(map);
-    
+
     L.marker([latitude, longitude], { icon: defaultIcon })
-        .addTo(map)
-        .bindPopup(address)
-        .openPopup();
+      .addTo(map)
+      .bindPopup(address)
+      .openPopup();
 
     return () => {
       map.remove(); // Usunięcie instancji mapy przy odmontowaniu komponentu

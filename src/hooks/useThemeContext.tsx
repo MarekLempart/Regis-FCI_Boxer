@@ -1,19 +1,21 @@
-// src/hooks/useThemeContext.tsx
+// src/hooks/useThemeContext.tsx // remove it
 
-import { useContext } from 'react';
-import ThemeContext from '../context/ThemeContext';
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 const useThemeContext = () => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useThemeContext must be used within a ThemeContextProvider');
+    throw new Error(
+      "useThemeContext must be used within a ThemeContextProvider"
+    );
   }
   return context;
 };
 
 export default useThemeContext;
 
-
+// remove a whole code below
 // import React, { createContext, useContext, useState, useEffect } from 'react';
 // import { ThemeProvider } from 'styled-components';
 // import { darkTheme, lightTheme } from '../styles/theme';
@@ -56,8 +58,6 @@ export default useThemeContext;
 //   }
 //   return context;
 // };
-
-
 
 // type ThemeContextType = {
 //   themeName: 'light' | 'dark';

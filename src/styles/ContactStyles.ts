@@ -1,4 +1,4 @@
-// src/styles/ContactStyles.ts
+// src/styles/ContactStyles.ts // remove it
 
 import styled from "styled-components";
 
@@ -65,7 +65,7 @@ export const ContactContainer = styled.div`
   }
 `;
 
-export const ContactContainerForm = styled.div `
+export const ContactContainerForm = styled.div`
   display: flex;
   flex-direction: column;
   width: auto;
