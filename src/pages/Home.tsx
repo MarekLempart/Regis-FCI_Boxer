@@ -1,4 +1,4 @@
-// src/pages/Home.tsx // remove it
+// src/pages/Home.tsx
 
 import HeroSlideshow from "../components/HeroSlideshow";
 import ImageSlideshow from "../components/ImageSlideshow";

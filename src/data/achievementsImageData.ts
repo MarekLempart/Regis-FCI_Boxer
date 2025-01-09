@@ -1,11 +1,10 @@
-// src/data/achievementsImageData.ts // remove it
+// src/data/achievementsImageData.ts
 
 import achievements1 from "../img/Achievements_Pedigree.webp";
 import achievements2 from "../img/Achievements_PsychologicalTests.webp";
 import achievements3 from "../img/Achievements_BreedingReview.webp";
 import achievements4 from "../img/Achievements_PolishChampion.webp";
 
-// Definicja typu dla kazdego elementu w tablicy obrazów
 interface ImageItemAchievements {
   id: string;
   src: string;

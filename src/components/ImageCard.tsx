@@ -1,4 +1,4 @@
-// src/components/ImageCard.tsx // remove it
+// src/components/ImageCard.tsx
 
 import { useState } from "react";
 import {

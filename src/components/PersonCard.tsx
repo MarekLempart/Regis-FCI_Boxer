@@ -1,4 +1,4 @@
-// src/components/PersonCard.tsx // remove it
+// src/components/PersonCard.tsx
 
 import React from "react";
 import { ImageCardContainer, StyledImageCard } from "../styles/ImageCardStyles";

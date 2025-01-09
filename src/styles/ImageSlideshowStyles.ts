@@ -1,4 +1,4 @@
-// src/styles/ImageSlideshowStyles.ts // remove it
+// src/styles/ImageSlideshowStyles.ts
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -13,7 +13,6 @@ export const PositionImageContainer = styled.div`
   aspect-ratio: 3 / 2;
 `;
 
-// Styled-component dla kontenera pokazu slajdów
 export const SlideshowPositionContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -32,7 +31,6 @@ export const SlideshowPositionContainer = styled.div`
   }
 `;
 
-// Styled-component dla obrazu w pokazie slajdów
 export const StyledImage = styled(motion.img)`
   width: 100%;
   height: 100%;

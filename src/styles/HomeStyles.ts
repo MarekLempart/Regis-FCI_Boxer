@@ -1,4 +1,4 @@
-// src/styles/HomeStyles.ts // remove it
+// src/styles/HomeStyles.ts
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -20,7 +20,6 @@ export const Container = styled.div`
   }
 `;
 
-// Kontener dla par komponentów w układzie dwóch kolumn bez zmiany kolejności
 export const ItemsContainerNoirOrder = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,14 +39,12 @@ export const ItemsContainerNoirOrder = styled.div`
   }
 `;
 
-// Kontener dla par komponentów w układzie dwóch kolumn w odwrotnej kolejności
 export const ItemsContainerReverseOrder = styled(ItemsContainerNoirOrder)`
   @media ${({ theme }) => theme.media.tabletAndDesktop} {
     flex-direction: row-reverse;
   }
 `;
 
-// Kontener dla poszczególnych komponentów w układzie dwóch kolumn
 export const ItemContainer = styled.div`
   display: flex;
   justify-content: center;

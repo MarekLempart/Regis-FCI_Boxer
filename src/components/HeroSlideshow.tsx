@@ -1,4 +1,4 @@
-// src/components/HeroSlideshow.tsx // remove it
+// src/components/HeroSlideshow.tsx
 
 import { useState, useEffect } from "react";
 import imageRegisHero from "../data/imageDataHero";

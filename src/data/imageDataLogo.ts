@@ -1,4 +1,4 @@
-// src/data/imageDataLogo.ts // remove it
+// src/data/imageDataLogo.ts
 import imgLogoZKwP from "../img/Logo_ZKwP.webp";
 import imgLogoZKwPWw from "../img/Logo_ZKwPww.webp";
 

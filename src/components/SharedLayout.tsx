@@ -1,4 +1,4 @@
-// src/components/SharedLayout.tsx // remove it
+// src/components/SharedLayout.tsx
 
 import { useState, useEffect, lazy, Suspense } from "react";
 import { useTheme } from "styled-components";

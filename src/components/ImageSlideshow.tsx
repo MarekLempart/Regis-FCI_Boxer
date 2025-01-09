@@ -1,4 +1,4 @@
-// src/components/ImageSlideshow.tsx // remove it
+// src/components/ImageSlideshow.tsx
 
 import { useState, useEffect } from "react";
 import {

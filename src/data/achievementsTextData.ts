@@ -1,4 +1,4 @@
-// src/data/achievementsTextData.ts // remove it
+// src/data/achievementsTextData.ts
 
 const achievementsTextData = [
   {

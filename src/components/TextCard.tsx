@@ -1,4 +1,4 @@
-// src/components/TextCard.tsx // remove it
+// src/components/TextCard.tsx
 
 import React, { useState } from "react";
 import {
@@ -16,7 +16,6 @@ interface TextCardProps {
 const TextCard: React.FC<TextCardProps> = ({ text }) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Deklaracja typu dla `useInView`
   const { ref } = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -34,7 +33,7 @@ const TextCard: React.FC<TextCardProps> = ({ text }) => {
           <StyledText>
             <TypeAnimation
               sequence={[...text.flatMap((t) => [t, 1000])]} // Animowany tekst i pauza
-              speed={50} // Prędkość "pisania"
+              speed={60} // Prędkość "pisania"
               wrapper="h3"
               repeat={0} // Animacja
               cursor={false}

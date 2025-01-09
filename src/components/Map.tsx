@@ -1,4 +1,4 @@
-// src/components/Map.tsx // remove it
+// src/components/Map.tsx
 
 import React, { useEffect } from "react";
 import L from "leaflet";
@@ -25,7 +25,7 @@ const Map: React.FC<MapProps> = ({ latitude, longitude, address, onClose }) => {
       shadowSize: [41, 41], // Rozmiar cienia
     });
 
-    const map = L.map("leaflet-map").setView([latitude, longitude], 16);
+    const map = L.map("leaflet-map").setView([latitude, longitude], 12);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:

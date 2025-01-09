@@ -1,4 +1,4 @@
-// src/styles/GlobalStyles.ts // remove it
+// src/styles/GlobalStyles.ts
 
 import { createGlobalStyle } from "styled-components";
 

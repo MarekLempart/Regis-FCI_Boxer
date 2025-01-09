@@ -1,4 +1,4 @@
-// src/data/imageDateRunBridge.ts // remove it
+// src/data/imageDateRunBridge.ts
 
 import imgRegis_RunBridge_01 from "../img/RunNoTheBridge-1.webp";
 import imgRegis_RunBridge_02 from "../img/RunNoTheBridge-2.webp";
@@ -9,13 +9,11 @@ import imgRegis_RunBridge_06 from "../img/RunNoTheBridge-6.webp";
 import imgRegis_RunBridge_07 from "../img/RunNoTheBridge-7.webp";
 import imgRegis_RunBridge_08 from "../img/RunNoTheBridge-8.webp";
 
-// Definicja typu dla kazdego elementu w tablicy obrazów
 interface ImageItemRunBridge {
   id: string;
   src: string;
 }
 
-// Tworzenie tablicy obrazów z typu 'ImageItemRunBridge[]'
 const imageRegisRunBridge: ImageItemRunBridge[] = [
   { id: "RunBridge_01", src: imgRegis_RunBridge_01 },
   { id: "RunBridge_02", src: imgRegis_RunBridge_02 },

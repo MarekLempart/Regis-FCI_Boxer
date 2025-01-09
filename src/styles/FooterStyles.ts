@@ -1,4 +1,4 @@
-// src/components/FooterStyles.ts // remove it
+// src/components/FooterStyles.ts
 
 import styled from "styled-components";
 

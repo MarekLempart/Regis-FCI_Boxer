@@ -1,4 +1,4 @@
-// src/components/ContactDetails.tsx // remove it
+// src/components/ContactDetails.tsx
 
 import React, { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser } from "react-icons/fa";

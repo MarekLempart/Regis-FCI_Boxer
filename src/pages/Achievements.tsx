@@ -1,4 +1,4 @@
-// src/pages/Achievements.tsx // remove it
+// src/pages/Achievements.tsx
 
 import React from "react";
 import achievementsImageData from "../data/achievementsImageData";

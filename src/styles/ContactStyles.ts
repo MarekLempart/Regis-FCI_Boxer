@@ -1,4 +1,4 @@
-// src/styles/ContactStyles.ts // remove it
+// src/styles/ContactStyles.ts
 
 import styled from "styled-components";
 

@@ -1,4 +1,4 @@
-// src/data/textData.ts // remove it
+// src/data/textData.ts
 
 const textData = {
   section1: [

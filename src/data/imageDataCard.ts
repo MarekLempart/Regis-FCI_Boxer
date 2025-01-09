@@ -1,4 +1,4 @@
-// src/data/imageDataCard.ts // remove it
+// src/data/imageDataCard.ts
 
 import imgRegis_Card_01 from "../img/RunNoTheBridge-1.webp";
 import imgRegis_Card_02 from "../img/Card-RegisOnTheBridge.webp";
@@ -8,14 +8,11 @@ import imgRegis_Card_05 from "../img/RunNoTheBridge-5.webp";
 import imgRegis_Card_06 from "../img/RunNoTheBridge-6.webp";
 import imgRegis_Card_07 from "../img/RunNoTheBridge-7.webp";
 import imgRegis_Card_08 from "../img/RunNoTheBridge-8.webp";
-
-// Definicja typu dla kazdego elementu w tablicy obrazów
 interface imageDataCard {
   id: string;
   src: string;
 }
 
-// Tworzenie tablicy obrazów z typu 'IimageDataCard[]'
 const imageRegisCard: imageDataCard[] = [
   { id: "Card_01", src: imgRegis_Card_01 },
   { id: "Card_02", src: imgRegis_Card_02 },

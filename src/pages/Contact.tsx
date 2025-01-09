@@ -1,4 +1,4 @@
-// src/pages/Contact.tsx // remove it
+// src/pages/Contact.tsx
 
 import React from "react";
 import personImageData from "../data/personImageData";

@@ -1,4 +1,4 @@
-// src/styles/PersonTextStyles.ts // remove it
+// src/styles/PersonTextStyles.ts
 
 import styled from "styled-components";
 
@@ -20,7 +20,6 @@ export const TextContainer = styled.div`
   }
 `;
 
-// Tekst wewnątrz karty
 export const StyledText = styled.div`
   font-family: "Montserrat", cursive;
   font-size: 18px;

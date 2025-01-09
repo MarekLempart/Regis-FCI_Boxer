@@ -1,4 +1,4 @@
-// src/styles/HeaderStyles.ts // remove it
+// src/styles/HeaderStyles.ts
 
 import styled from "styled-components";
 

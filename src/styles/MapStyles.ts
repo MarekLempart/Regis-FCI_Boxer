@@ -1,4 +1,4 @@
-// src/styles/MapStyles.ts // remove it
+// src/styles/MapStyles.ts
 
 import styled from "styled-components";
 

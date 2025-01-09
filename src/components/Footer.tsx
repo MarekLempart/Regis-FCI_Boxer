@@ -1,4 +1,4 @@
-// src/components/Footer.tsx // remove it
+// src/components/Footer.tsx
 
 import {
   FooterContainer,
@@ -60,7 +60,7 @@ const Footer = () => {
       </ContactSection>
 
       {/* Logo fotografa */}
-      {/* <PhotographerLogo> // remove it
+      {/* <PhotographerLogo>
                 <img src="placeholder-for-logo.png" alt="Photographer logo" />
             </PhotographerLogo> */}
 

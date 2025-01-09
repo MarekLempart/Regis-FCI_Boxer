@@ -1,4 +1,4 @@
-// src/data/imageDataHero.ts // remove it
+// src/data/imageDataHero.ts
 
 import imgRegis_01_mobile from "../img/RegisCapture-1_mobile.webp";
 import imgRegis_01_tablet from "../img/RegisCapture-1_tablet.webp";
@@ -9,8 +9,6 @@ import imgRegis_02_desktop from "../img/RegisCapture-2_desktop01.webp";
 import imgRegis_03_mobile from "../img/RegisCapture-3_mobile.webp";
 import imgRegis_03_tablet from "../img/RegisCapture-3_tablet.webp";
 import imgRegis_03_desktop from "../img/RegisCapture-3_desktop.webp";
-
-// Definicja typu dla kazdego elementu w tablicy obrazów
 interface ImageItem {
   id: string;
   srcMobile: string;
@@ -18,7 +16,6 @@ interface ImageItem {
   srcDesktop: string;
 }
 
-// Tworzenie tablicy obrazów z typu 'ImageItem[]'
 const imageRegisHero: ImageItem[] = [
   {
     id: "Regis_01",

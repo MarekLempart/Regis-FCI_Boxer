@@ -1,4 +1,4 @@
-//src/app.tsx // remove it
+//src/app.tsx
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Achievements from "./pages/Achievements";
@@ -14,7 +14,6 @@ function App() {
       <ScrollToTop />
       <ToastContainer />
       <Routes>
-        {/* Ścieżka z układem SharedLayout */}
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="achievements" element={<Achievements />} />

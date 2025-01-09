@@ -1,8 +1,7 @@
-// src/styles/SharedLayoutStyles.ts // remove it
+// src/styles/SharedLayoutStyles.ts
 import styled from "styled-components";
 import { Spin } from "antd";
 
-// Stylizowany główny kontener dla zawartości stron
 export const MainWrapper = styled.div`
   padding-top: ${({ theme }) =>
     theme.headerHeight};

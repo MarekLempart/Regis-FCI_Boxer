@@ -1,4 +1,4 @@
-// src/styles/ImageCardStyles.ts // remove it
+// src/styles/ImageCardStyles.ts
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -13,7 +13,6 @@ export const PositionImageContainer = styled.div`
   aspect-ratio: 3 / 2;
 `;
 
-// Kontener wokół obrazu
 export const ImageCardContainer = styled.div`
   display: flex;
   justify-content: center;

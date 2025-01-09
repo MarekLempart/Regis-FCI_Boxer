@@ -1,4 +1,4 @@
-// src/styles/TextCardStyles.ts // remove it
+// src/styles/TextCardStyles.ts
 
 import styled from "styled-components";
 
@@ -28,7 +28,6 @@ export const TextCardContainer = styled.div`
   }
 `;
 
-// Tekst wewnątrz karty
 export const StyledText = styled.div`
   font-family: "Caveat", cursive;
   font-size: 1.8rem;

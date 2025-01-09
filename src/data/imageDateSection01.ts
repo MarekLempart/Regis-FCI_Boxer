@@ -1,4 +1,4 @@
-// src/data/imageDateSection01.ts // remove it
+// src/data/imageDateSection01.ts
 import imgRegis_Position_01 from "../img/RegisInTheLeaves-01.webp";
 import imgRegis_Position_02 from "../img/RegisInTheLeaves-02.webp";
 import imgRegis_Position_03 from "../img/RegisInTheLeaves-03.webp";
@@ -7,13 +7,11 @@ import imgRegis_Position_05 from "../img/RegisInTheLeaves-05.webp";
 import imgRegis_Position_06 from "../img/RegisInTheLeaves-06.webp";
 import imgRegis_Position_07 from "../img/RegisInTheLeaves-07.webp";
 
-// Definicja typu dla kazdego elementu w tablicy obrazów
 interface ImageItemPosition {
   id: string;
   src: string;
 }
 
-// Tworzenie tablicy obrazów z typu 'ImageItemPosition[]'
 const imageRegisPosition: ImageItemPosition[] = [
   { id: "Position_01", src: imgRegis_Position_01 },
   { id: "Position_02", src: imgRegis_Position_02 },

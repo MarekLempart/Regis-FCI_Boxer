@@ -1,4 +1,4 @@
-// src/components/Header.tsx // remove it
+// src/components/Header.tsx
 
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { NavLink } from "react-router-dom";
@@ -33,7 +33,6 @@ import {
 } from "../styles/HeaderStyles";
 import LogoRegisImage from "../img/Logo_Regis1.png";
 
-// Definicja typów propsów
 interface HeaderProps {
   isMenuOpen: boolean;
   toggleMenu: () => void;

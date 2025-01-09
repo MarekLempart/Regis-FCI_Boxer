@@ -1,4 +1,4 @@
-// src/styles/theme.ts // remove it
+// src/styles/theme.ts
 
 export const theme = {
   colors: {
