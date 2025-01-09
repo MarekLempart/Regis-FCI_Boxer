@@ -9,12 +9,3 @@ RewriteRule ^ index.html [L]
 # Wyłącz wyświetlanie zawartości katalogów
 Options -Indexes
 
-# Ogranicz dostęp do plików graficznych tylko z Twojej domeny
-<FilesMatch "\.(jpg|jpeg|png|gif|svg|webp)$">
-    # Zezwól na ładowanie obrazów z Twojej domeny
-    RewriteCond %{HTTP_REFERER} !^https://www.regis-bokser.pl [NC]
-    # Zezwól na ładowanie obrazów, jeśli nagłówek Referer nie jest obecny
-    RewriteCond %{HTTP_REFERER} !^$
-    # Blokuj dostęp w pozostałych przypadkach
-    RewriteRule .* - [F]
-</FilesMatch>
