@@ -3,6 +3,15 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import react from '@vitejs/plugin-react-swc'
 // import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
+// Ustawienie webcrypto globalnie
+import { webcrypto } from 'crypto';
+if (!globalThis.crypto) {
+  Object.defineProperty(globalThis, 'crypto', {
+    value: webcrypto,
+    configurable: true,
+  });
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   // base: "/Regis-FCI_Boxer/",
