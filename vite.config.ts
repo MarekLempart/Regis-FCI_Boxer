@@ -3,13 +3,10 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import react from '@vitejs/plugin-react-swc'
 // import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
-// Ustawienie webcrypto globalnie
+// Importuj `crypto` i ustaw poprawnie WebCrypto
 import { webcrypto } from 'crypto';
-if (!globalThis.crypto) {
-  Object.defineProperty(globalThis, 'crypto', {
-    value: webcrypto,
-    configurable: true,
-  });
+if (typeof globalThis.crypto === 'undefined') {
+  globalThis.crypto = webcrypto;
 }
 
 // https://vite.dev/config/
