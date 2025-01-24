@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import react from '@vitejs/plugin-react-swc'
 // import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
@@ -9,7 +10,12 @@ export default defineConfig({
   // base: process.env.VITE_DEPLOY_ENV === 'ghpages' ? "/Regis-FCI_Boxer/" : "/",
   // base: process.env.VITE_DEPLOY_ENV === 'ovh' ? './' : '/',
   base: './', // Poprawna baza dla hostingu OVH
-  plugins: [react()],
+  plugins: [
+    react(),
+    nodePolyfills({
+      protocolImports: true,
+    }),
+  ],
     // ViteImageOptimizer({
     //   png: {
     //     quality: 80, // Dostosuj jakość
