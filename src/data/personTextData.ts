@@ -1,5 +1,4 @@
 // src/data/personTextData.ts
-
 const personTextData = [
   {
     id: "person1",

@@ -1,5 +1,4 @@
 // src/data/imageDataCard.ts
-
 import imgRegis_Card_01 from "../img/RunNoTheBridge-1.webp";
 import imgRegis_Card_02 from "../img/Card-RegisOnTheBridge.webp";
 import imgRegis_Card_03 from "../img/Card-RegisOnATrunk.webp";

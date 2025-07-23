@@ -1,5 +1,4 @@
 // src/styles/theme.ts
-
 export const theme = {
   colors: {
     textWhite: "#f8f9fa",

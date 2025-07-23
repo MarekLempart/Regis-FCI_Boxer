@@ -1,5 +1,4 @@
 // src/styles/ThemeSwitcherStyles.ts // remove it
-
 import styled from "styled-components";
 
 export const SwitcherButton = styled.button`

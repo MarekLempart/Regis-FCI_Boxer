@@ -1,5 +1,4 @@
 // src/data/achievementsImageData.ts
-
 import achievements1 from "../img/Achievements_Pedigree.webp";
 import achievements2 from "../img/Achievements_PsychologicalTests.webp";
 import achievements3 from "../img/Achievements_BreedingReview.webp";

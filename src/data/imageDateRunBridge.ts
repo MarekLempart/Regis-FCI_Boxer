@@ -1,5 +1,4 @@
 // src/data/imageDateRunBridge.ts
-
 import imgRegis_RunBridge_01 from "../img/RunNoTheBridge-1.webp";
 import imgRegis_RunBridge_02 from "../img/RunNoTheBridge-2.webp";
 import imgRegis_RunBridge_03 from "../img/RunNoTheBridge-3.webp";

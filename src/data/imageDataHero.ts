@@ -1,5 +1,4 @@
 // src/data/imageDataHero.ts
-
 import imgRegis_01_mobile from "../img/RegisCapture-1_mobile.webp";
 import imgRegis_01_tablet from "../img/RegisCapture-1_tablet.webp";
 import imgRegis_01_desktop from "../img/RegisCapture-1_desktop.webp";

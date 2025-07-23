@@ -1,5 +1,4 @@
 // src/pages/Achievements.tsx
-
 import React from "react";
 import achievementsImageData from "../data/achievementsImageData";
 import achievementsTextData from "../data/achievementsTextData";

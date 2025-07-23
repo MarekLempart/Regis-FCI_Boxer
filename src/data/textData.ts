@@ -1,5 +1,4 @@
 // src/data/textData.ts
-
 const textData = {
   section1: [
     "Jestem dużym, postawnym psem i robię wrażenie na każdym, kto mnie zobaczy.",

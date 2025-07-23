@@ -1,5 +1,4 @@
 // src/components/TextCard.tsx
-
 import React, { useState } from "react";
 import {
   PositionTextContainer,

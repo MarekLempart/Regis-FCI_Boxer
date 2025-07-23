@@ -1,5 +1,4 @@
 // src/hooks/useThemeSwitcher.tsx // remove it
-
 import { useState, useEffect } from "react";
 
 export const useThemeSwitcher = () => {

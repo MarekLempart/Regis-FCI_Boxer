@@ -1,5 +1,4 @@
 // src/data/achievementsTextData.ts
-
 const achievementsTextData = [
   {
     id: "achievements1",

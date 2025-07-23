@@ -1,5 +1,4 @@
 // src/data/imageDataOnTrunk.ts
-
 import imgRegis_OnATrunk_01 from "../img/RegisOnATrunk-01.webp";
 import imgRegis_OnATrunk_02 from "../img/RegisOnATrunk-02.webp";
 import imgRegis_OnATrunk_03 from "../img/RegisOnATrunk-03.webp";

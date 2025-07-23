@@ -1,5 +1,4 @@
 // src/data/personImageData.ts
-
 import person1 from "../img/Person01_Regis.webp";
 import person2 from "../img/Person02_Marta.webp";
 import person3 from "../img/Person03_Marek.webp";

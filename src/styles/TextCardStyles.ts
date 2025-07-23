@@ -1,5 +1,4 @@
 // src/styles/TextCardStyles.ts
-
 import styled from "styled-components";
 
 export const PositionTextContainer = styled.div`

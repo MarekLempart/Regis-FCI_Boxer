@@ -1,5 +1,4 @@
 // src/components/HeroSlideshow.tsx
-
 import { useState, useEffect } from "react";
 import imageRegisHero from "../data/imageDataHero";
 import {
@@ -51,8 +50,8 @@ const HeroSlideshow = () => {
     screenSize === "mobile"
       ? imageRegisHero[currentImageIndex].srcMobile
       : screenSize === "tablet"
-      ? imageRegisHero[currentImageIndex].srcTablet
-      : imageRegisHero[currentImageIndex].srcDesktop;
+        ? imageRegisHero[currentImageIndex].srcTablet
+        : imageRegisHero[currentImageIndex].srcDesktop;
 
   return (
     <SlideshowContainer>

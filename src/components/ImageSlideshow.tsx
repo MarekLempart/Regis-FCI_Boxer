@@ -1,5 +1,4 @@
 // src/components/ImageSlideshow.tsx
-
 import { useState, useEffect } from "react";
 import {
   PositionImageContainer,

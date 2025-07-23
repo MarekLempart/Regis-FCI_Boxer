@@ -1,5 +1,4 @@
 // src/components/Header.tsx
-
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "styled-components";
@@ -104,9 +103,8 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   return (
     <>
       <HeaderWrapper
-        className={`${isHeaderVisible ? "visible" : "hidden"} ${
-          isMenuOpen ? "menu-open" : ""
-        }`}
+        className={`${isHeaderVisible ? "visible" : "hidden"} ${isMenuOpen ? "menu-open" : ""
+          }`}
       >
         <Logo>
           <ImageComponent />

@@ -1,5 +1,4 @@
 // src/styles/HeaderStyles.ts
-
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
