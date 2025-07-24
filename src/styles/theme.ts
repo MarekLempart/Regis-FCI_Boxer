@@ -192,7 +192,7 @@ export const theme: BaseTheme = {
     colBlack: "#000000",
   },
 
-  headerHeight: "70px",
+  headerHeight: "130px",
 
   breakpoints: {
     mobile: "768px",

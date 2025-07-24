@@ -11,7 +11,7 @@ export const SlideshowContainer = styled.div`
   overflow: hidden;
   border-radius: 10px;
   background: #000;
-  margin: 90px auto 0px;
+  margin: 30px auto 0px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     height: 600px;

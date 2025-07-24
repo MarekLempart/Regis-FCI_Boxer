@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { Spin } from "antd";
 
 export const MainWrapper = styled.div`
-  padding-top: ${({ theme }) =>
-    theme.headerHeight};
+  padding-top: ${({ theme }) => theme.headerHeight};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
