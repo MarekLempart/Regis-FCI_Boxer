@@ -37,10 +37,10 @@ export const MapCloseButton = styled.button`
   border: none;
   font-size: 24px;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.textDarkNavy};
+  color: ${({ theme }) => theme.colors.colDarkNavy};
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.textChickenComb};
+    color: ${({ theme }) => theme.colors.colChickenComb};
   }
 `;

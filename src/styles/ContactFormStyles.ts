@@ -22,10 +22,10 @@ export const PhoneInputStyledContainer = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid ${({ theme }) => theme.colors.textOrange};
+    border: 1px solid ${({ theme }) => theme.colors.textPrimary};
     border-radius: 5px;
     padding: 10px;
-    background-color: ${({ theme }) => theme.colors.bgWhite};
+    background-color: ${({ theme }) => theme.colors.colWhite};
   }
 
   .PhoneInputInput {
@@ -33,7 +33,7 @@ export const PhoneInputStyledContainer = styled.div`
     border: none;
     outline: none;
     font-size: 16px;
-    color: ${({ theme }) => theme.colors.textDarkNavy};
+    color: ${({ theme }) => theme.colors.colDarkNavy};
   }
 
   .PhoneInputCountry {
@@ -45,7 +45,7 @@ export const PhoneInputStyledContainer = styled.div`
     outline: none;
     background: transparent;
     font-size: 16px;
-    color: ${({ theme }) => theme.colors.textDarkNavy};
+    color: ${({ theme }) => theme.colors.colDarkNavy};
     cursor: pointer;
   }
 
@@ -103,16 +103,16 @@ export const InputTitle = styled.div`
 export const Input = styled.input`
   width: 100%;
   padding: 10px;
-  border: 1px solid ${({ theme }) => theme.colors.textOrange};
-  color: ${({ theme }) => theme.colors.textDarkNavy};
+  border: 1px solid ${({ theme }) => theme.colors.colOrange_2};
+  color: ${({ theme }) => theme.colors.colDarkNavy};
   border-radius: 5px;
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
   padding: 10px;
-  color: ${({ theme }) => theme.colors.textDarkNavy};
-  border: 1px solid ${({ theme }) => theme.colors.textOrange};
+  color: ${({ theme }) => theme.colors.colDarkNavy};
+  border: 1px solid ${({ theme }) => theme.colors.colOrange_2};
   border-radius: 5px;
   resize: none;
 `;
@@ -120,8 +120,8 @@ export const TextArea = styled.textarea`
 export const SubmitButton = styled.button`
   margin: 0 auto;
   padding: 10px 20px;
-  background: ${({ theme }) => theme.colors.bgOrange};
-  color: ${({ theme }) => theme.colors.textDarkNavy};
+  background: ${({ theme }) => theme.colors.colOrange_2};
+  color: ${({ theme }) => theme.colors.colDarkNavy};
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -137,7 +137,7 @@ export const ErrorText = styled.div`
   justify-content: start;
   align-items: center;
   gap: 10px;
-  color: ${({ theme }) => theme.colors.textChickenComb};
+  color: ${({ theme }) => theme.colors.colChickenComb};
   font-size: 12px;
   margin-top: 5px;
   position: absolute;

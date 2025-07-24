@@ -6,7 +6,7 @@ export const FooterContainer = styled.footer`
   padding: 20px;
   background-color: ${({ theme }) => theme.colors.bgPrimary};
   color: ${({ theme }) => theme.colors.textPrimary};
-  border-top: 3px solid ${({ theme }) => theme.colors.textOrange};
+  border-top: 3px solid ${({ theme }) => theme.colors.colOrange_2};
 `;
 
 export const ContactSection = styled.div`
@@ -30,7 +30,7 @@ export const ContactLine = styled.p`
     transition: color 200ms, transform 200ms;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.textOrange};
+      color: ${({ theme }) => theme.colors.colOrange_2};
       transform: scale(1.05);
     }
   }
@@ -59,7 +59,7 @@ export const Logo = styled.img`
 
   &:hover {
     filter: drop-shadow(
-      0 0 15px ${({ theme }) => theme.colors.textBrightBrown}
+      0 0 15px ${({ theme }) => theme.colors.colBrightBrown}
     );
     transform: scale(1.1);
   }
