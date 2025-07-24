@@ -231,8 +231,8 @@ export const darkTheme: ThemeType = {
   ...theme,
   colors: {
     ...theme.colors,
-    bgPrimary: theme.colors.colGray,
-    bgSecondary: theme.colors.colDimGray,
+    bgPrimary: theme.colors.colCharcoal,
+    bgSecondary: theme.colors.colDarkSlateGray,
     textPrimary: theme.colors.colNavajoWhite,
     textSecondary: theme.colors.colTan,
     accent: theme.colors.colDarkOrange,
