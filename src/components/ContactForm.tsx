@@ -18,7 +18,11 @@ import {
   PhoneInputStyledContainer,
 } from "../styles/ContactFormStyles";
 
-emailjs.init("xtkeKbpRdN9dos4sU");
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+
 
 const ContactForm: React.FC = () => {
   const formik = useFormik({
@@ -39,12 +43,22 @@ const ContactForm: React.FC = () => {
       message: Yup.string().required("Treść zapytania jest wymagana"),
     }),
     onSubmit: (values, { resetForm }) => {
+      if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+        toast.error('contactForm.toast.error', {
+          position: "top-right",
+          autoClose: 5000,
+          theme: "light",
+        });
+        console.error("Brak konfiguracji EmailJS");
+        return;
+      }
+
       emailjs
         .send(
-          "service_jydn2ns",
-          "template_ic5gljh",
+          SERVICE_ID,
+          TEMPLATE_ID,
           values,
-          "xtkeKbpRdN9dos4sU"
+          PUBLIC_KEY
         )
         .then(() => {
           toast.success("Wiadomość wysłana!", {
